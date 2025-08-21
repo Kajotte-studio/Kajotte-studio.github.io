@@ -8,22 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* style.css */
-
-        /* Ogólne style dla całej strony */
+        /* General styles */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
             color: #e0e0e0;
-
-            /* Zmiana ścieżki do obrazu tła na ścieżkę absolutną z folderu html/images */
             background: url('html/images/kajottestudio_reklama2025.jpg') no-repeat center center/cover;
             background-attachment: fixed;
-            background-color: #121212; /* Ustawienie zapasowego koloru */
+            background-color: #121212;
         }
 
-        /* Styl dla nagłówka i nawigacji */
+        /* Header and Navigation */
         header {
             background-color: #1e1e1e;
             padding: 1rem 2rem;
@@ -49,6 +45,8 @@
             list-style: none;
             display: flex;
             gap: 2rem;
+            padding: 0;
+            margin: 0;
         }
 
         nav ul li a {
@@ -61,7 +59,7 @@
             color: #00bcd4;
         }
 
-        /* Styl sekcji Hero */
+        /* Hero Section */
         .hero {
             min-height: 80vh;
             display: flex;
@@ -73,93 +71,50 @@
             background: url('html/images/black.jpg') no-repeat center center/cover;
         }
 
-
         h1 {
             font-size: 3rem;
             color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h2.hero-subtitle {
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main sections */
+        .section-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 80px auto 20px;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         #o-nas {
-            background-color: rgba(0, 0, 0, 0.8); /* Półprzezroczysty czarny */
-            margin-left: 450px;
-            margin-right: 450px;
-            padding: 30px; /* Dodaj odstępy, żeby tekst nie dotykał krawędzi */
-            border-radius: 20px; /* Opcjonalne: zaokrąglenie rogów */
-            margin-top: 80px;
-
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 100px auto; /* Zwiększony margines górny i dolny */
+            padding: 20px;     /* Zmniejszone wewnętrzne wypełnienie */
+            border-radius: 20px;
+            max-width: 90%;
         }
 
-        #portfolio {
-            background-color: rgba(0, 0, 0, 0.4); /* Półprzezroczysty biały 255 */
-            padding: 50px; /* Dodaj odstępy, żeby tekst nie dotykał krawędzi */
-            border-radius: 10px; /* Opcjonalne: zaokrąglenie rogów */
-            margin-left: 30px;
-            margin-right: 30px;
+        #uslugi {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5);
             margin-top: 20px;
         }
 
-        #kontakt {
-            background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczysty czarny */
-            padding: 50px 0; /* Dodaj odstępy, żeby tekst nie dotykał krawędzi */
-            border-radius: 10px; /* Opcjonalne: zaokrąglenie rogów */
-            margin-left: 80px;
-            margin-right: 110px;
-            margin-top: 30px;
-        }
-
-        /* --- Style dla miniaturki w portfolio --- */
-        .portfolio-miniatura {
-            width: 200px;
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .portfolio-miniatura:hover {
-            transform: scale(1.05);
-        }
-
-        /* --- Style dla powiększonego zdjęcia (modal) --- */
-        .modal-zdjecie {
-            display: none;
-            position: fixed;
-            z-index: 102; /* Wyższa wartość, aby modal zakupu był niżej */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .modal-content-zdjecie {
-            margin: auto;
-            display: block;
+        .dark-section {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin: 20px auto;
             max-width: 90%;
-            max-height: 90vh;
-            object-fit: contain;
-            margin-top: 50px;
         }
-
-        .close-zdjecie {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .close-zdjecie:hover,
-        .close-zdjecie:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
 
         .cta-button {
             background-color: #00bcd4;
@@ -175,15 +130,9 @@
             background-color: #0097a7;
         }
 
-        /* Styl sekcji usług */
-        #uslugi {
-            padding: 4rem 2rem;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.5); /* Półprzezroczysty czarny */
-            margin-top: 20px;
-        }
-
-        .services-container {
+        /* Services and Portfolio containers */
+        .services-container,
+        .portfolio-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -191,35 +140,38 @@
             margin-top: 2rem;
         }
 
-        /* Nowe style dla sekcji portfolio, aby wyrównać elementy */
-        .services-container1 {
-            display: flex;
+        .services-container,
+        .service-item,
+        .portfolio-item {
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 15px; /* Odstęp między zdjęciem a tekstem */
+            gap: 15px;
             padding: 20px;
-            background-color: #1e1e1e; /* Ciemne tło dla każdego bloku portfolio */
+            background-color: #1e1e1e;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             flex: 1 1 300px;
         }
 
-        .service-item {
-            background-color: #1e1e1e;
+        .service-item, .portfolio-item {
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            flex: 1 1 300px;
         }
 
-        /* Styl formularza kontaktowego */
-        #kontakt {
-            padding: 4rem 2rem;
-            text-align: center;
+        /* Portfolio */
+        .portfolio-thumbnail {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        form {
+        .portfolio-thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact form */
+        #kontakt form {
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -227,12 +179,13 @@
             margin: 0 auto;
         }
 
-        form label {
+        #kontakt form label {
             text-align: left;
             font-weight: bold;
         }
 
-        form input, form textarea {
+        #kontakt form input,
+        #kontakt form textarea {
             padding: 0.75rem;
             border: 1px solid #333;
             background-color: #222;
@@ -240,7 +193,7 @@
             border-radius: 5px;
         }
 
-        form button {
+        #kontakt form button {
             background-color: #00bcd4;
             color: #121212;
             padding: 1rem;
@@ -251,11 +204,18 @@
             transition: background-color 0.3s;
         }
 
-        form button:hover {
+        #kontakt form button:hover {
             background-color: #0097a7;
         }
 
-        /* Styl stopki i przycisku "Kup Produkt" */
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Footer and buy buttons */
         footer {
             text-align: center;
             padding: 1.5rem;
@@ -295,40 +255,49 @@
             background-color: #0097a7;
         }
 
-        /* Style dla modala */
+        /* Modals */
         .modal {
-            display: none; /* Ukryj modal domyślnie */
-            position: fixed; /* Zawsze na wierzchu */
-            z-index: 101; /* Wyżej niż inne elementy */
+            display: none;
+            position: fixed;
+            z-index: 101;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.7); /* Półprzezroczyste tło */
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         .modal-content {
             background-color: #1e1e1e;
-            margin: 15% auto; /* Wyśrodkowanie w pionie i poziomie */
+            margin: 15% auto;
             padding: 2rem;
             border: 1px solid #333;
-            width: 80%; /* Szerokość modala */
+            width: 80%;
             max-width: 500px;
             border-radius: 10px;
             text-align: center;
             position: relative;
         }
 
+        .modal-content-img {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            margin-top: 50px;
+        }
+
         .close-button {
             color: #e0e0e0;
-            float: right;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
             position: absolute;
             top: 10px;
             right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
         }
 
         .close-button:hover,
@@ -353,15 +322,9 @@
             background-color: #0097a7;
         }
 
-        .contact-info {
-            font-size: 22px;             /* Zmiana rozmiaru */
-            font-family: 'Montserrat', sans-serif; /* Zmiana czcionki */
-            font-weight: bold;           /* Pogrubienie (opcjonalnie) */
-        }
-
-        /* Nowe style dla zwijanego tekstu */
+        /* Collapsible text */
         .collapsible-content {
-            display: none; /* Domyślnie ukryj zawartość */
+            display: none;
             margin-top: 15px;
         }
 
@@ -373,6 +336,65 @@
             text-align: center;
             margin-top: 10px;
         }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            /* Navigation */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: #1e1e1e;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 99;
+                transition: all 0.3s ease-in-out;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 2rem;
+                cursor: pointer;
+                color: #e0e0e0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            /* Main sections */
+            .section-box,
+            .dark-section {
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 20px;
+            }
+
+            .services-container,
+            .portfolio-container {
+                flex-direction: column;
+            }
+
+            .service-item,
+            .portfolio-item {
+                flex: 1 1 100%;
+            }
+
+            /* Fonts and other elements */
+            h1 {
+                font-size: 2rem;
+            }
+
+            .modal-content {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -382,12 +404,13 @@
             <div class="logo">
                 <a href="#">Kajotte Studio</a>
             </div>
-            <ul>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <ul id="nav-links" class="nav-links">
                 <li><a href="#o-nas">O nas</a></li>
                 <li><a href="#uslugi">Usługi</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
-                <li><a href="#" class="buy-product-nav" onclick="openModal()">Kup Produkt</a></li>
+                <li><a href="#" class="buy-product-nav open-modal-button" data-modal="buy-modal">Kup Produkt</a></li>
             </ul>
         </nav>
     </header>
@@ -395,7 +418,7 @@
     <main>
         <section id="o-nas" class="hero">
             <h1>Kajotte Studio Kreatywność w każdym projekcie</h1>
-            <h2>Gdzie Kreatywność Spotyka Profesjonalizm</h2>
+            <h2 class="hero-subtitle">Gdzie Kreatywność Spotyka Profesjonalizm</h2>
             <p>W Kajotte Studio wierzymy, że każdy pomysł zasługuje na najlepszą oprawę. Od 2020 roku z pasją łączymy świat programowania, fotografii, produkcji muzycznej i filmowej, tworząc kompleksowe rozwiązania, które wyróżniają się jakością i oryginalnością.</p>
             <p>Nasze podejście to synergia wielu talentów. Jesteśmy zespołem, który z równą precyzją koduje innowacyjne aplikacje, jak i łapie ulotne chwile w obiektywie aparatu. Tworzymy porywające ścieżki dźwiękowe, które nadają emocjom głębi, a także realizujemy profesjonalne produkcje wideo, opowiadając historie obrazem.</p>
             <p>W Kajotte Studio nie podążamy za trendami – my je kreujemy. Jeśli szukasz partnera, który zrealizuje Twój projekt od koncepcji po finalne dzieło, zapraszamy do kontaktu. Odkryj, jak nasza pasja i profesjonalizm mogą nadać Twoim pomysłom zupełnie nowy wymiar.</p>
@@ -403,33 +426,32 @@
         </section>
 
         <section id="uslugi">
-            <h1 style="color: black;">Nasze Usługi</h1>
+            <h1>Nasze Usługi</h1>
             <div class="services-container">
                 <div class="service-item">
                     <h3>Fotografia i Wideo</h3>
                     <p>Uchwycimy każdą chwilę z najwyższą precyzją. Oferujemy sesje zdjęciowe, pełne produkcje wideo i profesjonalny montaż, wykorzystując najnowocześniejszy sprzęt, aby Twoja wizja stała się rzeczywistością.</p>
-                    <a href="index_foto.html" class="link-saks" style="color: lightblue;">Fotografia</a>
-                    <br><a href="index_video.html" class="link-saks" style="color: lightblue;">Produkcja filmowa</a>
+                    <a href="index_foto.html" style="color: lightblue;">Fotografia</a>
+                    <br><a href="index_video.html" style="color: lightblue;">Produkcja filmowa</a>
                 </div>
                 <div class="service-item">
                     <h3>Produkcja Muzyczna</h3>
                     <p>Stwórzmy unikalne brzmienie dla Twojego projektu. Nasze w pełni wyposażone studio nagraniowe to idealne miejsce do tworzenia oryginalnych ścieżek dźwiękowych, a także profesjonalnego miksowania i masteringu.</p>
-                    <a href="index_muz.html" class="link-saks" style="color: lightblue;">Produkcja muzyki</a>
+                    <a href="index_muz.html" style="color: lightblue;">Produkcja muzyki</a>
                 </div>
                 <div class="service-item">
                     <h3>Programowanie</h3>
-                    <p>Przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania. Tworzymy niezawodne oprogramowanie, w tym
-                    <br> <a href="index_saks.html" class="link-saks" style="color: lightblue;">System Autostart Kajotte Studio</a>, dostosowane do Twoich potrzeb.</p>
-                    <a href="index_prog.html" class="link-saks" style="color: lightblue;">Programowanie</a>
+                    <p>Przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania. Tworzymy niezawodne oprogramowanie, w tym <a href="index_saks.html" style="color: lightblue;">System Autostart Kajotte Studio</a>, dostosowane do Twoich potrzeb.</p>
+                    <a href="index_prog.html" style="color: lightblue;">Programowanie</a>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio">
-            <h1 style="color: white;">Portfolio</h1>
-            <div class="services-container">
-                <div class="services-container1">
-                    <img src="html/images/hubble_saks.jpg" alt="Realizacje Wideo" class="portfolio-miniatura">
+        <section id="portfolio" class="dark-section">
+            <h1>Portfolio</h1>
+            <div class="portfolio-container">
+                <div class="portfolio-item">
+                    <img src="html/images/hubble_saks.jpg" alt="Realizacje Wideo: kadr z produkcji wideo" class="portfolio-thumbnail">
                     <h3>Realizacje Wideo</h3>
                     <div class="collapsible-content">
                         <p>W Kajotte Studio z pasją przekształcamy pomysły w kinową rzeczywistość. Specjalizujemy się w kompleksowej produkcji filmowej — od precyzyjnego nagrania, realizowanego na wysokiej klasy sprzęcie, po profesjonalny montaż i dopracowany podkład dźwiękowy.</p>
@@ -438,8 +460,8 @@
                     </div>
                     <span class="toggle-text">Czytaj więcej</span>
                 </div>
-                <div class="services-container1">
-                    <img src="html/images/login_off_2.jpg" alt="Sesje Fotograficzne" class="portfolio-miniatura">
+                <div class="portfolio-item">
+                    <img src="html/images/login_off_2.jpg" alt="Sesje Fotograficzne: zdjęcie z intymnego portretu" class="portfolio-thumbnail">
                     <h3>Sesje Fotograficzne</h3>
                     <div class="collapsible-content">
                         <p>W Kajotte Studio z pasją przekształcamy chwile w ponadczasowe obrazy. Oferujemy sesje fotograficzne, które wykraczają poza standardowe ujęcia, obejmując szerokie spektrum: od intymnych portretów i naturalnych kadrów w plenerze, po specjalistyczne projekty.</p>
@@ -448,8 +470,8 @@
                     </div>
                     <span class="toggle-text">Czytaj więcej</span>
                 </div>
-                <div class="services-container1">
-                    <img src="html/images/login_off_1.jpg" alt="Programowanie" class="portfolio-miniatura">
+                <div class="portfolio-item">
+                    <img src="html/images/login_off_1.jpg" alt="Projekty Oprogramowania: zrzut ekranu z interfejsu aplikacji" class="portfolio-thumbnail">
                     <h3>Projekty Oprogramowania</h3>
                     <div class="collapsible-content">
                         <p>Interfejs użytkownika Systemu Autostart. Intuicyjny design spotyka się z wydajnością. <a href="index_saks.html" style="color: #fff;">Zobacz więcej</a></p>
@@ -465,7 +487,7 @@
             </div>
         </section>
 
-        <section id="kontakt">
+        <section id="kontakt" class="dark-section">
             <h2>Skontaktuj się</h2>
             <p>Jesteś gotowy, aby rozpocząć? Zadzwoń lub napisz do nas – chętnie porozmawiamy o Twoim projekcie i wspólnie znajdziemy najlepsze rozwiązanie.</p>
             <form action="https://formspree.io/f/xqalraqg" method="POST">
@@ -490,18 +512,18 @@
     </main>
 
     <footer>
-        <a href="#" class="buy-product-footer" onclick="openModal()">Kup Produkt</a>
+        <a href="#" class="buy-product-footer open-modal-button" data-modal="buy-modal">Kup Produkt</a>
         <p>&copy; 2020-2025 Kajotte Studio. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
-    <div id="modal-zdjecie" class="modal-zdjecie">
-        <span class="close-zdjecie">&times;</span>
-        <img class="modal-content-zdjecie" id="powiekszone-zdjecie">
+    <div id="image-modal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content-img" id="enlarged-image" alt="Powiększone zdjęcie z portfolio.">
     </div>
 
     <div id="buy-modal" class="modal">
         <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
+            <span class="close-button">&times;</span>
             <h2>Sklep Kajotte Studio</h2>
             <p>Produkty w formie cyfrowej.</p>
             <div class="modal-links">
@@ -518,59 +540,66 @@
     </div>
 
     <script>
-        // Skrypt do modala zakupu
-        function openModal() {
-            document.getElementById('buy-modal').style.display = 'block';
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile navigation toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-        function closeModal() {
-            document.getElementById('buy-modal').style.display = 'none';
-        }
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
 
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('buy-modal')) {
-                closeModal();
-            }
-        }
+            // Reusable modal functionality
+            const openModalButtons = document.querySelectorAll('.open-modal-button');
+            const closeModalButtons = document.querySelectorAll('.close-button');
+            const modals = document.querySelectorAll('.modal');
 
-        // Skrypt do powiększania zdjęć
-        var modalZdjecie = document.getElementById("modal-zdjecie");
-        var modalImgZdjecie = document.getElementById("powiekszone-zdjecie");
-        var spanZdjecie = document.getElementsByClassName("close-zdjecie")[0];
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const modalId = button.dataset.modal;
+                    document.getElementById(modalId).style.display = 'block';
+                });
+            });
 
-        var miniaturki = document.getElementsByClassName("portfolio-miniatura");
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.closest('.modal').style.display = 'none';
+                });
+            });
 
-        for (var i = 0; i < miniaturki.length; i++) {
-            miniaturki[i].onclick = function() {
-                modalZdjecie.style.display = "block";
-                modalImgZdjecie.src = this.src;
-            }
-        }
+            window.addEventListener('click', (e) => {
+                modals.forEach(modal => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
 
-        spanZdjecie.onclick = function() {
-            modalZdjecie.style.display = "none";
-        }
+            // Image enlargement modal
+            const imageModal = document.getElementById('image-modal');
+            const enlargedImage = document.getElementById('enlarged-image');
+            const thumbnails = document.querySelectorAll('.portfolio-thumbnail');
 
-        window.onclick = function(event) {
-            if (event.target == modalZdjecie) {
-                modalZdjecie.style.display = "none";
-            }
-        }
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    imageModal.style.display = 'block';
+                    enlargedImage.src = thumbnail.src;
+                    enlargedImage.alt = thumbnail.alt;
+                });
+            });
 
-        // Nowy skrypt do zwijania/rozwijania tekstu
-        document.addEventListener('DOMContentLoaded', function() {
+            // Collapsible text
             const toggleTexts = document.querySelectorAll('.toggle-text');
 
             toggleTexts.forEach(toggle => {
                 toggle.addEventListener('click', () => {
                     const content = toggle.previousElementSibling;
-                    if (content.style.display === "none" || content.style.display === "") {
-                        content.style.display = "block";
-                        toggle.textContent = "Zwiń";
-                    } else {
-                        content.style.display = "none";
-                        toggle.textContent = "Czytaj więcej";
-                    }
+                    const isContentVisible = content.style.display === "block";
+                    content.style.display = isContentVisible ? "none" : "block";
+                    toggle.textContent = isContentVisible ? "Czytaj więcej" : "Zwiń";
                 });
             });
         });
