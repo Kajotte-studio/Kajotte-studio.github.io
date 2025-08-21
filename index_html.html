@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Autostart Kajotte Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Globalne style */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            transition: background-image 0.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Nagłówek i nawigacja */
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        /* Sekcje */
+        .section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        /* Sekcja O nas */
+        #about {
+            background-color: rgba(233, 236, 239, 0.9);
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Sekcja Usługi */
+        #services {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-item {
+            background-color: rgba(248, 249, 250, 0.9);
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-item .hidden-text {
+            display: none;
+        }
+
+        .service-item .toggle-btn {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: underline;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        #hero .container {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        .service-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Sekcja Kontakt */
+        #contact {
+            background-color: rgba(52, 58, 64, 0.9);
+            color: #fff;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .contact-info li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info li a:hover {
+            color: #007bff;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        /* Stopka */
+        .footer {
+            background-color: #212529;
+            color: #bbb;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Styl dla kalkulatora */
+        .calculator {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .calculator table {
+            width: 100%;
+        }
+
+        .calculator input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .calculator input[type="button"], .calculator input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .calculator input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .calculator input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        .calculator input[type="reset"] {
+            background-color: #f4f4f4;
+            color: #333;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s;
+        }
+
+        .calculator input[type="reset"]:hover {
+            background-color: #e2e2e2;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">System Autostart Kajotte Studio</a>
+            <ul class="nav-links">
+                <li><a href="#about">Kalkulator</a></li>
+                <li><a href="#services">Projekty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="html/index.html" target="_blank">Edytor HTML</a></li>
+                <li><a href="earth_quakes_saks.html" target="_blank">Trzęsienia ziemi</a></li>
+                <li><a href="pogoda.html" target="_blank">Pogoda</a></li>
+                <li><a href="kasyno_kajotte_studio_games.html" target="_blank">Kasyno</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="section">
+            <div class="container">
+                <h1 class="section-title" style="font-size: 3.5rem; color: #007bff;">System Autostart Kajotte Studio</h1>
+                <p style="font-size: 1.3rem; max-width: 900px; margin: 0 auto;">System Autostart Kajotte Studio (SAKS) to innowacyjny projekt, który od stycznia 2023 roku rozwijamy z pasją i precyzją. Jest to spójny ekosystem programów napisanych w języku Python, stworzony z myślą o zwiększeniu bezpieczeństwa i automatyzacji pracy na Twoim komputerze. SAKS działa w tle, niezauważalnie, aby zapewnić pełną kontrolę nad urządzeniem.</p>
+                <h1 class="section-title" style="font-size: 3.5rem; color: #007bff;">Jak to działa?</h1>
+                <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">Rdzeniem systemu jest program Login, który pełni rolę centralnego menadżera. Aby uzyskać dostęp do pełnej funkcjonalności SAKS, konieczne jest pomyślne zalogowanie. Dzięki temu rozwiązaniu, możesz mieć pewność, że tylko upoważnione osoby mają dostęp do Twojego systemu.</p>
+                <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">SAKS jest systemem inteligentnym. Programy działające w tle monitorują kluczowe zdarzenia na Twoim urządzeniu. Automatycznie rejestrują takie informacje jak:
+                <br>* Uruchomienie i wyłączenie komputera
+                <br>* Rozpoczęcie i zakończenie ładowania baterii
+                <br>* Pomyślne zalogowanie do programu Login</p>
+                <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">Wszystkie te wydarzenia są natychmiastowo rejestrowane i przesyłane w formie powiadomień. System automatycznie wysyła wiadomości e-mail, informując Cię o najważniejszych zdarzeniach. Dodatkowo, kluczowe powiadomienia mogą być wyświetlane w formie powiadomień Windows, dzięki czemu masz pełną kontrolę nad swoim urządzeniem i jesteś na bieżąco z jego aktywnością.</p>
+                <h1 class="section-title" style="font-size: 3.5rem; color: #007bff;">Bezpieczeństwo przede wszystkim</h1>
+                <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">Jednym z najważniejszych elementów SAKS jest unikalny system zabezpieczeń oparty na fizycznym kluczu. Uruchomienie komputera bez dedykowanego klucza USB skutkuje automatycznym wyłączeniem urządzenia i zablokowaniem dostępu do całego systemu.
+                <br>To rozwiązanie gwarantuje, że Twoje dane i programy są bezpieczne, nawet w przypadku nieautoryzowanych prób dostępu.
+                <br>SAKS to przyszłość automatyzacji i bezpieczeństwa.
+                <br>To nie tylko oprogramowanie, ale przemyślana architektura, która pracuje dla Ciebie 24/7.
+                <h1 class="section-title" style="font-size: 3.5rem; color: #007bff;">Kajotte Studio</h1>
+                <p style="font-size: 1.3rem; max-width: 900px; margin: 0 auto; color: black;">Witaj w Kajotte Studio – miejscu, gdzie pasja do tworzenia spotyka się z precyzją i nowoczesną technologią. Od 2020 roku dostarczamy unikalne rozwiązania w dziedzinie, która łączy cyfrową sztukę z zaawansowanym programowaniem. Nasze Studio to efekt ewolucji i ciągłego poszukiwania nowych wyzwań.
+                <h1 class="section-title" style="font-size: 3.5rem; color: #007bff;">Nasza historia i doświadczenie</h1>
+                <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto; color: black;">Nasza przygoda zaczęła się od fotografii i produkcji filmowej. To właśnie od uchwycenia ulotnych chwil i tworzenia niezapomnianych opowieści wizualnych, rodziła się nasza misja. Z biegiem czasu, do kreatywnego świata obrazu dołączyła fascynacja kodem.
+                <br>Dzięki temu poszerzyliśmy naszą działalność o zaawansowane usługi programistyczne, opanowując języki C++ i Python, które pozwalają nam tworzyć wydajne i niezawodne aplikacje. Nie zapominamy też o fundamentach Internetu, specjalizując się w tworzeniu estetycznych i funkcjonalnych witryn internetowych, wykorzystując siłę HTML.</p>
+                <h1 class="section-title" style="font-size: 3.5rem; color: #007bff;">Co nas wyróżnia?</h1>
+                <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;">Nasze wszechstronne podejście pozwala nam realizować projekty, które wykraczają poza tradycyjne ramy. Niezależnie od tego, czy potrzebujesz profesjonalnego filmu reklamowego, innowacyjnego oprogramowania, czy nowoczesnej strony internetowej, Kajotte Studio łączy różnorodne kompetencje w spójną całość. Jesteśmy gotowi podjąć każde wyzwanie, dostosowując się do Twoich potrzeb i oczekiwań.
+                <br>W Kajotte Studio wierzymy, że każdy projekt zasługuje na indywidualne podejście i najwyższą jakość wykonania. Skontaktuj się z nami, abyśmy wspólnie mogli stworzyć coś wyjątkowego.</p>
+                <a href="#services" class="button" style="display: inline-block; padding: 12px 24px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 50px; margin-top: 30px; font-weight: 700;">Zobacz projekty</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Kalkulator SAKS</h2>
+                <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto;"><b>Kalk</b> to wszechstronne narzędzie w ekosystemie SAKS, stworzone z myślą o szybkich obliczeniach.
+                    <br>Ten zaawansowany kalkulator potrafi przetwarzać złożone wyrażenia matematyczne, zapewniając dokładne wyniki.
+                    <br><b>Jego największym atutem jest wbudowana pamięć, która pozwala na zapisywanie wyników obliczeń.</b>
+                    <br>Zapisane w pamięci wartości możesz w dowolnym momencie wkleić bezpośrednio do Notatnika SAKS, co usprawnia pracę i eliminuje potrzebę ręcznego przepisywania danych.
+                    <br>Kalk SAKS to idealne narzędzie dla każdego, kto ceni sobie precyzję, wydajność i integrację między programami.</p>
+                <h2 class="section-title">Kalkulator wersja HTML</h2>
+
+                <div class="calculator">
+                    <h3>Kalkulator Kajotte Studio</h3>
+                    <p>W poniższym polu wpisz wyrażenie liczbowe i kliknij "Wylicz".</p>
+
+                    <form id="calculator-form" onsubmit="eval_eq(); return false;">
+                        <table border="0" cellpadding="10px">
+                            <tr>
+                                <td><label for="equation">Wyrazenie: </label></td>
+                                <td><input type="text" id="equation" size="40" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td><label for="results">Wyniki: </label></td>
+                                <td><input type="text" id="results" size="40" value="" disabled="disabled" /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" id="evaluate" value="Wylicz" onclick="eval_eq();" /></td>
+                                <td><input type="reset" id="Reset" value="Zresetuj" /></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+                <script type="text/javascript">
+                    function eval_eq() {
+                        var x = document.getElementById("equation").value;
+                        if (x) {
+                            try {
+                                document.getElementById("results").value = eval(x);
+                            } catch (e) {
+                                document.getElementById("results").value = "Błąd wyrażenia!";
+                            }
+                        } else {
+                            document.getElementById("results").value = "";
+                        }
+                    }
+                </script>
+                </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">System Autostart Kajotte Studio</h2>
+                <div class="services-grid">
+                    <div class="service-item" data-background-image="html/images/rek3.jpg">
+                        <img src="html/images/rek3.jpg" alt="Kalendarz">
+                        <h3>Pogoda API</h3>
+                        <p>
+                            To inteligentny program w ekosystemie Systemu Autostart Kajotte Studio, który dostarcza aktualne i precyzyjne prognozy pogodowe.
+                        </p>
+                        <div class="hidden-text">
+                            <p>Wykorzystuje zaawansowane dane API z platformy <b>OpenWeatherMap</b>, zapewniając dostęp do wiarygodnych informacji pogodowych dla tysięcy lokalizacji na całym świecie. Dzięki dedykowanemu kontu, program ma możliwość wykonywania do <b>1000 zapytań dziennie</b>, co gwarantuje stały dostęp do świeżych danych. Pogoda SAKS może analizować i przesyłać te informacje na <b>Twój adres e-mail</b>, automatycznie informując Cię o prognozie dla dwóch zapisanych lokalizacji lub dowolnego miejsca, które wskażesz.
+                            <br><br>Aby skorzystać z tej funkcji, wystarczy podać <b>nazwę miasta i kraju</b> lub <b>współrzędne geograficzne</b> (długość i szerokość). Dzięki temu Pogoda SAKS dostarczy Ci szczegółowe informacje, pomagając Ci zaplanować dzień z precyzją, niezależnie od tego, gdzie się znajdujesz.
+                            <br><br>Obecna tu <a href="pogoda.html">strona</a> została wygenerowana automatycznie przez program Pogoda SAKS.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/hubble_saks.jpg">
+                        <img src="html/images/hubble_saks.jpg" alt="Login">
+                        <h3>Login SAKS</h3>
+                            <p>
+                            To centralny i kluczowy program w całym ekosystemie Systemu Autostart Kajotte Studio. Pełni on rolę głównego strażnika, bez którego uruchomienie jakiegokolwiek innego programu SAKS jest niemożliwe.
+                            </p>
+                            <p><b>Główne funkcje i bezpieczeństwo</b></p>
+                        <div class="hidden-text">
+                            <p>Głównym zadaniem Login jest odblokowanie i uruchamianie pozostałych programów, a także pełna kontrola nad całym systemem. Posiada on zaawansowaną blokadę BSAKS, która chroni przed nieautoryzowanym dostępem.
+                            <br>Login pozwala na włączanie lub wyłączanie wybranych funkcji całego systemu oraz pojedynczych programów, dając Ci pełną kontrolę nad ich działaniem. Z jego poziomu możesz również zarządzać systemem, np. zablokować go, zresetować, a nawet wyłączyć urządzenie.
+                            <br>Program zapewnia również bezpośredni dostęp do interpretera Pythona oraz wiersza poleceń, co pozwala na zaawansowaną konfigurację i interakcję z systemem.
+                            <br><br><b>Raportowanie</b>
+                            <br>Login SAKS jest wyposażony w bardzo rozbudowany Raport SAKS, który szczegółowo monitoruje i zapisuje wszystkie zdarzenia. Dzięki temu masz pełny wgląd w historię działań, od logowania po zmiany w konfiguracji.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/login_off_1.jpg">
+                        <img src="html/images/login_off_1.jpg" alt="e-mail">
+                        <h3>Notificator</h3>
+                        <p>
+                            To zaawansowany system w ramach SAKS, składający się z kilkunastu programów, których głównym celem jest bieżące informowanie użytkownika o kluczowych wydarzeniach systemowych. Działa on jako wszechstronne narzędzie do monitorowania i zabezpieczania urządzenia.
+                        </p>
+                        <div class="hidden-text">
+                            <p><b>Funkcje i powiadomienia</b>
+                            <br>Gdy użytkownik poprawnie zaloguje się do programu Login lub wyloguje się, Notificator automatycznie zmienia tapetę Windows, dając wizualny sygnał o zmianie statusu systemu.
+                            <br>Program ten pełni też zaawansowaną rolę w kontroli baterii. W trybie podglądu możesz na bieżąco śledzić czas ładowania lub spadek każdego procenta, co dostarcza cenne dane do analizy i lepszego zarządzania energią.
+                            <br><br><b>Bezpieczeństwo i blokady</b>
+                            <br>Notificator to również kluczowy element zabezpieczający SAKS. W ciągu zaledwie 5 sekund od wyjęcia dedykowanego klucza USB z portu urządzenia, system automatycznie wyłączy komputer i zablokuje dostęp do wszystkich programów SAKS. To niezwykle szybka reakcja gwarantuje, że Twoje dane pozostają bezpieczne nawet w przypadku fizycznego naruszenia.
+                            <br>Wszystkie ustawienia Notificatora są w pełni konfigurowalne z poziomu programu Login. Możesz tam włączać lub wyłączać poszczególne funkcje, dostosowując system do swoich indywidualnych potrzeb.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/login_off_2.jpg">
+                        <img src="html/images/login_off_2.jpg" alt="Login OFF">
+                        <h3>Wyłączenie Login</h3>
+                        <p>
+                            <b>Niezawodność i Odporność: Fundamenty SAKS</b>
+                            <br>Wyłączenie programu Login SAKS lub jakakolwiek inna próba zakłócenia pracy systemu nie wpłynie na jego działanie. 
+                        </p>
+                        <div class="hidden-text">
+                            <p>Nasze rozwiązania zostały zaprojektowane z myślą o ciągłości i bezpieczeństwie, niezależnie od zewnętrznych ingerencji. SAKS działa w pełni autonomicznie, realizując zadania zgodnie z Twoimi ustawieniami.</p>
+                            <p><b>Pełna kontrola, absolutna precyzja</b>
+                            <br> * Zaplanowane akcje: Niezależnie od sytuacji, system wykonuje zaprogramowane akcje. Możesz ustawić automatyczne wyłączenie komputera po 7 godzinach lub precyzyjnie — co do sekundy — po 1 godzinie, 1 minucie i 2 sekundach. Funkcje te działają niezależnie od bieżącego stanu systemu.
+                            <br>* Wielowymiarowy monitoring: System Notificator wciąż monitoruje kluczowe parametry, takie jak poziom baterii, i wysyła powiadomienia Windows, zapewniając Ci stały wgląd w to, co dzieje się z Twoim urządzeniem.
+                            <br>* Spersonalizowane zarządzanie: Z poziomu Login SAKS masz możliwość ustawiania alarmów z dowolną precyzją, od sekund do wielu godzin, oraz dostosowywania wszystkich funkcji pod swoje indywidualne potrzeby.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/rek1.jpg">
+                        <img src="html/images/rek1.jpg" alt="Kontakt">
+                        <h3>Kontakt</h3>
+                        <p>
+                            <b>System Autostart Kajotte Studio</b> wysyła automatyczne powiadomienia e-mail, dzięki czemu zawsze masz dostęp do najważniejszych informacji o stanie i aktywności swojego urządzenia. 
+                        </p>
+                        <div class="hidden-text">
+                            <p>Te wiadomości są personalizowane i zawierają kompleksowy zestaw danych, dostarczając Ci pełną kontrolę i wiedzę.</p>
+                            <p>Wysłanie do dowolnego odbiorcy wiadomości zaraz po uruchomieniu urządzenia, po logowaniu do systemu za pomocą programu Login oraz po wylogowaniu oraz wyłączeniu urządzenia.</p>
+                            <p><b>Co zawierają powiadomienia?</b>
+                            <br> * Dane pogodowe z Pogoda SAKS: Otrzymasz aktualną prognozę pogody dla wybranych lokalizacji, bazując na danych z OpenWeatherMap.
+                            <br> * Wydarzenia z Kalendarz SAKS: E-mail poinformuje Cię o zaplanowanych wydarzeniach i przypomnieniach, co pozwala na lepsze zarządzanie czasem i obowiązkami.
+                            <br> * Losowy cytat: Każda wiadomość zawiera losowo wybrany cytat z systemowej bazy danych, dodając element inspiracji lub motywacji do Twojego dnia.
+                            <br> * Informacje systemowe: Wiadomość podsumowuje kluczowe aktywności, takie jak czas uruchomienia, status zalogowania do programu Login, oraz informację o użyciu klucza zabezpieczeń SAKS przez użytkownika.
+                            <br> * Raportowanie: Zawsze będziesz wiedzieć, kto i kiedy użył klucza dostępu do systemu, co zwiększa Twoje bezpieczeństwo i świadomość.
+                            <br>Te zautomatyzowane e-maile sprawiają, że nawet gdy jesteś z dala od komputera, masz pełny wgląd w to, co dzieje się w Twoim systemie SAKS.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/rek2.jpg">
+                        <img src="html/images/rek2.jpg" alt="Oblicz">
+                        <h3>Matematyka w ekosystemie SAKS</h3>
+                        <p>
+                            W ramach Systemu Autostart Kajotte Studio (SAKS), znajdziesz również zaawansowane programy matematyczne, które automatyzują obliczenia i integrację danych.
+                        </p>
+                        <div class="hidden-text">
+                            <p><b>Matm - Twoje narzędzie do geometrii i stałych</b>
+                            <br>Program Matm to wszechstronne narzędzie do podstawowych obliczeń matematycznych. Pozwala on na szybkie i precyzyjne wyliczanie pola powierzchni i obwodu różnych figur geometrycznych. Dodatkowo, program udostępnia kluczowe stałe matematyczne, takie jak liczba Pi (\pi), ułatwiając pracę nad bardziej złożonymi problemami.</p>
+                            <p><b>Convks - Konwerter jednostek na wyciągnięcie ręki</b>
+                            <br>Convks to potężne narzędzie do konwersji jednostek. Jego głównym zadaniem jest błyskawiczne przeliczanie różnych miar, w tym:
+                            <br> * jednostki objętości (np. galony na litry i odwrotnie)
+                            <br> * długości (np. kilometry na mile)
+                            <br> * czasu (np. sekundy na godziny, minuty i sekundy)
+                            <br> * danych cyfrowych (np. bajty na gigabajty)</p>
+                            <p>Wyniki z programów Matm i Convks są automatycznie zapisywane w pamięci SAKS. Dzięki temu, możesz je wkleić jednym kliknięciem do programu Notatnik SAKS, co znacznie usprawnia pracę i eliminuje potrzebę ręcznego przepisywania danych. Ta automatyzacja i integracja czynią SAKS wyjątkowo wydajnym systemem dla każdego, kto ceni sobie precyzję i oszczędność czasu.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/sysblokada.gif">
+                        <img src="html/images/sysblokada.gif" alt="Oblicz">
+                        <h3>System Wielopoziomowych Zabezpieczeń SAKS</h3>
+                            <p>System SAKS stawia na wielopoziomowe zabezpieczenia, które zapewniają maksymalne bezpieczeństwo i pełną kontrolę użytkownikowi. Programy w ekosystemie można uruchomić wyłącznie przez centralny menedżer, czyli program Login.</p>
+                        <div class="hidden-text">
+                            <p><b>SD SAKS - Strażnik Prawidłowego Działania</b>
+                            <br>Jednym z kluczowych elementów systemu jest SD SAKS (System Detekcji), który stale monitoruje poprawność działania całego ekosystemu oraz prawidłowość klucza USB. To niewidzialny strażnik, który w przypadku wykrycia jakichkolwiek nieprawidłowości, takich jak próba ingerencji w system lub nieautoryzowane użycie, natychmiast reaguje.</p>
+                            <p>W razie nieprawidłowego działania lub wyjęcia dedykowanego klucza USB, SD SAKS automatycznie wyłącza komputer i całkowicie blokuje dostęp do wszystkich programów, zapewniając, że Twoje dane pozostają bezpieczne nawet w najbardziej krytycznych sytuacjach.</p>
+                            <p><b>Wielopoziomowa Blokada BSAKS</b>
+                            <br>Sercem systemu zabezpieczeń jest BSAKS (Blokada Systemu Autostart Kajotte Studio), która składa się z trzech etapów. Aby uzyskać dostęp do pełnej funkcjonalności, użytkownik musi pokonywać kolejne bariery:
+                            <br>* Etap 1: Pierwszym krokiem jest odblokowanie programu Login MOD za pośrednictwem programu Login.
+                            <br> * Etap 2: Po pomyślnym odblokowaniu Login MOD, można uruchomić program Sysi, który odblokowuje drugi etap BSAKS, dając dostęp do większości programów w ekosystemie.
+                            <br>* Etap 3: Ostatni etap zabezpieczeń chroni najbardziej wrażliwe programy.</p>
+                            <p><b>Specjalne Zabezpieczenia Kluczowych Programów</b>
+                            <br>Nawet po przejściu przez trzy etapy BSAKS, niektóre programy pozostają zablokowane ze względu na ich strategiczne znaczenie. Passaks, Bankier i IFR to programy, które do uruchomienia wymagają odblokowania Rejestru. Co ciekawe, same programy Bankier i IFR potrzebują tylko jednego hasła, co podkreśla, że kluczowym zabezpieczeniem jest dostęp do Rejestru, chronionego dwoma hasłami.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/1.jpg">
+                        <img src="html/images/1.jpg" alt="Edytor HTML">
+                        <h3>Edytor HTML</h3>
+                            <p>
+                            Początki Systemu Autostart Kajotte Studio sięgają 2023 roku, kiedy to powstał Kreator HTML — jeden z jego pierwszych programów. Jego zadaniem było umożliwienie użytkownikom łatwego tworzenia stron internetowych.
+                            </p>
+                            <p>Wystarczyło podać treść i nagłówek, a program automatycznie generował gotową stronę z charakterystyczną grafiką Kajotte Studio, zbierając jednocześnie dane systemowe, takie jak aktualny czas.</p>
+                        <div class="hidden-text">
+                            
+                            <p>Obecnie, rolę Kreatora HTML przejął znacznie bardziej zaawansowany Notatnik SAKS, który ewoluował, stając się centrum do pracy z plikami tekstowymi. Dzięki temu, tworzenie i edytowanie kodu HTML jest teraz jeszcze prostsze i w pełni zintegrowane z ekosystemem SAKS.</p>
+                            <p>Zobacz <a href="html/index.html" target="_blank">strony</a> utworzone za pomocą Edytora HTML.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/sysipliki.gif">
+                        <img src="html/images/sysipliki.gif" alt="Kalendarz">
+                        <h3>Kalendarz SAKS:</h3>
+                        <p>
+                            Twoje Centrum Zarządzania Czasem
+                        </p>
+                        <div class="hidden-text">
+                            <p>Kalendarz SAKS to zaawansowany program, który wykracza poza zwykłe przypomnienia. Od początku swojego istnienia pod koniec 2023 roku, przeszedł znaczną ewolucję, a jego moduły (w tym Sysi kalendarz) zostały gruntownie przebudowane w 2025 roku, aby dostarczać niezrównaną precyzję i integrację.</p>
+                            <p><b>Co oferuje Kalendarz SAKS?</b>
+                            <br> * Inteligentne Powiadomienia: Program na bieżąco oblicza liczbę dni do najbliższego wydarzenia. Informacje te są automatycznie przesyłane do Login SAKS i umieszczane w Raporcie SAKS, a także w powiadomieniach e-mail, które otrzymujesz przy każdym logowaniu i wylogowaniu. Nigdy nie przeoczysz ważnego terminu.
+                            <br> * Wielopoziomowy Widok: Kalendarz dostarcza widok miesięczny i roczny w kilku wersjach, co pozwala na dogodne planowanie i przeglądanie nadchodzących wydarzeń.
+                            <br> * Zaawansowane Obliczenia: Wystarczy podać dowolną datę, a program precyzyjnie obliczy, ile dni pozostało do dzisiaj lub do innego, wybranego przez Ciebie terminu. Wyniki są automatycznie zapisywane w pamięci SAKS, co umożliwia ich błyskawiczne wklejanie do innych programów, na przykład do Notatnika SAKS.
+                            <br> * Elastyczna Pamięć: Pamięć Kalendarza SAKS jest w pełni modyfikowalna. Użytkownik może w pełni automatyzować tworzenie nowych wydarzeń lub dodawać szczegółowe informacje, takie jak "urodziny", wraz z dodatkowymi notatkami.
+                            <br> * Pełna Personalizacja: Możesz swobodnie dostosowywać wygląd Kalendarza, zmieniając kolory i czcionki, aby idealnie pasował do Twojego stylu pracy.</p>
+                            <p>Kalendarz SAKS to nie tylko narzędzie, ale inteligentny asystent, który pracuje w tle, by pomóc Ci zarządzać czasem z najwyższą precyzją i wygodą.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                    <div class="service-item" data-background-image="html/images/IMG_2023.jpg">
+                        <img src="html/images/IMG_2023.jpg" alt="Kalendarz">
+                        <h3>Notatnik SAKS: Twoje Centrum Produktywności i Twórczości</h3>
+                        <p>
+                            Notatnik SAKS to coś więcej niż edytor tekstu. Rozwijany od końca 2023 roku, stał się sercem ekosystemu SAKS, łącząc w sobie zaawansowane funkcje, szybkość i intuicyjność. To narzędzie, które dostosowuje się do Twojego stylu pracy.
+                        </p>
+                        <div class="hidden-text">
+                            <p><b>Niezrównane Możliwości</b>
+                            <br>Kompleksowy edytor: Z łatwością edytuj pliki programów w Pythonie oraz dokumenty HTML, zapisuj zmiany i uruchamiaj programy. Dzięki pamięci wielu lokalizacji, dostęp do plików i folderów, niezależnie od miejsca ich przechowywania, jest błyskawiczny. Praca staje się szybsza, a Ty oszczędzasz czas.</p>
+                            <p><b>Głęboka integracja z pamięcią SAKS:</b>
+                            <br>Notatnik ma bezpośredni dostęp do pamięci innych programów SAKS, co zapewnia niezrównaną wygodę pracy. Z łatwością możesz wklejać do swoich notatek:</p>
+                            <p>* Wyniki obliczeń z programów Matm i Kalk SAKS.
+                            <br>* Informacje o liczbie dni, obliczone przez Kalendarz SAKS.
+                            <br>* Przeliczone jednostki miar z Convks.
+                            <br>* Współrzędne oraz nazwę ostatnio szukanego miasta z Mapy SAKS.
+                            <br>* Aktualne dane pogodowe z programu Pogoda.</p>
+                            <p>Ta głęboka integracja eliminuje potrzebę ręcznego przepisywania danych, co czyni Twoją pracę znacznie szybszą i bardziej precyzyjną.</p>
+                            <p><b>Zaawansowana komunikacja e-mail:</b>
+                            <br>Twórz w pełni spersonalizowane wiadomości e-mail. Wysyłaj je z kolorową treścią, dodawaj pliki MP3 z Audiobook SAKS oraz obrazy JPG lub GIF. Dodatkowo, aby dodać inspiracji, Notatnik może automatycznie wstawić losowy cytat z bazy danych SAKS.
+                            <br><b>Baza wiedzy i pamięć podręczna:</b>
+                            <br>Program przechowuje 10 notatek, do których masz błyskawiczny dostęp z poziomu menu. Dodatkowo znajdziesz w nim 10 rozdziałów książek.
+                            <br>* Szyty na miarę: Tak jak inne programy SAKS, Notatnik umożliwia pełną personalizację. Zmieniaj kolory i czcionki, aby dopasować go do swoich preferencji.
+                            <br>* Edytor Python: To potężne narzędzie z obszerną biblioteką gotowych poleceń, które przyspieszają pisanie kodu zarówno dla standardowych, jak i dla modułów SAKS.</p>
+                            <p>Dzięki Notatnikowi SAKS Twoja praca z plikami tekstowymi staje się wydajna, przyjemna i w pełni zintegrowana z całym ekosystemem.</p>
+                        </div>
+                        <button class="toggle-btn">Rozwiń</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Kup produkt</h2>
+                    <p>System Autostart Kajotte Studio - <a href="informacje_ifr.saks" target="_blank" style="color: #ffffff;">Sprawdź naszą ofertę</a></p>
+                <h2 class="section-title">Skontaktuj się</h2>
+                    <p>Masz pytania lub chcesz rozpocząć współpracę? Napisz do nas lub zadzwoń!</p>
+                <ul class="contact-info">
+                    <li><a href="mailto:kajottestudio@gmail.com">kajottestudio@gmail.com</a></li>
+                    <li><a href="tel:+48695004663">+48 695 004 663</a></li>
+                    <li><a href="index.html" target="_blank">Kajotte Studio</a></li>
+                    <li><a href="https://www.youtube.com/@KajotteStudio" target="_blank">YouTube</a></li>
+                    <li><a href="https://pin.it/2wkTcaMAQ" target="_blank">Pinterest</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023-2025 Kajotte Studio. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceItems = document.querySelectorAll('.service-item');
+            const body = document.body;
+
+            // Ustaw domyślne tło strony
+            body.style.backgroundImage = "url('html/images/hubble_saks.jpg')";
+
+            serviceItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const bgImage = this.getAttribute('data-background-image');
+                    if (bgImage) {
+                        body.style.backgroundImage = `url("${bgImage}")`;
+                    }
+                });
+            });
+
+            // NOWY SKRYPT DLA ZWIJANIA TEKSTU
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const parentItem = this.closest('.service-item');
+                    const hiddenText = parentItem.querySelector('.hidden-text');
+
+                    if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
+                        hiddenText.style.display = "block"; // Zmieniono na 'block', aby poprawnie wyświetlić paragrafy
+                        this.textContent = "Zwiń";
+                    } else {
+                        hiddenText.style.display = "none";
+                        this.textContent = "Rozwiń";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
