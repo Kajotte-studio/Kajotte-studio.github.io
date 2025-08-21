@@ -17,12 +17,20 @@
             background: url('html/images/kajottestudio_reklama2025.jpg') no-repeat center center/cover;
             background-attachment: fixed;
             background-color: #121212;
+            line-height: 1.6;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
 
         /* Header and Navigation */
         header {
             background-color: #1e1e1e;
-            padding: 1rem 2rem;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -67,14 +75,24 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
             background: url('html/images/black.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            margin: 0 auto;
         }
 
         h1 {
             font-size: 3rem;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
         }
 
         h2.hero-subtitle {
@@ -84,36 +102,19 @@
         }
 
         /* Main sections */
-        .section-box {
-            background-color: rgba(0, 0, 0, 0.8);
-            margin: 80px auto 20px;
-            padding: 30px;
-            border-radius: 20px;
-            max-width: 90%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        #o-nas {
-            background-color: rgba(0, 0, 0, 0.8);
-            margin: 100px auto; /* Zwiększony margines górny i dolny */
-            padding: 20px;     /* Zmniejszone wewnętrzne wypełnienie */
-            border-radius: 20px;
-            max-width: 90%;
-        }
-
-        #uslugi {
-            padding: 4rem 2rem;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.5);
-            margin-top: 20px;
+        section {
+            padding: 4rem 1rem;
         }
 
         .dark-section {
             background-color: rgba(0, 0, 0, 0.4);
-            padding: 50px 20px;
             border-radius: 10px;
-            margin: 20px auto;
-            max-width: 90%;
+            padding: 4rem 1rem;
+            margin: 2rem 0;
+        }
+
+        #uslugi {
+            text-align: center;
         }
 
         .cta-button {
@@ -124,6 +125,8 @@
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
+            margin-top: 2rem;
+            display: inline-block;
         }
 
         .cta-button:hover {
@@ -140,22 +143,18 @@
             margin-top: 2rem;
         }
 
-        .services-container,
         .service-item,
         .portfolio-item {
+            display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             gap: 15px;
-            padding: 20px;
+            padding: 2rem;
             background-color: #1e1e1e;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             flex: 1 1 300px;
-        }
-
-        .service-item, .portfolio-item {
-            padding: 2rem;
         }
 
         /* Portfolio */
@@ -213,6 +212,8 @@
             padding: 0;
             font-size: 22px;
             font-weight: bold;
+            text-align: center;
+            margin-top: 2rem;
         }
 
         /* Footer and buy buttons */
@@ -339,6 +340,19 @@
 
         /* Mobile styles */
         @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero, .dark-section {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .hero-content, .section-content {
+                 padding: 1rem;
+            }
+
             /* Navigation */
             nav ul {
                 display: none;
@@ -362,6 +376,8 @@
                 font-size: 2rem;
                 cursor: pointer;
                 color: #e0e0e0;
+                background: none;
+                border: none;
             }
 
             .nav-links li {
@@ -369,13 +385,6 @@
             }
 
             /* Main sections */
-            .section-box,
-            .dark-section {
-                margin-left: 10px;
-                margin-right: 10px;
-                padding: 20px;
-            }
-
             .services-container,
             .portfolio-container {
                 flex-direction: column;
@@ -386,13 +395,10 @@
                 flex: 1 1 100%;
             }
 
-            /* Fonts and other elements */
-            h1 {
-                font-size: 2rem;
-            }
-
+            /* Modals */
             .modal-content {
                 width: 90%;
+                margin: 5% auto;
             }
         }
     </style>
@@ -400,114 +406,124 @@
 <body>
 
     <header>
-        <nav>
-            <div class="logo">
-                <a href="#">Kajotte Studio</a>
-            </div>
-            <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
-            <ul id="nav-links" class="nav-links">
-                <li><a href="#o-nas">O nas</a></li>
-                <li><a href="#uslugi">Usługi</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-                <li><a href="#" class="buy-product-nav open-modal-button" data-modal="buy-modal">Kup Produkt</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#">Kajotte Studio</a>
+                </div>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+                <ul id="nav-links" class="nav-links">
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="#uslugi">Usługi</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#" class="buy-product-nav open-modal-button" data-modal="buy-modal">Kup Produkt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="o-nas" class="hero">
-            <h1>Kajotte Studio Kreatywność w każdym projekcie</h1>
-            <h2 class="hero-subtitle">Gdzie Kreatywność Spotyka Profesjonalizm</h2>
-            <p>W Kajotte Studio wierzymy, że każdy pomysł zasługuje na najlepszą oprawę. Od 2020 roku z pasją łączymy świat programowania, fotografii, produkcji muzycznej i filmowej, tworząc kompleksowe rozwiązania, które wyróżniają się jakością i oryginalnością.</p>
-            <p>Nasze podejście to synergia wielu talentów. Jesteśmy zespołem, który z równą precyzją koduje innowacyjne aplikacje, jak i łapie ulotne chwile w obiektywie aparatu. Tworzymy porywające ścieżki dźwiękowe, które nadają emocjom głębi, a także realizujemy profesjonalne produkcje wideo, opowiadając historie obrazem.</p>
-            <p>W Kajotte Studio nie podążamy za trendami – my je kreujemy. Jeśli szukasz partnera, który zrealizuje Twój projekt od koncepcji po finalne dzieło, zapraszamy do kontaktu. Odkryj, jak nasza pasja i profesjonalizm mogą nadać Twoim pomysłom zupełnie nowy wymiar.</p>
-            <a href="#uslugi" class="cta-button">Poznaj naszą ofertę</a>
+            <div class="container hero-content">
+                <h1>Kajotte Studio Kreatywność w każdym projekcie</h1>
+                <h2 class="hero-subtitle">Gdzie Kreatywność Spotyka Profesjonalizm</h2>
+                <p>W Kajotte Studio wierzymy, że każdy pomysł zasługuje na najlepszą oprawę. Od 2020 roku z pasją łączymy świat programowania, fotografii, produkcji muzycznej i filmowej, tworząc kompleksowe rozwiązania, które wyróżniają się jakością i oryginalnością.</p>
+                <p>Nasze podejście to synergia wielu talentów. Jesteśmy zespołem, który z równą precyzją koduje innowacyjne aplikacje, jak i łapie ulotne chwile w obiektywie aparatu. Tworzymy porywające ścieżki dźwiękowe, które nadają emocjom głębi, a także realizujemy profesjonalne produkcje wideo, opowiadając historie obrazem.</p>
+                <p>W Kajotte Studio nie podążamy za trendami – my je kreujemy. Jeśli szukasz partnera, który zrealizuje Twój projekt od koncepcji po finalne dzieło, zapraszamy do kontaktu. Odkryj, jak nasza pasja i profesjonalizm mogą nadać Twoim pomysłom zupełnie nowy wymiar.</p>
+                <a href="#uslugi" class="cta-button">Poznaj naszą ofertę</a>
+            </div>
         </section>
 
         <section id="uslugi">
-            <h1>Nasze Usługi</h1>
-            <div class="services-container">
-                <div class="service-item">
-                    <h3>Fotografia i Wideo</h3>
-                    <p>Uchwycimy każdą chwilę z najwyższą precyzją. Oferujemy sesje zdjęciowe, pełne produkcje wideo i profesjonalny montaż, wykorzystując najnowocześniejszy sprzęt, aby Twoja wizja stała się rzeczywistością.</p>
-                    <a href="index_foto.html" style="color: lightblue;">Fotografia</a>
-                    <br><a href="index_video.html" style="color: lightblue;">Produkcja filmowa</a>
-                </div>
-                <div class="service-item">
-                    <h3>Produkcja Muzyczna</h3>
-                    <p>Stwórzmy unikalne brzmienie dla Twojego projektu. Nasze w pełni wyposażone studio nagraniowe to idealne miejsce do tworzenia oryginalnych ścieżek dźwiękowych, a także profesjonalnego miksowania i masteringu.</p>
-                    <a href="index_muz.html" style="color: lightblue;">Produkcja muzyki</a>
-                </div>
-                <div class="service-item">
-                    <h3>Programowanie</h3>
-                    <p>Przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania. Tworzymy niezawodne oprogramowanie, w tym <a href="index_saks.html" style="color: lightblue;">System Autostart Kajotte Studio</a>, dostosowane do Twoich potrzeb.</p>
-                    <a href="index_prog.html" style="color: lightblue;">Programowanie</a>
+            <div class="container">
+                <h1>Nasze Usługi</h1>
+                <div class="services-container">
+                    <div class="service-item">
+                        <h3>Fotografia i Wideo</h3>
+                        <p>Uchwycimy każdą chwilę z najwyższą precyzją. Oferujemy sesje zdjęciowe, pełne produkcje wideo i profesjonalny montaż, wykorzystując najnowocześniejszy sprzęt, aby Twoja wizja stała się rzeczywistością.</p>
+                        <a href="index_foto.html" style="color: lightblue;">Fotografia</a>
+                        <br><a href="index_video.html" style="color: lightblue;">Produkcja filmowa</a>
+                    </div>
+                    <div class="service-item">
+                        <h3>Produkcja Muzyczna</h3>
+                        <p>Stwórzmy unikalne brzmienie dla Twojego projektu. Nasze w pełni wyposażone studio nagraniowe to idealne miejsce do tworzenia oryginalnych ścieżek dźwiękowych, a także profesjonalnego miksowania i masteringu.</p>
+                        <a href="index_muz.html" style="color: lightblue;">Produkcja muzyki</a>
+                    </div>
+                    <div class="service-item">
+                        <h3>Programowanie</h3>
+                        <p>Przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania. Tworzymy niezawodne oprogramowanie, w tym <a href="index_saks.html" style="color: lightblue;">System Autostart Kajotte Studio</a>, dostosowane do Twoich potrzeb.</p>
+                        <a href="index_prog.html" style="color: lightblue;">Programowanie</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="portfolio" class="dark-section">
-            <h1>Portfolio</h1>
-            <div class="portfolio-container">
-                <div class="portfolio-item">
-                    <img src="html/images/hubble_saks.jpg" alt="Realizacje Wideo: kadr z produkcji wideo" class="portfolio-thumbnail">
-                    <h3>Realizacje Wideo</h3>
-                    <div class="collapsible-content">
-                        <p>W Kajotte Studio z pasją przekształcamy pomysły w kinową rzeczywistość. Specjalizujemy się w kompleksowej produkcji filmowej — od precyzyjnego nagrania, realizowanego na wysokiej klasy sprzęcie, po profesjonalny montaż i dopracowany podkład dźwiękowy.</p>
-                        <p>Nasze podejście to połączenie zaawansowanej technologii z kreatywnym wizjonerstwem. Każdy kadr jest starannie przemyślany, a dźwięk perfekcyjnie synchronizowany, by tworzyć historie, które angażują i zapadają w pamięć.</p>
-                        <p>Efekty naszej pracy, w tym zwiastuny, próbki i wersje testowe, możesz zobaczyć na naszym kanale <a href="https://www.youtube.com/@KajotteStudio" target="_blank" style="color: #fff;">YouTube</a>. Zapraszamy do odkrycia pełnego spektrum naszych możliwości.</p>
+            <div class="container">
+                <h1>Portfolio</h1>
+                <div class="portfolio-container">
+                    <div class="portfolio-item">
+                        <img src="html/images/hubble_saks.jpg" alt="Realizacje Wideo: kadr z produkcji wideo" class="portfolio-thumbnail">
+                        <h3>Realizacje Wideo</h3>
+                        <div class="collapsible-content">
+                            <p>W Kajotte Studio z pasją przekształcamy pomysły w kinową rzeczywistość. Specjalizujemy się w kompleksowej produkcji filmowej — od precyzyjnego nagrania, realizowanego na wysokiej klasy sprzęcie, po profesjonalny montaż i dopracowany podkład dźwiękowy.</p>
+                            <p>Nasze podejście to połączenie zaawansowanej technologii z kreatywnym wizjonerstwem. Każdy kadr jest starannie przemyślany, a dźwięk perfekcyjnie synchronizowany, by tworzyć historie, które angażują i zapadają w pamięć.</p>
+                            <p>Efekty naszej pracy, w tym zwiastuny, próbki i wersje testowe, możesz zobaczyć na naszym kanale <a href="https://www.youtube.com/@KajotteStudio" target="_blank" style="color: #fff;">YouTube</a>. Zapraszamy do odkrycia pełnego spektrum naszych możliwości.</p>
+                        </div>
+                        <span class="toggle-text">Czytaj więcej</span>
                     </div>
-                    <span class="toggle-text">Czytaj więcej</span>
-                </div>
-                <div class="portfolio-item">
-                    <img src="html/images/login_off_2.jpg" alt="Sesje Fotograficzne: zdjęcie z intymnego portretu" class="portfolio-thumbnail">
-                    <h3>Sesje Fotograficzne</h3>
-                    <div class="collapsible-content">
-                        <p>W Kajotte Studio z pasją przekształcamy chwile w ponadczasowe obrazy. Oferujemy sesje fotograficzne, które wykraczają poza standardowe ujęcia, obejmując szerokie spektrum: od intymnych portretów i naturalnych kadrów w plenerze, po specjalistyczne projekty.</p>
-                        <p>Dzięki zaawansowanemu sprzętowi, jesteśmy w stanie sprostać każdemu wyzwaniu. Nasza oferta sięga od ujęć z bliska, z wykorzystaniem mikroskopu, po uchwycenie kosmicznych detali dzięki specjalistycznej lunecie do astrofotografii, by zaoferować Ci ujęcia, które naprawdę zapierają dech w piersiach.</p>
-                        <p>Niezależnie od wizji, nasz cel pozostaje ten sam: opowiedzieć Twoją historię w sposób, który jest równie wyjątkowy, co Ty.</p>
+                    <div class="portfolio-item">
+                        <img src="html/images/login_off_2.jpg" alt="Sesje Fotograficzne: zdjęcie z intymnego portretu" class="portfolio-thumbnail">
+                        <h3>Sesje Fotograficzne</h3>
+                        <div class="collapsible-content">
+                            <p>W Kajotte Studio z pasją przekształcamy chwile w ponadczasowe obrazy. Oferujemy sesje fotograficzne, które wykraczają poza standardowe ujęcia, obejmując szerokie spektrum: od intymnych portretów i naturalnych kadrów w plenerze, po specjalistyczne projekty.</p>
+                            <p>Dzięki zaawansowanemu sprzętowi, jesteśmy w stanie sprostać każdemu wyzwaniu. Nasza oferta sięga od ujęć z bliska, z wykorzystaniem mikroskopu, po uchwycenie kosmicznych detali dzięki specjalistycznej lunecie do astrofotografii, by zaoferować Ci ujęcia, które naprawdę zapierają dech w piersiach.</p>
+                            <p>Niezależnie od wizji, nasz cel pozostaje ten sam: opowiedzieć Twoją historię w sposób, który jest równie wyjątkowy, co Ty.</p>
+                        </div>
+                        <span class="toggle-text">Czytaj więcej</span>
                     </div>
-                    <span class="toggle-text">Czytaj więcej</span>
-                </div>
-                <div class="portfolio-item">
-                    <img src="html/images/login_off_1.jpg" alt="Projekty Oprogramowania: zrzut ekranu z interfejsu aplikacji" class="portfolio-thumbnail">
-                    <h3>Projekty Oprogramowania</h3>
-                    <div class="collapsible-content">
-                        <p>Interfejs użytkownika Systemu Autostart. Intuicyjny design spotyka się z wydajnością. <a href="index_saks.html" style="color: #fff;">Zobacz więcej</a></p>
-                        <p>W Kajotte Studio z pasją przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania cyfrowe. Specjalizujemy się w wszechstronnym programowaniu, dostarczając rozwiązania idealnie dopasowane do Twoich potrzeb.</p>
-                        <p>Nasze kompetencje obejmują:
-                        <br>* Tworzenie oprogramowania: Piszemy zaawansowane programy w językach Python i C++, tworząc zarówno aplikacje desktopowe, jak i złożone narzędzia do automatyzacji.
-                        <br>* Projektowanie stron internetowych: Od podstaw budujemy responsywne i estetyczne strony, wykorzystując HTML i CSS, aby zapewnić nowoczesny wygląd i intuicyjną obsługę.
-                        <br>* Programowanie embedded i IoT: Zajmujemy się programowaniem mikrokontrolerów, w tym Arduino, oraz tworzeniem inteligentnych rozwiązań dla urządzeń SmartLife, zarówno do zastosowań domowych, jak i przemysłowych</p>
-                        <p>W Kajotte Studio nie tylko kodujemy, ale przede wszystkim rozwiązujemy problemy, dostarczając niezawodne i wydajne oprogramowanie, które usprawnia działanie Twojej firmy i domu.</p>
+                    <div class="portfolio-item">
+                        <img src="html/images/login_off_1.jpg" alt="Projekty Oprogramowania: zrzut ekranu z interfejsu aplikacji" class="portfolio-thumbnail">
+                        <h3>Projekty Oprogramowania</h3>
+                        <div class="collapsible-content">
+                            <p>Interfejs użytkownika Systemu Autostart. Intuicyjny design spotyka się z wydajnością. <a href="index_saks.html" style="color: #fff;">Zobacz więcej</a></p>
+                            <p>W Kajotte Studio z pasją przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania cyfrowe. Specjalizujemy się w wszechstronnym programowaniu, dostarczając rozwiązania idealnie dopasowane do Twoich potrzeb.</p>
+                            <p>Nasze kompetencje obejmują:
+                            <br>* Tworzenie oprogramowania: Piszemy zaawansowane programy w językach Python i C++, tworząc zarówno aplikacje desktopowe, jak i złożone narzędzia do automatyzacji.
+                            <br>* Projektowanie stron internetowych: Od podstaw budujemy responsywne i estetyczne strony, wykorzystując HTML i CSS, aby zapewnić nowoczesny wygląd i intuicyjną obsługę.
+                            <br>* Programowanie embedded i IoT: Zajmujemy się programowaniem mikrokontrolerów, w tym Arduino, oraz tworzeniem inteligentnych rozwiązań dla urządzeń SmartLife, zarówno do zastosowań domowych, jak i przemysłowych</p>
+                            <p>W Kajotte Studio nie tylko kodujemy, ale przede wszystkim rozwiązujemy problemy, dostarczając niezawodne i wydajne oprogramowanie, które usprawnia działanie Twojej firmy i domu.</p>
+                        </div>
+                        <span class="toggle-text">Czytaj więcej</span>
                     </div>
-                    <span class="toggle-text">Czytaj więcej</span>
                 </div>
             </div>
         </section>
 
         <section id="kontakt" class="dark-section">
-            <h2>Skontaktuj się</h2>
-            <p>Jesteś gotowy, aby rozpocząć? Zadzwoń lub napisz do nas – chętnie porozmawiamy o Twoim projekcie i wspólnie znajdziemy najlepsze rozwiązanie.</p>
-            <form action="https://formspree.io/f/xqalraqg" method="POST">
-                <label for="name">Imię:</label>
-                <input type="text" id="name" name="name" required>
+            <div class="container">
+                <h2>Skontaktuj się</h2>
+                <p>Jesteś gotowy, aby rozpocząć? Zadzwoń lub napisz do nas – chętnie porozmawiamy o Twoim projekcie i wspólnie znajdziemy najlepsze rozwiązanie.</p>
+                <form action="https://formspree.io/f/xqalraqg" method="POST">
+                    <label for="name">Imię:</label>
+                    <input type="text" id="name" name="name" required>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="message">Wiadomość:</label>
-                <textarea id="message" name="message" required></textarea>
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">Wyślij</button>
-            </form>
-            <ul class="contact-info">
-                <li><a href="mailto:kajottestudio@gmail.com" style="color: lightblue;">E-mail: kajottestudio@gmail.com</a></li>
-                <li><a href="tel:+48695004663" style="color: lightblue;">Telefon: +48 695 004 663</a></li>
-                <li><a href="https://www.youtube.com/@KajotteStudio" target="_blank" style="color: lightpink;">YouTube</a></li>
-                <li><a href="https://pin.it/2wkTcaMAQ" target="_blank" style="color: lightpink;">Pinterest</a></li>
-            </ul>
+                    <button type="submit">Wyślij</button>
+                </form>
+                <ul class="contact-info">
+                    <li><a href="mailto:kajottestudio@gmail.com" style="color: lightblue;">E-mail: kajottestudio@gmail.com</a></li>
+                    <li><a href="tel:+48695004663" style="color: lightblue;">Telefon: +48 695 004 663</a></li>
+                    <li><a href="https://www.youtube.com/@KajotteStudio" target="_blank" style="color: lightpink;">YouTube</a></li>
+                    <li><a href="https://pin.it/2wkTcaMAQ" target="_blank" style="color: lightpink;">Pinterest</a></li>
+                </ul>
+            </div>
         </section>
     </main>
 
