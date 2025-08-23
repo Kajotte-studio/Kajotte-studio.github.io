@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kajotte Studio">
+    <meta name="description" content="Kajotte Studio - fotografia, produkcja filmowa i muzyczna, programowanie">
+    <meta name="keywords" content="Kajotte Studio, kajotte studio, zdjecia, zdjecia kajotte, zdjecia kajotte studio, fotografia, fotografia kajotte studio, fotografia kajotte, programowanie, programowanie kajotte studio, kajottestudio, programowanie kajottestudio, produkcja filmowa, produkcja kajotte, produkcja wideo, video, film, movie, produkcja muzyczna, montaz filmow, montaż filmów, montaz klipow, montaż klipów, sample, sciezka dzwiekowa, ścieżka dźwiękowa, postprodukcja, nagrania dzwiekowe, nagrania wokalne, kajotte studio warszawa, studio warszawa, fotografia warszawa, sesja warszawa, sesja fotograficzna warszawa, montaz warszawa, produkcja muzyczna warszawa, zdjecia na zamowienie, nagrania dzwiekowe na zamowienie, nagrania filmowe na zamowienie, gotowy projekt na zamowienie, strona internetowa, tworzenie strony internetowej, html css, zamówienie programu, zamowienie programu, zrób mi program, zrob mi program, zrob mi strone, program na zlecenie, warszawa programowanie, nagraj mi sample">
+    <link rel="icon" href="html/images/kajotte_studio_icon.png" type="image/png">
+    <title>Kajotte Studio - Kreatywne Rozwiązania</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="21CWSKrQ6d1CMe_tdJ3JfpoE2RY0vfNobGA1iw7AUBw" />
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+            background: url('html/images/kajottestudio_reklama2025.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            background-color: #121212;
+            line-height: 1.6;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #1e1e1e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #00bcd4;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .language-switcher a {
+            text-decoration: none;
+            color: #00bcd4;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+        .language-switcher a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1rem;
+            background: url('html/images/black.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        h2.hero-subtitle {
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main sections */
+        section {
+            padding: 4rem 1rem;
+        }
+
+        .dark-section {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 4rem 1rem;
+            margin: 2rem 0;
+        }
+
+        #uslugi {
+            text-align: center;
+        }
+
+        .cta-button {
+            background-color: #00bcd4;
+            color: #121212;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #0097a7;
+        }
+
+        /* Services and Portfolio containers */
+        .services-container,
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-item,
+        .portfolio-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            padding: 2rem;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            flex: 1 1 300px;
+        }
+
+        /* Portfolio */
+        .portfolio-thumbnail {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .portfolio-thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact form */
+        #kontakt form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #kontakt form label {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #kontakt form input,
+        #kontakt form textarea {
+            padding: 0.75rem;
+            border: 1px solid #333;
+            background-color: #222;
+            color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        #kontakt form button {
+            background-color: #00bcd4;
+            color: #121212;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #kontakt form button:hover {
+            background-color: #0097a7;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* Footer and buy buttons */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #1e1e1e;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .buy-product-nav {
+            background-color: #00bcd4;
+            color: #121212;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .buy-product-nav:hover {
+            background-color: #0097a7;
+        }
+
+        .buy-product-footer {
+            display: inline-block;
+            background-color: #00bcd4;
+            color: #121212;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .buy-product-footer:hover {
+            background-color: #0097a7;
+        }
+
+        /* Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 101;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #1e1e1e;
+            margin: 15% auto;
+            padding: 2rem;
+            border: 1px solid #333;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content-img {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            margin-top: 50px;
+        }
+
+        .close-button {
+            color: #e0e0e0;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .modal-links a {
+            display: block;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #00bcd4;
+            color: #121212;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .modal-links a:hover {
+            background-color: #0097a7;
+        }
+
+        /* Collapsible text */
+        .collapsible-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .toggle-text {
+            cursor: pointer;
+            color: #00bcd4;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero, .dark-section {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .hero-content, .section-content {
+                 padding: 1rem;
+            }
+
+            /* Navigation */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: #1e1e1e;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 99;
+                transition: all 0.3s ease-in-out;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 2rem;
+                cursor: pointer;
+                color: #e0e0e0;
+                background: none;
+                border: none;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            /* Main sections */
+            .services-container,
+            .portfolio-container {
+                flex-direction: column;
+            }
+
+            .service-item,
+            .portfolio-item {
+                flex: 1 1 100%;
+            }
+
+            /* Modals */
+            .modal-content {
+                width: 90%;
+                margin: 5% auto;
+            }
+        }
+    </style>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T10NZFFEXN');
+</script>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#">Kajotte Studio</a>
+                </div>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+                <ul id="nav-links" class="nav-links">
+                    <li><a href="#o-nas">O nas</a></li>
+                    <li><a href="#uslugi">Usługi</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="#" class="buy-product-nav open-modal-button" data-modal="buy-modal">Kup Produkt</a></li>
+                    <li>
+                        <div class="language-switcher">
+                            <span>PL</span> | <a href="index_en.html">EN</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="o-nas" class="hero">
+            <div class="container hero-content">
+                <h1>Kajotte Studio Kreatywność w każdym projekcie</h1>
+                <h2 class="hero-subtitle">Gdzie Kreatywność Spotyka Profesjonalizm</h2>
+                <p>W Kajotte Studio wierzymy, że każdy pomysł zasługuje na najlepszą oprawę. Od 2020 roku z pasją łączymy świat programowania, fotografii, produkcji muzycznej i filmowej, tworząc kompleksowe rozwiązania, które wyróżniają się jakością i oryginalnością.</p>
+                <p>Nasze podejście to synergia wielu talentów. Jesteśmy zespołem, który z równą precyzją koduje innowacyjne aplikacje, jak i łapie ulotne chwile w obiektywie aparatu. Tworzymy porywające ścieżki dźwiękowe, które nadają emocjom głębi, a także realizujemy profesjonalne produkcje wideo, opowiadając historie obrazem.</p>
+                <p>W Kajotte Studio nie podążamy za trendami – my je kreujemy. Jeśli szukasz partnera, który zrealizuje Twój projekt od koncepcji po finalne dzieło, zapraszamy do kontaktu. Odkryj, jak nasza pasja i profesjonalizm mogą nadać Twoim pomysłom zupełnie nowy wymiar.</p>
+                <h3>Jesteś gotów, żeby przenieść swój biznes lub hobby na wyższy poziom?</h3>
+                <p>Może potrzebujesz profesjonalnej strony internetowej, która przyciągnie nowych klientów, albo chcesz wreszcie uporządkować i ulepszyć swoje nagrania wideo, audio lub zdjęcia? Bez względu na to, co masz na myśli, my możemy Ci w tym pomóc!</p>
+                <p>Działamy w pełni online, co oznacza, że odległość nie stanowi dla nas żadnego problemu. Nieważne, czy mieszkasz w Warszawie, Krakowie, czy gdziekolwiek indziej na świecie, możemy współpracować tak, jakbyśmy byli w tym samym pokoju.</p>
+                <h3>Co możemy dla Ciebie zrobić?</h3>
+                <p><b>Tworzenie stron internetowych:</b> Zaprojektujemy i zbudujemy stronę, która nie tylko świetnie wygląda, ale też działa bez zarzutu i jest łatwa w obsłudze.</p>
+                <p><b>Montaż i obróbka wideo:</b> Przekształcimy Twoje surowe nagrania w profesjonalne, angażujące materiały, które zachwycą Twoich widzów.</p>
+                <p><b>Obróbka audio:</b> Poprawimy jakość dźwięku, usuniemy szumy i sprawimy, że Twoje nagrania będą brzmiały krystalicznie czysto.</p>
+                <p><b>Obróbka zdjęć:</b> Ulepszymy Twoje fotografie, wydobędziemy z nich to, co najlepsze, i nadamy im profesjonalny wygląd.</p>
+                <p><b><em>Szukasz profesjonalnego oprogramowania dopasowanego do Twoich potrzeb?
+                <br>A może masz już gotowy projekt, który wymaga dopracowania?
+                <br>Jesteś we właściwym miejscu!</em></b></p>
+                <p>W Kajotte Studio tworzymy dedykowane programy na zamówienie, które pomagają firmom takim jak Twoja w efektywnym działaniu. Niezależnie od branży czy skali projektu, nasi specjaliści są gotowi, by przełożyć Twoje pomysły na działające rozwiązania.</p>
+                <p>Nie musisz zaczynać od zera. Jeśli masz już swój projekt, ale potrzebujesz wsparcia w jego dokończeniu, rozbudowie lub modernizacji, możemy go wspólnie ulepszyć. Pomożemy Ci zoptymalizować kod, dodać nowe funkcje lub dostosować go do aktualnych standardów rynkowych.</p>
+                <h3>Jesteśmy tutaj, aby zdjąć z Ciebie ciężar technicznych spraw, abyś mógł skupić się na tym, co robisz najlepiej.</h3>
+                <p><b><a href="#kontakt" style="color: lightblue;">Skontaktuj się</a> już dziś i opowiedz nam o swoim projekcie. Razem stworzymy coś wyjątkowego!</b></p>
+                <a href="#uslugi" class="cta-button">Poznaj naszą ofertę</a>
+            </div>
+        </section>
+
+        <section id="uslugi">
+            <div class="container">
+                <h1>Nasze Usługi</h1>
+                <div class="services-container">
+                    <div class="service-item">
+                        <h3>Fotografia i Wideo</h3>
+                        <p>Uchwycimy każdą chwilę z najwyższą precyzją. Oferujemy sesje zdjęciowe, pełne produkcje wideo i profesjonalny montaż, wykorzystując najnowocześniejszy sprzęt, aby Twoja wizja stała się rzeczywistością.</p>
+                        <a href="index_foto.html" style="color: lightblue;">Fotografia</a>
+                        <br><a href="index_video.html" style="color: lightblue;">Produkcja filmowa</a>
+                    </div>
+                    <div class="service-item">
+                        <h3>Produkcja Muzyczna</h3>
+                        <p>Stwórzmy unikalne brzmienie dla Twojego projektu. Nasze w pełni wyposażone studio nagraniowe to idealne miejsce do tworzenia oryginalnych ścieżek dźwiękowych, a także profesjonalnego miksowania i masteringu.</p>
+                        <a href="index_muz.html" style="color: lightblue;">Produkcja muzyki</a>
+                    </div>
+                    <div class="service-item">
+                        <h3>Programowanie</h3>
+                        <p>Przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania. Tworzymy niezawodne oprogramowanie, w tym <a href="index_saks_pl.html" style="color: lightblue;">System Autostart Kajotte Studio</a>, dostosowane do Twoich potrzeb.</p>
+                        <a href="index_prog.html" style="color: lightblue;">Programowanie</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="dark-section">
+            <div class="container">
+                <h1>Portfolio</h1>
+                <div class="portfolio-container">
+                    <div class="portfolio-item">
+                        <img src="html/images/hubble_saks.jpg" alt="Kajotte Studio Realizacje Wideo: kadr z produkcji wideo" class="portfolio-thumbnail">
+                        <h3>Realizacje Wideo</h3>
+                        <div class="collapsible-content">
+                            <p>W Kajotte Studio z pasją przekształcamy pomysły w kinową rzeczywistość. Specjalizujemy się w kompleksowej produkcji filmowej — od precyzyjnego nagrania, realizowanego na wysokiej klasy sprzęcie, po profesjonalny montaż i dopracowany podkład dźwiękowy.</p>
+                            <p>Nasze podejście to połączenie zaawansowanej technologii z kreatywnym wizjonerstwem. Każdy kadr jest starannie przemyślany, a dźwięk perfekcyjnie synchronizowany, by tworzyć historie, które angażują i zapadają w pamięć.</p>
+                            <p>Efekty naszej pracy, w tym zwiastuny, próbki i wersje testowe, możesz zobaczyć na naszym kanale <a href="https://www.youtube.com/@KajotteStudio" target="_blank" style="color: #fff;">YouTube</a>. Zapraszamy do odkrycia pełnego spektrum naszych możliwości.</p>
+                        </div>
+                        <span class="toggle-text">Czytaj więcej</span>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="html/images/login_off_2.jpg" alt="Kajotte Studio Sesje Fotograficzne" class="portfolio-thumbnail">
+                        <h3>Sesje Fotograficzne</h3>
+                        <div class="collapsible-content">
+                            <p>W Kajotte Studio z pasją przekształcamy chwile w ponadczasowe obrazy. Oferujemy sesje fotograficzne, które wykraczają poza standardowe ujęcia, obejmując szerokie spektrum: od intymnych portretów i naturalnych kadrów w plenerze, po specjalistyczne projekty.</p>
+                            <p>Dzięki zaawansowanemu sprzętowi, jesteśmy w stanie sprostać każdemu wyzwaniu. Nasza oferta sięga od ujęć z bliska, z wykorzystaniem mikroskopu, po uchwycenie kosmicznych detali dzięki specjalistycznej lunecie do astrofotografii, by zaoferować Ci ujęcia, które naprawdę zapierają dech w piersiach.</p>
+                            <p>Niezależnie od wizji, nasz cel pozostaje ten sam: opowiedzieć Twoją historię w sposób, który jest równie wyjątkowy, co Ty.</p>
+                        </div>
+                        <span class="toggle-text">Czytaj więcej</span>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="html/images/login_off_1.jpg" alt="Projekty Oprogramowania: zrzut ekranu z interfejsu aplikacji" class="portfolio-thumbnail">
+                        <h3>Projekty Oprogramowania</h3>
+                        <div class="collapsible-content">
+                            <p>Interfejs użytkownika Systemu Autostart. Intuicyjny design spotyka się z wydajnością. <a href="index_saks_pl.html" style="color: #fff;">Zobacz więcej</a></p>
+                            <p>W Kajotte Studio z pasją przekształcamy innowacyjne pomysły w funkcjonalne rozwiązania cyfrowe. Specjalizujemy się w wszechstronnym programowaniu, dostarczając rozwiązania idealnie dopasowane do Twoich potrzeb.</p>
+                            <p>Nasze kompetencje obejmują:
+                            <br>* Tworzenie oprogramowania: Piszemy zaawansowane programy w językach Python i C++, tworząc zarówno aplikacje desktopowe, jak i złożone narzędzia do automatyzacji.
+                            <br>* Projektowanie stron internetowych: Od podstaw budujemy responsywne i estetyczne strony, wykorzystując HTML i CSS, aby zapewnić nowoczesny wygląd i intuicyjną obsługę.
+                            <br>* Programowanie embedded i IoT: Zajmujemy się programowaniem mikrokontrolerów, w tym Arduino, oraz tworzeniem inteligentnych rozwiązań dla urządzeń SmartLife, zarówno do zastosowań domowych, jak i przemysłowych</p>
+                            <p>W Kajotte Studio nie tylko kodujemy, ale przede wszystkim rozwiązujemy problemy, dostarczając niezawodne i wydajne oprogramowanie, które usprawnia działanie Twojej firmy i domu.</p>
+                        </div>
+                        <span class="toggle-text">Czytaj więcej</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="dark-section">
+            <div class="container">
+                <h2>Skontaktuj się</h2>
+                <p>Jesteś gotowy, aby rozpocząć? Zadzwoń lub napisz do nas – chętnie porozmawiamy o Twoim projekcie i wspólnie znajdziemy najlepsze rozwiązanie.</p>
+                <form action="https://formspree.io/f/xqalraqg" method="POST">
+                    <label for="name">Imię:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Wyślij</button>
+                </form>
+                <ul class="contact-info">
+                    <li><a href="mailto:kajottestudio@gmail.com" style="color: lightblue;">E-mail: kajottestudio@gmail.com</a></li>
+                    <li><a href="tel:+48695004663" style="color: lightblue;">Telefon: +48 695 004 663</a></li>
+                    <li><a href="https://www.youtube.com/@KajotteStudio" target="_blank" style="color: lightpink;">YouTube</a></li>
+                    <li><a href="https://pin.it/2wkTcaMAQ" target="_blank" style="color: lightpink;">Pinterest</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="buy-product-footer open-modal-button" data-modal="buy-modal">Kup Produkt</a>
+        <p>&copy; 2020-2025 Kajotte Studio. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <div id="image-modal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content-img" id="enlarged-image" alt="Powiększone zdjęcie z portfolio.">
+    </div>
+
+    <div id="buy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Sklep Kajotte Studio</h2>
+            <p>Produkty w formie cyfrowej.</p>
+            <div class="modal-links">
+                <a href="index_saks_pl.html" target="_blank">System Autostart Kajotte Studio</a>
+            </div>
+            <p>Usługi.</p>
+            <div class="modal-links">
+                <a href="index_foto.html">Fotografia</a>
+                <a href="index_muz.html">Produkcja muzyki</a>
+                <a href="index_video.html">Produkcja filmowa</a>
+                <a href="index_prog.html">Programowanie</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile navigation toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            });
+
+            // Reusable modal functionality
+            const openModalButtons = document.querySelectorAll('.open-modal-button');
+            const closeModalButtons = document.querySelectorAll('.close-button');
+            const modals = document.querySelectorAll('.modal');
+
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const modalId = button.dataset.modal;
+                    document.getElementById(modalId).style.display = 'block';
+                });
+            });
+
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.closest('.modal').style.display = 'none';
+                });
+            });
+
+            window.addEventListener('click', (e) => {
+                modals.forEach(modal => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+
+            // Image enlargement modal
+            const imageModal = document.getElementById('image-modal');
+            const enlargedImage = document.getElementById('enlarged-image');
+            const thumbnails = document.querySelectorAll('.portfolio-thumbnail');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    imageModal.style.display = 'block';
+                    enlargedImage.src = thumbnail.src;
+                    enlargedImage.alt = thumbnail.alt;
+                });
+            });
+
+            // Collapsible text
+            const toggleTexts = document.querySelectorAll('.toggle-text');
+
+            toggleTexts.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.previousElementSibling;
+                    const isContentVisible = content.style.display === "block";
+                    content.style.display = isContentVisible ? "none" : "block";
+                    toggle.textContent = isContentVisible ? "Czytaj więcej" : "Zwiń";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
