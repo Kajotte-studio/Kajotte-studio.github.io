@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kajotte Studio">
+    <meta name="description" content="Kajotte Studio Blog - photography, film, music, and programming. Tips, articles, and stories from the studio's life.">
+    <meta name="keywords" content="Kajotte Studio, blog, photography, film, music, programming, tips, tutorials, workshop, behind the scenes">
+    <link rel="icon" href="html/images/kajotte_studio_icon.png" type="image/png">
+    <title>Kajotte Studio Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="google-site-verification" content="21CWSKrQ6d1CMe_tdJ3JfpoE2RY0vfNobGA1iw7AUBw" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
+</head>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T10NZFFEXN');
+</script>
+<body>
+
+    <header class="site-header">
+        <nav class="top-nav">
+            <a href="index_en.html" class="logo">Kajotte Studio</a>
+            <div class="language-switcher">
+                <a href="index_blog_pl.html">PL</a>
+                <a href="index_blog_en.html" class="active">EN</a>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1>Kajotte Studio Blog</h1>
+            <p>Insights, inspirations, and behind-the-scenes stories.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <div class="about-me">
+                <h3>About Kajotte Studio</h3>
+                <p>We created this blog to share our passion for programming, film, music, and photography. We want to inspire and help others develop their projects.</p>
+            </div>
+            <div class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#" onclick="filterPosts('programming')">Programming</a></li>
+                    <li><a href="#" onclick="filterPosts('photo-video')">Photography & Video</a></li>
+                    <li><a href="#" onclick="filterPosts('music')">Music</a></li>
+                    <li><a href="#" onclick="filterPosts('all')">All posts</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Find us</h3>
+                <a href="https://www.youtube.com/@KajotteStudio" target="_blank" class="social-text-link">YouTube</a>
+                <a href="https://pin.it/2wkTcaMAQ" target="_blank" class="social-text-link">Pinterest</a>
+            </div>
+        </aside>
+
+        <section class="posts" id="posts-container">
+            <article class="post programming">
+                <h2>How to start programming? A guide for beginners.</h2>
+                <p class="post-meta">Published: August 24, 2025 | Category: Programming</p>
+                <p class="post-excerpt">In this post, I will share my tips for beginner programmers. We'll discuss where to start, what tools are useful, and how to overcome initial difficulties.</p>
+                <a href="index_blog_post_1_en.html" class="read-more">Read more</a>
+            </article>
+
+            <article class="post photo-video">
+                <h2>Photography in practice: Shots, lighting, and post-production.</h2>
+                <p class="post-meta">Published: August 22, 2025 | Category: Photography & Video</p>
+                <p class="post-excerpt">Discover the secrets of successful photo shoots. Learn how to master composition and lighting to make your photos amazing.</p>
+                <a href="post_2_en.html" class="read-more">Read more</a>
+            </article>
+
+            <article class="post music">
+                <h2>Creating music in a home studio: The basics.</h2>
+                <p class="post-meta">Published: August 18, 2025 | Category: Music</p>
+                <p class="post-excerpt">This post is your guide to the world of home music production. We will discuss the essential equipment and software you need to start your recording journey.</p>
+                <a href="post_3_en.html" class="read-more">Read more</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="index_en.html" class="social-text-link">Kajotte Studio</a>
+            <a href="https://www.youtube.com/@KajotteStudio" target="_blank" class="social-text-link">YouTube</a>
+            <a href="https://pin.it/2wkTcaMAQ" target="_blank" class="social-text-link">Pinterest</a>
+        </div>
+        <p>&copy; 2020-2025 Kajotte Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
