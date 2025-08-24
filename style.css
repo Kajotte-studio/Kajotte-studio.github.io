@@ -7,6 +7,21 @@ body {
     color: #e0e0e0;
 }
 
+#shareButton {
+    /* Style dla dużych ekranów, np. komputerów */
+    font-size: 16px;
+    padding: 15px 32px;
+}
+
+/* Media Query dla urządzeń o szerokości do 600px (smartfony) */
+@media screen and (max-width: 600px) {
+    #shareButton {
+        font-size: 14px; /* Zmniejszamy rozmiar czcionki */
+        padding: 10px 20px; /* Zmniejszamy odstępy wewnątrz przycisku */
+    }
+}
+
+
 .site-header {
     background-color: #1e1e1e;
     padding: 1rem 0;
