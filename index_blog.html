@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kajotte Studio">
     <meta name="description" content="Blog Kajotte Studio - fotografia, film, muzyka i programowanie. Porady, artykuły i historie z życia studia.">
-    <meta name="keywords" content="Kajotte Studio, blog, fotografia, film, muzyka, programowanie, porady, tutoriale, warsztat, kulisy, python, programming, film maker">
+    <meta name="keywords" content="Kajotte Studio, blog, fotografia, film, muzyka, programowanie, porady, tutoriale, warsztat, kulisy">
     <link rel="icon" href="html/images/kajotte_studio_icon.png" type="image/png">
     <title>Kajotte Studio Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,8 @@
 
     <header class="site-header">
         <nav class="top-nav">
-            <div class="logo">
-                <a href="index_pl.html" class="lang-pl">Kajotte Studio</a>
-                <a href="index_en.html" class="lang-en hidden">Kajotte Studio</a>
-            </div>
+            <a href="index_pl.html" class="logo lang-pl">Kajotte Studio</a>
+            <a href="index_en.html" class="logo lang-en hidden">Kajotte Studio</a>
             <div class="language-switcher">
                 <a href="#" onclick="setLanguage('pl')" id="lang-pl" class="active">PL</a>
                 <a href="#" onclick="setLanguage('en')" id="lang-en">EN</a>
@@ -44,41 +42,6 @@
     </header>
 
     <main class="container">
-        <section class="posts">
-            <article class="post">
-                <h2 class="lang-pl">Jak zacząć programować? Poradnik dla początkujących.</h2>
-                <h2 class="lang-en hidden">How to start programming? A guide for beginners.</h2>
-                <p class="post-meta lang-pl">Opublikowano: 24 sierpnia 2025 | Kategoria: Programowanie</p>
-                <p class="post-meta lang-en hidden">Published: August 24, 2025 | Category: Programming</p>
-                <p class="lang-pl">W tym wpisie podzielę się moimi wskazówkami dla początkujących programistów. Omówię, od czego zacząć, jakie narzędzia są przydatne i jak pokonać pierwsze trudności.</p>
-                <p class="lang-en hidden">In this post, I will share my tips for beginner programmers. We'll discuss where to start, what tools are useful, and how to overcome initial difficulties.</p>
-                <a href="#" class="lang-pl read-more">Czytaj więcej</a>
-                <a href="#" class="lang-en hidden read-more">Read more</a>
-            </article>
-
-            <article class="post">
-                <h2 class="lang-pl">Fotografia w praktyce: Ujęcia, oświetlenie i postprodukcja.</h2>
-                <h2 class="lang-en hidden">Photography in practice: Shots, lighting, and post-production.</h2>
-                <p class="post-meta lang-pl">Opublikowano: 22 sierpnia 2025 | Kategoria: Fotografia i Wideo</p>
-                <p class="post-meta lang-en hidden">Published: August 22, 2025 | Category: Photography & Video</p>
-                <p class="lang-pl">Odkryj sekrety udanych sesji zdjęciowych. Dowiedz się, jak opanować kompozycję i światło, by Twoje zdjęcia zachwycały.</p>
-                <p class="lang-en hidden">Discover the secrets of successful photo shoots. Learn how to master composition and lighting to make your photos amazing.</p>
-                <a href="#" class="lang-pl read-more">Czytaj więcej</a>
-                <a href="#" class="lang-en hidden read-more">Read more</a>
-            </article>
-
-            <article class="post">
-                <h2 class="lang-pl">Tworzenie muzyki w domowym studio: Podstawy.</h2>
-                <h2 class="lang-en hidden">Creating music in a home studio: The basics.</h2>
-                <p class="post-meta lang-pl">Opublikowano: 18 sierpnia 2025 | Kategoria: Muzyka</p>
-                <p class="post-meta lang-en hidden">Published: August 18, 2025 | Category: Music</p>
-                <p class="lang-pl">Ten wpis to Twój przewodnik po świecie domowej produkcji muzycznej. Omówimy niezbędne wyposażenie i oprogramowanie, abyś mógł rozpocząć swoją przygodę z nagrywaniem.</p>
-                <p class="lang-en hidden">This post is your guide to the world of home music production. We will discuss the essential equipment and software you need to start your recording journey.</p>
-                <a href="#" class="lang-pl read-more">Czytaj więcej</a>
-                <a href="#" class="lang-en hidden read-more">Read more</a>
-            </article>
-        </section>
-
         <aside class="sidebar">
             <div class="about-me">
                 <h3 class="lang-pl">O Kajotte Studio</h3>
@@ -90,9 +53,10 @@
                 <h3 class="lang-pl">Kategorie</h3>
                 <h3 class="lang-en hidden">Categories</h3>
                 <ul>
-                    <li><a href="#"><span class="lang-pl">Programowanie</span><span class="lang-en hidden">Programming</span></a></li>
-                    <li><a href="#"><span class="lang-pl">Fotografia i Wideo</span><span class="lang-en hidden">Photography & Video</span></a></li>
-                    <li><a href="#"><span class="lang-pl">Muzyka</span><span class="lang-en hidden">Music</span></a></li>
+                    <li><a href="#" onclick="filterPosts('programming')"><span class="lang-pl">Programowanie</span><span class="lang-en hidden">Programming</span></a></li>
+                    <li><a href="#" onclick="filterPosts('photo-video')"><span class="lang-pl">Fotografia i Wideo</span><span class="lang-en hidden">Photography & Video</span></a></li>
+                    <li><a href="#" onclick="filterPosts('music')"><span class="lang-pl">Muzyka</span><span class="lang-en hidden">Music</span></a></li>
+                    <li><a href="#" onclick="filterPosts('all')"><span class="lang-pl">Wszystkie wpisy</span><span class="lang-en hidden">All posts</span></a></li>
                 </ul>
             </div>
             <div class="social-media">
@@ -102,6 +66,41 @@
                 <a href="https://pin.it/2wkTcaMAQ" target="_blank" class="social-text-link">Pinterest</a>
             </div>
         </aside>
+
+        <section class="posts" id="posts-container">
+            <article class="post programming">
+                <h2 class="lang-pl">Jak zacząć programować? Poradnik dla początkujących.</h2>
+                <h2 class="lang-en hidden">How to start programming? A guide for beginners.</h2>
+                <p class="post-meta lang-pl">Opublikowano: 24 sierpnia 2025 | Kategoria: Programowanie</p>
+                <p class="post-meta lang-en hidden">Published: August 24, 2025 | Category: Programming</p>
+                <p class="post-excerpt lang-pl">W tym wpisie podzielę się moimi wskazówkami dla początkujących programistów. Omówię, od czego zacząć, jakie narzędzia są przydatne i jak pokonać pierwsze trudności.</p>
+                <p class="post-excerpt lang-en hidden">In this post, I will share my tips for beginner programmers. We'll discuss where to start, what tools are useful, and how to overcome initial difficulties.</p>
+                <a href="post_1.html" class="read-more lang-pl">Czytaj więcej</a>
+                <a href="post_1.html" class="read-more lang-en hidden">Read more</a>
+            </article>
+
+            <article class="post photo-video">
+                <h2 class="lang-pl">Fotografia w praktyce: Ujęcia, oświetlenie i postprodukcja.</h2>
+                <h2 class="lang-en hidden">Photography in practice: Shots, lighting, and post-production.</h2>
+                <p class="post-meta lang-pl">Opublikowano: 22 sierpnia 2025 | Kategoria: Fotografia i Wideo</p>
+                <p class="post-meta lang-en hidden">Published: August 22, 2025 | Category: Photography & Video</p>
+                <p class="post-excerpt lang-pl">Odkryj sekrety udanych sesji zdjęciowych. Dowiedz się, jak opanować kompozycję i światło, by Twoje zdjęcia zachwycały.</p>
+                <p class="post-excerpt lang-en hidden">Discover the secrets of successful photo shoots. Learn how to master composition and lighting to make your photos amazing.</p>
+                <a href="post_2.html" class="read-more lang-pl">Czytaj więcej</a>
+                <a href="post_2.html" class="read-more lang-en hidden">Read more</a>
+            </article>
+
+            <article class="post music">
+                <h2 class="lang-pl">Tworzenie muzyki w domowym studio: Podstawy.</h2>
+                <h2 class="lang-en hidden">Creating music in a home studio: The basics.</h2>
+                <p class="post-meta lang-pl">Opublikowano: 18 sierpnia 2025 | Kategoria: Muzyka</p>
+                <p class="post-meta lang-en hidden">Published: August 18, 2025 | Category: Music</p>
+                <p class="post-excerpt lang-pl">Ten wpis to Twój przewodnik po świecie domowej produkcji muzycznej. Omówimy niezbędne wyposażenie i oprogramowanie, abyś mógł rozpocząć swoją przygodę z nagrywaniem.</p>
+                <p class="post-excerpt lang-en hidden">This post is your guide to the world of home music production. We will discuss the essential equipment and software you need to start your recording journey.</p>
+                <a href="post_3.html" class="read-more lang-pl">Czytaj więcej</a>
+                <a href="post_3.html" class="read-more lang-en hidden">Read more</a>
+            </article>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -115,30 +114,6 @@
         <p class="lang-en hidden">&copy; 2020-2025 Kajotte Studio. All rights reserved.</p>
     </footer>
 
-    <script>
-        function setLanguage(lang) {
-            const allElements = document.querySelectorAll('.lang-pl, .lang-en');
-            allElements.forEach(el => {
-                if (el.classList.contains(`lang-${lang}`)) {
-                    el.classList.remove('hidden');
-                } else {
-                    el.classList.add('hidden');
-                }
-            });
-
-            const langLinks = document.querySelectorAll('.language-switcher a');
-            langLinks.forEach(link => {
-                link.classList.remove('active');
-            });
-            document.getElementById(`lang-${lang}`).classList.add('active');
-
-            localStorage.setItem('lang', lang);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('lang') || 'pl';
-            setLanguage(savedLang);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
