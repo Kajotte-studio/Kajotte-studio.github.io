@@ -55,6 +55,30 @@
 
             <p><b>Don't hesitate—we're excited to hear about your project!</b></p>
 
+            <button id="shareButton" style="background-color: black; color: azure;">Kajotte Studio Blog</button>
+
+<script>
+const shareButton = document.getElementById('shareButton');
+
+shareButton.addEventListener('click', async () => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: 'Check out this website!',
+        url: window.location.href
+      });
+      console.log('Page shared successfully');
+    } catch (error) {
+      console.error('Error while sharing:', error);
+    }
+  } else {
+    // Komunikat lub alternatywa dla przeglądarek, które nie wspierają Web Share API
+    alert('Twoja przeglądarka nie wspiera funkcji udostępniania.');
+  }
+});
+</script>
+
             <div class = "fb-share-button" data-href = "https://developers.facebook.com/docs/plugins/" data-layout = "" data-size = "" > <a target = "_blank" href = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse" class = "fb-xfbml-parse-ignore" > Share </a></div>
 
         </article>
