@@ -7,52 +7,171 @@
     <meta name="author" content="Kajotte Studio">
     <meta name="description" content="Kajotte Studio">
     <meta name="google-site-verification" content="21CWSKrQ6d1CMe_tdJ3JfpoE2RY0vfNobGA1iw7AUBw" />
-    <title>Wybierz język / Choose your language</title>
+    <title>Kajotte Studio - Wybierz język / Choose your language</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary-color: #00796b;
+            --secondary-color: #004d40;
+            --background-color: #f0f4f8;
+            --card-background: #ffffff;
+            --text-color: #333;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Pozycjonowanie na dole ekranu */
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            justify-content: center; /* Wyśrodkowanie w pionie dla ekranów powyżej 768px */
+            width: 100%;
+            padding-bottom: 20vh; /* Przesunięcie w górę na dużych ekranach */
+        }
+
+        .content-wrapper {
+            background-color: var(--card-background);
+            padding: 50px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            text-align: center;
+            max-width: 650px;
+            width: 90%;
+        }
+
+        .studio-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em; /* Mniejszy rozmiar */
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em; /* Większy rozmiar */
+            color: var(--text-color);
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        .language-links {
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
+            flex-wrap: wrap;
+            gap: 25px;
         }
-        .language-container a {
-            font-size: 24px;
-            margin: 0 15px;
-            padding: 10px 20px;
+
+        .link-item {
+            display: inline-block;
+            font-size: 1.1em;
+            padding: 14px 30px;
             text-decoration: none;
             color: #fff;
-            background-color: #007bff;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            background-color: var(--primary-color);
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 6px var(--shadow-medium);
         }
-        .language-container a:hover {
-            background-color: #0056b3;
+
+        .link-item:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px var(--shadow-medium);
         }
-        h1 {
-            color: #333;
-            margin-bottom: 30px;
+
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #757575;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #ccc; /* Ramka dla stopki */
+        }
+
+        .social-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #757575;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Ustawienia dla urządzeń mobilnych */
+        @media (max-width: 768px) {
+            body {
+                justify-content: center; /* Wyśrodkowanie na małych ekranach */
+            }
+            .main-content {
+                padding-bottom: 0;
+            }
+            .content-wrapper {
+                padding: 30px 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 30px;
+            }
+            .studio-name {
+                font-size: 1em;
+            }
+            .language-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .link-item {
+                width: 100%;
+            }
         }
     </style>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T10NZFFEXN');
-</script>
 <body>
 
-    <h1>Wybierz język / Choose your language</h1>
-    <div class="language-container">
-        <a href="index_pl.html">Polski</a>
-        <a href="index_en.html">English</a>
+    <div class="main-content">
+        <div class="content-wrapper">
+            <p class="studio-name">Kajotte Studio</p>
+            <h1>Wybierz język / Choose your language</h1>
+            <div class="language-links">
+                <a href="index_pl.html" class="link-item">Polski</a>
+                <a href="index_en.html" class="link-item">English</a>
+            </div>
+        </div>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2020-2025 Kajotte Studio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@kajottestudio" target="_blank">YouTube</a>
+            <a href="https://www.pinterest.com/kajottestudio/" target="_blank">Pinterest</a>
+        </div>
+    </footer>
 
 </body>
 </html>
