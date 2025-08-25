@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
    <url>
-      <loc>https://kajotte-studio.github.io/</loc>
+      <loc>https://Kajotte-studio.github.io/Index.html</loc>
       <lastmod>2025-08-25</lastmod>
-      <changefreq>daily</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
+
    <url>
-      <loc>https://kajotte-studio.github.io/index_pl</loc>
+      <loc>https://Kajotte-studio.github.io/index_pl.html</loc>
       <lastmod>2025-08-25</lastmod>
-      <changefreq>daily</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="pl" href="https://kajotte-studio.github.io/index_pl.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://kajotte-studio.github.io/index_en.html"/>
    </url>
+
    <url>
-      <loc>https://kajotte-studio.github.io/index_en</loc>
+      <loc>https://Kajotte-studio.github.io/index_en.html</loc>
       <lastmod>2025-08-25</lastmod>
-      <changefreq>daily</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://kajotte-studio.github.io/index_en.html"/>
+      <xhtml:link rel="alternate" hreflang="pl" href="https://kajotte-studio.github.io/index_pl.html"/>
    </url>
+
 </urlset>
