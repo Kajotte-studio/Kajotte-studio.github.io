@@ -27,4 +27,22 @@
       <xhtml:link rel="alternate" hreflang="pl" href="https://kajotte-studio.github.io/index_pl.html"/>
    </url>
 
+   <url>
+      <loc>https://kajotte-studio.github.io/index_blog_en.html</loc>
+      <lastmod>2025-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://kajotte-studio.github.io/index_blog_en.html"/>
+      <xhtml:link rel="alternate" hreflang="pl" href="https://kajotte-studio.github.io/index_blog_pl.html"/>
+   </url>
+
+   <url>
+      <loc>https://kajotte-studio.github.io/index_blog_pl.html</loc>
+      <lastmod>2025-08-25</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://kajotte-studio.github.io/index_blog_pl.html"/>
+      <xhtml:link rel="alternate" hreflang="pl" href="https://kajotte-studio.github.io/index_blog_en.html"/>
+   </url>
+
 </urlset>
