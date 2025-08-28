@@ -1,3 +1,1 @@
-User-agent: *
-Allow: /
 Sitemap: https://kajotte-studio.github.io/sitemap.xml
