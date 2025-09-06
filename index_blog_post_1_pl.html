@@ -42,12 +42,36 @@
             <h2>Jak zacząć programować? Poradnik dla początkujących.</h2>
             <p class="post-meta">Opublikowano: 24 sierpnia 2025 | Kategoria: Programowanie</p>
 
-            <p>Programowanie może wydawać się skomplikowane na początku, ale z odpowiednim podejściem każdy może nauczyć się pisać kod. Kluczem jest cierpliwość i konsekwencja. Zacznij od prostych języków, takich jak **Python** lub **JavaScript**, które są łatwe do opanowania i mają ogromne społeczności wsparcia. Zamiast uczyć się wszystkiego na raz, skup się na jednym projekcie. Na przykład, spróbuj stworzyć prostą stronę internetową lub małą grę. Zbuduj portfolio swoich projektów, które będą wizytówką Twoich umiejętności.</p>
+            <p>Programowanie może wydawać się skomplikowane na początku, ale z odpowiednim podejściem każdy może nauczyć się pisać kod. Kluczem jest cierpliwość i konsekwencja. Zacznij od prostych języków, takich jak <a href="index_blog_post_5_pl.html" style="color: azure;">Python</a> lub JavaScript, które są łatwe do opanowania i mają ogromne społeczności wsparcia. Zamiast uczyć się wszystkiego na raz, skup się na jednym projekcie. Na przykład, spróbuj stworzyć prostą stronę internetową lub małą grę. Zbuduj portfolio swoich projektów, które będą wizytówką Twoich umiejętności.</p>
 
             <p>Pamiętaj, że nauka programowania to proces, a błędy są jego naturalną częścią. Nie zniechęcaj się, gdy coś nie działa. Wyszukiwanie rozwiązań w Internecie, korzystanie z forów i dokumentacji to codzienność każdego programisty. W Kajotte Studio wierzymy, że pasja jest najważniejsza.</p>
+            <button id="shareButton" style="background-color: black; color: azure;">Udostępnij post</button>
+
+<script>
+const shareButton = document.getElementById('shareButton');
+
+shareButton.addEventListener('click', async () => {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: 'Sprawdź tę stronę!',
+        url: window.location.href
+      });
+      console.log('Strona została udostępniona pomyślnie.');
+    } catch (error) {
+      console.error('Błąd podczas udostępniania:', error);
+    }
+  } else {
+    // Komunikat lub alternatywa dla przeglądarek, które nie wspierają Web Share API
+    alert('Twoja przeglądarka nie wspiera funkcji udostępniania.');
+  }
+});
+</script>
         </article>
 
         <a href="index_blog_pl.html" class="social-text-link"> &larr; Powrót do bloga</a>
+
     </main>
 
     <footer class="site-footer">
