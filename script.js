@@ -33,11 +33,13 @@ const navMenu = document.querySelector('.nav-menu');
 const closeBtn = document.querySelector('.close-btn');
 const modal = document.getElementById('myModal');
 
-menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    navMenu.classList.toggle('active');
-});
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('active');
+    });
+}
 
 document.querySelectorAll('.load-button').forEach(button => {
     button.addEventListener('click', (event) => {
@@ -46,9 +48,13 @@ document.querySelectorAll('.load-button').forEach(button => {
     });
 });
 
-closeBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        closeModal();
-    }
-});
+if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+}
+if (modal) {
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+}

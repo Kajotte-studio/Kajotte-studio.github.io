@@ -15,7 +15,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -26,9 +26,9 @@ body {
 }
 
 .main-nav {
-    width: 100%;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .nav-menu {
@@ -43,15 +43,20 @@ body {
     white-space: nowrap;
 }
 
-.nav-menu a {
+/* Styl linków-przycisków w menu głównym */
+.nav-button {
+    background-color: #007bff; /* Wyraźny niebieski */
     color: white;
     text-decoration: none;
     font-size: 1em;
-    padding: 5px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
 }
 
-.nav-menu a:hover {
-    text-decoration: underline;
+.nav-button:hover {
+    background-color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
+    text-decoration: none;
 }
 
 /* Ukrycie przycisku menu mobilnego na dużych ekranach */
@@ -62,21 +67,24 @@ body {
 /* Ustawienia dla urządzeń mobilnych */
 @media (max-width: 768px) {
     .fixed-header {
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
     }
 
     .main-nav {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        justify-content: flex-end;
     }
 
     .nav-menu {
         flex-direction: column;
-        width: 100%;
-        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 50%;
+        background-color: rgba(117, 116, 116, 0.9);
+        border-top: 1px solid #444;
         display: none;
-        text-align: center;
+        padding-top: 10px;
     }
 
     .nav-menu.active {
@@ -84,13 +92,26 @@ body {
     }
 
     .nav-menu li {
-        padding: 10px 0;
         width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Zmiana stylu przycisków w menu mobilnym */
+    .nav-menu li a {
+        background-color: transparent;
+        color: white;
     }
 
     .menu-toggle {
         display: block;
         align-self: flex-end;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2em;
+        cursor: pointer;
+        padding: 5px 10px;
     }
 }
 
@@ -99,6 +120,8 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1.8em;
+    color: #333;
+    text-shadow: none;
 }
 
 main {
@@ -130,7 +153,7 @@ main {
 }
 
 .load-button {
-    background-color: #007bff;
+    background-color: #007bff; /* Wyraźny niebieski */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -142,7 +165,7 @@ main {
 }
 
 .load-button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
 }
 
 .dummy-content {
@@ -153,6 +176,10 @@ main {
     margin-right: auto;
     text-align: left;
     line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .modal {
@@ -207,14 +234,19 @@ main {
 }
 
 .zoom-controls button {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #007bff; /* Wyraźny niebieski */
     border: none;
-    color: #333;
+    color: white;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
     margin: 0 5px;
     border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.zoom-controls button:hover {
+    background-color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
 }
 
 .before-footer-links {
@@ -226,12 +258,13 @@ main {
 }
 
 .before-footer-links a {
-    color: #007bff;
+    color: #007bff; /* Wyraźny niebieski */
     text-decoration: none;
     margin: 0 10px;
 }
 
 .before-footer-links a:hover {
+    color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
     text-decoration: underline;
 }
 
