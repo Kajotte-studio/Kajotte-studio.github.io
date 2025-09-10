@@ -3,66 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria - Kajotte Studio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="alternate" href="index_en.html" hreflang="en-US">
+    <meta name="author" content="Kajotte Studio">
+    <meta name="description" content="Kajotte Studio - fotografia, produkcja filmowa i muzyczna, programowanie">
+    <meta name="keywords" content="Kajotte Studio, kajotte studio, zdjecia, zdjecia kajotte, zdjecia kajotte studio, fotografia, fotografia kajotte studio, fotografia kajotte, programowanie, programowanie kajotte studio, kajottestudio, programowanie kajottestudio, produkcja filmowa, produkcja kajotte, produkcja wideo, video, film, movie, produkcja muzyczna, montaz filmow, montaż filmów, montaz klipow, montaż klipów, sample, sciezka dzwiekowa, ścieżka dźwiękowa, postprodukcja, nagrania dzwiekowe, nagrania wokalne, kajotte studio warszawa, studio warszawa, fotografia warszawa, sesja warszawa, sesja fotograficzna warszawa, montaz warszawa, produkcja muzyczna warszawa, zdjecia na zamowienie, nagrania dzwiekowe na zamowienie, nagrania filmowe na zamowienie, gotowy projekt na zamowienie, strona internetowa, tworzenie strony internetowej, html css, zamówienie programu, zamowienie programu, zrób mi program, zrob mi program, zrob mi strone, program na zlecenie, warszawa programowanie, nagraj mi sample">
+    <link rel="icon" href="html/images/kajotte_studio_icon.png" type="image/png">
+    <link rel="canonical" href="https://kajotte-studio.github.io/index_pl.html">
+    <link rel="alternate" href="https://kajotte-studio.github.io/index_en.html" hreflang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="21CWSKrQ6d1CMe_tdJ3JfpoE2RY0vfNobGA1iw7AUBw" />
+    <title>Strona w budowie Kajotte Studio 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            flex-grow: 1; /* Allows the container to take up available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            padding: 12px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .links a:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        .language-switcher {
+            margin-top: 20px;
+        }
+        .language-switcher a {
+            text-decoration: none;
+            color: #34495e;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .language-switcher a:hover {
+            color: #e74c3c;
+        }
+        .footer {
+            margin-top: auto; /* Pushes the footer to the bottom */
+            padding-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .links a {
+                padding: 10px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .footer {
+                padding-top: 10px;
+            }
+        }
+    </style>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T10NZFFEXN');
+</script>
 <body>
-
-    <header class="fixed-header">
-        <nav class="main-nav">
-            <ul class="nav-menu">
-                <li><a href="https://www.kajotteweb1.pl" target="_blank">Kajotte Studio</a></li>
-                <li><a href="https://www.kajotteweb2.com" target="_blank">Portfolio</a></li>
-                <li><a href="https://www.kajotteweb3.pl" target="_blank">Kontakt</a></li>
-                <li><a href="index_en.html" class="lang-switch">English Version</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1 class="page-title">Galeria dużych plików</h1>
-        <section class="gallery">
-            <div class="image-placeholder">
-                <p>Kliknij, aby załadować zdjęcie 1</p>
-                <button class="load-button" data-image-src="images/photo1.png">Pokaż zdjęcie</button>
-            </div>
-            <div class="image-placeholder">
-                <p>Kliknij, aby załadować zdjęcie 2</p>
-                <button class="load-button" data-image-src="images/photo2.png">Pokaż zdjęcie</button>
-            </div>
-        </section>
-
-        <div class="dummy-content">
-            <h2>Witaj w Galerii Kajotte Studio</h2>
-            <p>Tutaj znajdziesz nasze wybrane prace w wysokiej rozdzielczości. Każde zdjęcie zostało starannie przygotowane, aby zaprezentować najdrobniejsze detale.</p>
-            <p>Mamy nadzieję, że spodobają Ci się nasze projekty. Zapraszamy również do odwiedzenia naszych innych stron, gdzie znajdziesz więcej informacji o Kajotte Studio i naszej ofercie.</p>
-            <h3>Dlaczego duże pliki?</h3>
-            <p>Wierzymy, że jakość ma znaczenie. Duże pliki PNG pozwalają na zachowanie najwyższej jakości obrazu, co jest kluczowe w naszej pracy. Dzięki temu możesz podziwiać każdy szczegół bez utraty ostrości.</p>
+    <div class="container">
+        <h1>Strona w przebudowie</h1>
+        <p>Pracujemy nad nową wersją naszej strony internetowej. Wkrótce wrócimy z czymś zupełnie nowym i lepszym!</p>
+        <p>Tymczasem zapraszamy do odwiedzenia naszych innych stron:</p>
+        <div class="links">
+            <a href="index.html">Kajotte Studio 1</a>
+            <a href="https://kajottestudio.wuaze.com/">Kajotte Studio 2</a>
+            <a href="https://kajotte-studio.wuaze.com/">Kajotte Studio 3</a>
+            <a href="https://kajotte-studio.wuaze.com/index_linki_pl.html">Wszystkie strony</a>
         </div>
-
-        <div id="myModal" class="modal">
-            <div class="modal-content-container">
-                <span class="close-btn">&times;</span>
-                <img class="modal-content" id="modalImage" src="" alt="Powiększone zdjęcie">
-                <div class="zoom-controls">
-                    <button id="zoomOutBtn">-</button>
-                    <button id="zoomInBtn">+</button>
-                </div>
-            </div>
+        <div class="language-switcher">
+            <a href="index_en.html">English Version</a>
         </div>
-    </main>
-
-    <div class="before-footer-links">
-        <a href="https://www.kajotteweb1.pl" target="_blank">Nasza Główna Strona</a> |
-        <a href="https://www.kajotteweb2.com/uslugi" target="_blank">Nasze Usługi</a> |
-        <a href="https://www.kajotteweb3.pl/projekty" target="_blank">Inne Projekty</a>
     </div>
-
-    <footer>
-        <p>&copy; 2023 Kajotte Studio. Wszelkie prawa zastrzeżone.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="footer">
+        &copy; 2025 Kajotte Studio. Wszystkie prawa zastrzeżone.
+    </div>
 </body>
 </html>
