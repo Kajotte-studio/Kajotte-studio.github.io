@@ -3,140 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Kajotte Studio">
-    <meta name="description" content="Kajotte Studio - photography, film and music production, programming">
-    <meta name="keywords" content="Kajotte Studio, kajotte studio, photos, kajotte photos, kajotte studio photos, photography, kajotte studio photography, kajotte photography, programming, kajotte studio programming, kajottestudio, kajottestudio programming, film production, kajotte production, video production, video, film, movie, music production, video editing, clip editing, samples, soundtrack, post-production, audio recordings, vocal recordings, kajotte studio warsaw, studio warsaw, photography warsaw, photo session warsaw, video editing warsaw, music production warsaw, custom photos, custom audio recordings, custom film recordings, custom project, website, website creation, html css, order a program, custom program, programming on demand, warsaw programming, record samples">
-    <link rel="icon" href="html/images/kajotte_studio_icon.png" type="image/png">
-    <title>Kajotte Studio - Creative Solutions</title>
-    <link rel="canonical" href="https://kajotte-studio.github.io/index_pl.html">
-    <link rel="alternate" href="https://kajotte-studio.github.io/index_en.html" hreflang="en">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="google-site-verification" content="21CWSKrQ6d1CMe_tdJ3JfpoE2RY0vfNobGA1iw7AUBw" />
-    <title>Website under construction Kajotte Studio 1</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .container {
-            max-width: 600px;
-            width: 100%;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            flex-grow: 1; /* Allows the container to take up available space */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-        .links a {
-            text-decoration: none;
-            color: #fff;
-            background-color: #3498db;
-            padding: 12px 25px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .links a:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-        .language-switcher {
-            margin-top: 20px;
-        }
-        .language-switcher a {
-            text-decoration: none;
-            color: #34495e;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .language-switcher a:hover {
-            color: #e74c3c;
-        }
-        .footer {
-            margin-top: auto; /* Pushes the footer to the bottom */
-            padding-top: 20px;
-            font-size: 0.9em;
-            color: #777;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            .links a {
-                padding: 10px 20px;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                padding: 25px;
-            }
-            h1 {
-                font-size: 1.8em;
-            }
-            .footer {
-                padding-top: 10px;
-            }
-        }
-    </style>
+    <title>Gallery - Kajotte Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" href="index_pl.html" hreflang="pl-PL">
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T10NZFFEXN');
-</script>
 <body>
-    <div class="container">
-        <h1>Website under construction</h1>
-        <p>We are currently working on a new version of our website. We will be back soon with something completely new and better!</p>
-        <p>In the meantime, feel free to visit our other pages:</p>
-        <div class="links">
-            <a href="index.html">Kajotte Studio 1</a>
-            <a href="https://kajottestudio.wuaze.com/">Kajotte Studio 2</a>
-            <a href="https://kajotte-studio.wuaze.com/">Kajotte Studio 3</a>
-            <a href="https://kajotte-studio.wuaze.com/index_linki_en.html">All pages</a>
+
+    <header class="fixed-header">
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="https://www.kajotteweb1.com" target="_blank">Kajotte Studio</a></li>
+                <li><a href="https://www.kajotteweb2.com" target="_blank">Portfolio</a></li>
+                <li><a href="https://www.kajotteweb3.com" target="_blank">Contact</a></li>
+                <li><a href="index_pl.html" class="lang-switch">Polski</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Large files gallery</h1>
+        <section class="gallery">
+            <div class="image-placeholder">
+                <p>Click to load photo 1</p>
+                <button class="load-button" data-image-src="images/photo1.png">Show photo</button>
+            </div>
+            <div class="image-placeholder">
+                <p>Click to load photo 2</p>
+                <button class="load-button" data-image-src="images/photo2.png">Show photo</button>
+            </div>
+        </section>
+
+        <div class="dummy-content">
+            <h2>Welcome to Kajotte Studio Gallery</h2>
+            <p>Here you will find our selected works in high resolution. Each photo has been carefully prepared to showcase the finest details.</p>
+            <p>We hope you enjoy our designs. We also invite you to visit our other websites for more information about Kajotte Studio and our services.</p>
+            <h3>Why large files?</h3>
+            <p>We believe that quality matters. Large PNG files allow for the highest image quality, which is crucial in our work. This way, you can admire every detail without losing sharpness.</p>
         </div>
-        <div class="language-switcher">
-            <a href="index_pl.html">Polska wersja</a>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content-container">
+                <span class="close-btn">&times;</span>
+                <img class="modal-content" id="modalImage" src="" alt="Enlarged photo">
+                <div class="zoom-controls">
+                    <button id="zoomOutBtn">-</button>
+                    <button id="zoomInBtn">+</button>
+                </div>
+            </div>
         </div>
+    </main>
+
+    <div class="before-footer-links">
+        <a href="https://www.kajotteweb1.com" target="_blank">Our Main Website</a> |
+        <a href="https://www.kajotteweb2.com/services" target="_blank">Our Services</a> |
+        <a href="https://www.kajotteweb3.com/projects" target="_blank">Other Projects</a>
     </div>
-    <div class="footer">
-        &copy; 2025 Kajotte Studio. All rights reserved.
-    </div>
+
+    <footer>
+        <p>&copy; 2023 Kajotte Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
