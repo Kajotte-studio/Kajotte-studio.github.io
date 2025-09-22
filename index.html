@@ -178,7 +178,7 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2020-2025 Kajotte Studio. All rights reserved.</p>
+        <p>&copy; 2020-<span id="current-year"></span> Kajotte Studio. All rights reserved.</p>
         <div class="social-links">
             <a href="https://www.youtube.com/@kajottestudio" target="_blank">YouTube</a>
             <a href="https://www.pinterest.com/kajottestudio/" target="_blank">Pinterest</a>
@@ -207,5 +207,6 @@ shareButton.addEventListener('click', async () => {
 </script>
         </div>
     </footer>
+    <script>document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>

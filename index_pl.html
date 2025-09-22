@@ -87,9 +87,10 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Kajotte Studio. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; 2020-<span id="current-year"></span> Kajotte Studio. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
     <script src="script.js"></script>
+    <script>document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>
