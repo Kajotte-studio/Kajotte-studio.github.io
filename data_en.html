@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="uploads/kajotte_studio_icon.png" type="image/png">
+    <meta name="author" content="Kajotte Studio">
+    <link rel="canonical" href="https://kajotte-studio.github.io/data_pl.html">
+    <link rel="alternate" href="https://kajotte-studio.github.io/data_en.html" hreflang="en">
+    <meta name="description" content="Kajotte Studio Current Date and Time Official website 1">
+    <title>Kajotte Studio No.1 | Current Date and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .date-box {
+            border: 2px solid #4CAF50;
+            padding: 1rem;
+            margin: 1rem auto;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        .date-box p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .buttons {
+            margin-top: 1.5rem;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .buttons a:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="data_pl.php" style="color: black;">Polska Wersja</a>
+        </div>
+        <h1>Current Date and Time</h1>
+        <h3>Kajotte Studio 1</h3>
+
+        <div class="date-box">
+            <p>Date: --</p>
+            <p>Time: --</p>
+        </div>
+
+        <div class="buttons">
+            <a href="https://kajottestudio.wuaze.com/data_en.php">2</a>
+            <a href="https://kajotte-studio.wuaze.com/data_en.php">3</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2020-<span id="current-year"></span> <a href="https://kajotte-studio.wuaze.com/" style="color: azure;">Kajotte Studio</a>. All rights reserved.</p>
+    </footer>
+    <script>document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
+</body>
+</html>
