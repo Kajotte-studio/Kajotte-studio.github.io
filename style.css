@@ -271,7 +271,8 @@ main {
 footer {
     text-align: center;
     padding: 20px;
+    font-size: 0.8em;
     background-color: #333;
-    color: white;
+    color: #777;
     margin-top: auto;
 }
