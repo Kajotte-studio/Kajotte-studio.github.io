@@ -9,6 +9,7 @@
     <link rel="alternate" href="https://kajotte-studio.github.io/data_en.html" hreflang="en">
     <meta name="description" content="Kajotte Studio Aktualna data i godzina Oficialna strona 1">
     <title>Kajotte Studio Nr.1 | Aktualna data i godzina</title>
+    <link rel="stylesheet" href="stylel.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,9 +67,10 @@
             text-align: center;
             padding: 1rem 0;
             background-color: #333;
-            color: #fff;
             position: absolute;
             bottom: 0;
+            color: #777;
+            font-size: 0.7em;
         }
         footer p {
             margin: 0;
@@ -104,7 +106,11 @@
     </div>
 
     <footer>
-        <p>&copy; 2020-<span id="current-year"></span> <a href="https://kajotte-studio.wuaze.com/" style="color: azure;">Kajotte Studio</a>. Wszelkie prawa zastrzeżone.</p>
+        <p>
+            &copy; 2020-<span id="current-year"></span> 
+            <a href="https://kajotte-studio.wuaze.com/">Kajotte Studio</a>. 
+            Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script>document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
 </body>
