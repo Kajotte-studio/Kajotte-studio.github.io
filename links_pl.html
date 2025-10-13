@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Kajotte Studio | Linki | Szybka nawigacja po całej witrynie:  fotografia, produkcja filmowa i muzyczna, programowanie | Znajdź wszystkie linki do naszych projektów </title>
+    <link rel="stylesheet" href="stylel.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,7 +85,7 @@
         .footer {
             margin-top: auto; /* Pushes the footer to the bottom */
             padding-top: 20px;
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #777;
         }
 
@@ -135,9 +136,13 @@
             <a href="links_en.html">English Version</a>
         </div>
     </div>
-    <div class="footer">
-        &copy; 2020-<span id="current-year"></span> Kajotte Studio. Wszystkie prawa zastrzeżone.
-    </div>
+    <footer>
+        <div class="footer">
+            &copy; 2020-<span id="current-year"></span> 
+            <a href="https://kajotte-studio.wuaze.com/">Kajotte Studio</a>. 
+            <br>Wszystkie prawa zastrzeżone.
+        </div>
+    </footer>
     <script>document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>

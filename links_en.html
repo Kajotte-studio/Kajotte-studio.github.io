@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Kajotte Studio | Links | Quick and easy navigation for the entire website: photography, film and music production, programming | Find all links to our projects </title>
+    <link rel="stylesheet" href="stylel.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -85,7 +86,7 @@
         .footer {
             margin-top: auto; /* Pushes the footer to the bottom */
             padding-top: 20px;
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #777;
         }
 
@@ -136,9 +137,13 @@
             <a href="links_pl.html">Polska Wersja</a>
         </div>
     </div>
-    <div class="footer">
-        &copy; 2020-<span id="current-year"></span> Kajotte Studio. All rights reserved.
-    </div>
+    <footer>
+        <div class="footer">
+            &copy; 2020-<span id="current-year"></span> 
+            <a href="https://kajotte-studio.wuaze.com/">Kajotte Studio</a>. 
+            <br>All rights reserved.
+        </div>
+    </footer>
     <script>document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>
