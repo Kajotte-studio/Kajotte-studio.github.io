@@ -1,0 +1,29 @@
+/* Stylizacja podstawowa linków w elemencie footer */
+footer a {
+  /* Zmienia kolor tekstu linku na jasno szary (np. dla ciemnego tła stopki) */
+  color: #777; 
+  
+  /* Usuwa domyślne podkreślenie */
+  text-decoration: none; 
+}
+
+/* --- Stan po najechaniu kursorem (ważny dla interakcji) --- */
+footer a:hover {
+  /* Zmienia kolor #ffffff linku na biały, gdy użytkownik na niego najedzie */
+  color: #ffffff; 
+  
+  /* Opcjonalnie: dodaje podkreślenie z powrotem, aby zaznaczyć interakcję */
+  text-decoration: underline; 
+}
+
+/* --- Stan linku odwiedzonego (opcjonalny) --- */
+footer a:visited {
+  /* Możesz pozostawić ten sam kolor, co w stanie normalnym */
+  color: #777; 
+}
+
+/* --- Stan linku w trakcie klikania (opcjonalny) --- */
+footer a:active {
+  /* Zmienia kolor na czerwony w momencie kliknięcia */
+  color: lightblue; 
+}
