@@ -138,6 +138,16 @@ main {
     gap: 20px;
 }
 
+.separator-div {
+    border-top: 4px solid #007bff; /* Tworzy górną krawędź jako linię */
+    width: 60%; /* Ustawia szerokość */
+    margin: 30px auto; /* Centruje i dodaje margines */
+}
+
+.dotted-separator {
+    border-top: 3px dotted #007bff; /* Linia kropkowana */
+}
+
 .image-placeholder {
     width: 300px;
     height: 200px;
