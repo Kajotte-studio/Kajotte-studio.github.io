@@ -139,13 +139,13 @@ main {
 }
 
 .separator-div {
-    border-top: 4px solid #007bff; /* Tworzy górną krawędź jako linię */
-    width: 60%; /* Ustawia szerokość */
+    border-top: 2px solid #777777; /* Tworzy górną krawędź jako linię */
+    width: 80%; /* Ustawia szerokość */
     margin: 30px auto; /* Centruje i dodaje margines */
 }
 
 .dotted-separator {
-    border-top: 3px dotted #007bff; /* Linia kropkowana */
+    border-top: 3px dotted #777777; /* Linia kropkowana */
 }
 
 .image-placeholder {
