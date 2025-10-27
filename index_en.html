@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kajotte Studio">
+    <meta name="description" content="Explore high-resolution images and large files in full detail! Kajotte Studio Gallery offers smooth zoom in and zoom out functionality so you don't miss a single pixel.">
+    <meta name="keywords" content="Kajotte Studio, kajotte studio, photos, kajotte photos, kajotte studio photos, photography, kajotte studio photography, kajotte photography, programming, kajotte studio programming, kajottestudio, kajottestudio programming, film production, kajotte production, video production, video, film, movie, music production, video editing, clip editing, samples, soundtrack, post-production, audio recordings, vocal recordings, kajotte studio warsaw, studio warsaw, photography warsaw, photo session warsaw, video editing warsaw, music production warsaw, custom photos, custom audio recordings, custom film recordings, custom project, website, website creation, html css, order a program, custom program, programming on demand, warsaw programming, record samples">
+    <link rel="icon" href="html/images/kajotte_studio_icon.png" type="image/png">
+    <link rel="canonical" href="https://kajotte-studio.github.io/index_pl.html">
+    <link rel="alternate" href="https://kajotte-studio.github.io/index_en.html" hreflang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Kajotte Studio Gallery: Large Files in Detail. Seamless Zoom In/Out</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylel.css">
+    <link rel="alternate" href="index_pl.html" hreflang="pl-PL">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-T10NZFFEXN');
+    </script>
+</head>
+<body>
+    <header class="fixed-header">
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">&#9776;</button>
+            <ul id="main-menu" class="nav-menu">
+                <li><a href="https://kajotte-studio.com/" class="nav-button">Kajotte Studio</a></li>
+                <li><a href="index.html" class="nav-button">Homepage</a></li>
+                <li><a href="https://kajotte-studio.com/index_foto_en.html" class="nav-button">Main gallery</a></li>
+                <li><a href="https://kajotte-studio.com/index_en.html" class="nav-button">Other</a></li>
+                <li><a href="https://kajotte-studio.com/index_blog_en.html" class="nav-button">Blog</a></li>
+                <li><a href="https://kajotte-studio.com/index_download_en.html" class="nav-button">Download</a></li>
+                <li><a href="https://kajotte-studio.com/kajotte_studio_sitemap_en.html" class="nav-button">Site map</a></li>
+                <li><a href="https://kajotte-studio.com/index_blog_post_3_en.html" class="nav-button">Contact</a></li>
+                <li><a href="index_pl.html" class="lang-switch nav-button">Polska Wersja</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <hr id="start">
+        <p style="color: #777777; font-size: 0.9rem;">
+            <em>“Photography is not about looking, 
+            <br>it’s about feeling. 
+            <br>If you can’t feel what 
+            <br>you’re looking at, 
+            <br>then you’re never going 
+            <br>to get others to feel anything 
+            <br>when they look at your pictures.”</em> <a href="#foot">&darr;</a>
+            <br>
+            <br>- Don McCullin
+        </p>
+        <div class="separator-div dotted-separator"></div>
+        <h1 class="page-title">Kajotte Studio Gallery</h1>
+        <a href="https://kajotte-studio.com/index_foto_en.html" class="nav-button">Main gallery</a>
+        <a href="https://kajotte-studio.com/lock/foto_lock_1_en.html"  class="nav-button">Private</a>
+        <div class="separator-div"></div>
+        <p>↓ Allows for easy zooming in, so you can see every single detail, no matter how small. ↓</p>
+        <section class="gallery">
+            <h5>The Kajotte Studio graphic</h5>
+            <div class="image-placeholder">
+                <p><b>Blog PL</b></p>
+                <h6><em>File size: 16 MB</em></h6>
+                <button class="load-button" data-image-src="html/images/kajotte_studio_blog_pl.png">Show graphics</button>
+            </div>
+            <div class="image-placeholder">
+                <p><b>Blog EN</b></p>
+                <h6><em>File size: 16 MB</em></h6>
+                <button class="load-button" data-image-src="html/images/kajotte_studio_blog.png">Show graphics</button>
+            </div>
+        </section>
+        <div class="dummy-content">
+            <h2>Kajotte Studio Gallery</h2>
+            <p>Here you will find our selected works in high resolution. Each photo has been carefully prepared to showcase the finest details.</p>
+            <p>We hope you enjoy our designs. We also invite you to visit our other websites for more information about Kajotte Studio and our services.</p>
+            <h3>Why large files?</h3>
+            <p>We believe that quality matters. Large PNG files allow for the highest image quality, which is crucial in our work. This way, you can admire every detail without losing sharpness.</p>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content-container">
+                <span class="close-btn">&times;</span>
+                <img class="modal-content" id="modalImage" src="html/images/kajotte_studio_blog_pl.png" alt="Enlarged photo">
+                <div class="zoom-controls">
+                    <button id="zoomOutBtn">-</button>
+                    <button id="zoomInBtn">+</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="before-footer-links">
+        <p class="page-title">Files available for download: </p>
+        <p>
+            <a href="https://kajotte-studio.com/download_center_graf_en.html">BLOG_en.png</a> - <b>Size:</b> 8 MB 
+        </p>
+    </div>
+    <div class="before-footer-links">
+        <a href="links_en.html">Our Websites</a> |
+        <a href="https://kajotte-studio.com/index_download_en.html">Download Center</a> |
+        <a href="https://kajotte-studio.com/index_linki_en.html">Projects</a>
+    </div>
+    <footer>
+        <p id="foot">
+            &copy; 2020-<span id="current-year"></span> 
+            <a href="index.html">Kajotte Studio</a>. 
+            All rights reserved. 
+            <a href="#start">&#x21BA;</a> 
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script>document.getElementById("current-year").innerHTML = new Date().getFullYear();</script>
+</body>
+</html>
