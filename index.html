@@ -3,196 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';frame-ancestors 'none'; upgrade-insecure-requests;">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>Kajotte Studio No.1 | Advanced Educational Ecosystem</title>
+    <meta name="description" content="Welcome to Kajotte Studio. Explore our professional educational platform, GitHub repositories, and advanced technical solutions. Select your path to begin.">
+    <meta name="keywords" content="Kajotte Studio, Educational Platform, GitHub Gallery, Technical Documentation, Learning System">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-light.png">
     <meta name="apple-mobile-web-app-title" content="Kajotte Studio">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="author" content="Kajotte Studio">
-    <meta name="description" content="Welcome to Kajotte Studio, a stable center for learning and creative tools. Select your language to access courses in Photography, Music/Video Production, Programming, and specialist resources.">
-    <meta name="google-site-verification" content="21CWSKrQ6d1CMe_tdJ3JfpoE2RY0vfNobGA1iw7AUBw">
-    <title>Kajotte Studio No.1: Educational Platform & Creative Resources (Tools, Blog, Downloads)</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
-
-        :root {
-            --primary-color: #00796b;
-            --secondary-color: #004d40;
-            --background-color: #f0f4f8;
-            --card-background: #ffffff;
-            --text-color: #333;
-            --shadow-light: rgba(0, 0, 0, 0.05);
-            --shadow-medium: rgba(0, 0, 0, 0.1);
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; /* Pozycjonowanie na dole ekranu */
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex-grow: 1;
-            justify-content: center; /* Wyśrodkowanie w pionie dla ekranów powyżej 768px */
-            width: 100%;
-            padding-bottom: 20vh; /* Przesunięcie w górę na dużych ekranach */
-        }
-
-        .content-wrapper {
-            background-color: var(--card-background);
-            padding: 50px 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px var(--shadow-light);
-            text-align: center;
-            max-width: 650px;
-            width: 90%;
-        }
-
-        .studio-name {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.2em; /* Mniejszy rozmiar */
-            color: var(--secondary-color);
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em; /* Większy rozmiar */
-            color: var(--text-color);
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 40px;
-        }
-
-        .language-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-
-        .link-item {
-            display: inline-block;
-            font-size: 1.1em;
-            padding: 14px 30px;
-            text-decoration: none;
-            color: #fff;
-            background-color: var(--primary-color);
-            border-radius: 50px;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            font-weight: 600;
-            box-shadow: 0 4px 6px var(--shadow-medium);
-        }
-
-        .link-item:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 10px var(--shadow-medium);
-        }
-
-        .footer {
-            margin-top: 30px;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #757575;
-            text-align: center;
-            width: 100%;
-            border-top: 1px solid #ccc; /* Ramka dla stopki */
-        }
-
-        .social-links {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #757575;
-            text-decoration: none;
-            font-size: 1em;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Ustawienia dla urządzeń mobilnych */
-        @media (max-width: 768px) {
-            body {
-                justify-content: center; /* Wyśrodkowanie na małych ekranach */
-            }
-            .main-content {
-                padding-bottom: 0;
-            }
-            .content-wrapper {
-                padding: 30px 15px;
-            }
-            h1 {
-                font-size: 1.8em;
-                margin-bottom: 30px;
-            }
-            .studio-name {
-                font-size: 1em;
-            }
-            .language-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .link-item {
-                width: 100%;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="style-link-t.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-T10NZFFEXN');
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://kajotte-studio.com/style-index.css" rel="stylesheet">
+    <link href="https://kajotte-studio.com/style-link-i.css" rel="stylesheet">
 </head>
 <body>
-    <p><em>kajotte-studio.github.io</em></p>
-    <h6>Gallery on GitHub</h6>
-    <div class="main-content">
-        <div class="content-wrapper">
-            <p class="studio-name">
-                <em>Kajotte Studio</em>
-                <br> No.1 / <a href="https://host447933.xce.pl/" class="stylish-link">No.2</a> / 
-                <a href="https://kajotte-studio.com" class="stylish-link">No.3</a>
-            </p>
-            <h1>Wybierz język / Choose your language</h1>
-            <div class="language-links">
-                <a href="index_pl.html" class="link-item">Polski</a>
-                <a href="index_en.html" class="link-item">English</a>
+    <div class="background-visual"></div>
+    <header class="top-brand">
+        <h1>KAJOTTE STUDIO</h1>
+        <p>Advanced Educational Ecosystem</p>
+    </header>
+    <main class="selection-container">
+        <section class="card no1 active-domain">
+            <div class="card-bg"></div>
+            <div class="card-content">
+                <div class="badge">
+                    Platform 01 
+                </div>
+                <h2>GitHub Gallery</h2>
+                <p class="description">Professional exploration tool for high-resolution assets.</p>
+                <div class="lang-box">
+                    <a href="index_en.html" class="btn">English Version</a>
+                    <a href="index_pl.html" class="btn">Polska Wersja</a>
+                </div>
             </div>
-        </div>
-    </div>
-    <footer class="footer">
-        <p>&copy; 2020-<span id="current-year"></span> Kajotte Studio. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://www.youtube.com/@kajottestudio" target="_blank">YouTube</a>
-            <a href="https://www.pinterest.com/kajottestudio/" target="_blank">Pinterest</a>
-            <button id="shareButton">Share this page</button>
-        </div>
+            <div class="domain-indicator">No.1</div>
+        </section>
+        <section class="card no2">
+            <div class="card-bg"></div>
+            <div class="card-content">
+                <div class="badge">
+                    Platform 02 &#9657; 
+                    <a href="https://host447933.xce.pl/" class="stylish-link">Visit</a>
+                </div>
+                <h2>Technical Site</h2>
+                <p class="description">Website under construction.</p>
+                <div class="lang-box">
+                    <a href="https://kajotte-studio.com/index_en.html" class="btn">English Version</a>
+                    <a href="https://kajotte-studio.com/index_pl.html" class="btn">Polska Wersja</a>
+                </div>
+            </div>
+            <div class="domain-indicator">No.2</div>
+        </section>
+        <section class="card no3">
+            <div class="card-bg"></div>
+            <div class="card-content">
+                <div class="badge">
+                    Platform 03 &#9657; 
+                    <a href="https://kajotte-studio.com/" class="stylish-link">Visit</a>
+                </div>
+                <h2>Educational Portal</h2>
+                <p class="description">Comprehensive learning management system designed for modern education.</p>
+                <div class="lang-box">
+                    <a href="https://kajotte-studio.com/index_en.html" class="btn">English Version</a>
+                    <a href="https://kajotte-studio.com/index_pl.html" class="btn">Polska Wersja</a>
+                </div>
+            </div>
+            <div class="domain-indicator">No.3</div>
+        </section>
+    </main>
+    <footer class="minimal-footer">
+        <p>&copy; 2020-<span id="current-year"></span> KAJOTTE STUDIO  All rights reserved.</p>
     </footer>
-    <script src="script-button-en.js"></script>
     <script src="current-year.js"></script>
 </body>
 </html>
