@@ -45,7 +45,7 @@ body {
 
 /* Styl linków-przycisków w menu głównym */
 .nav-button {
-    background-color: #007bff; /* Wyraźny niebieski */
+    background-color: #1e1e1e; /* Wyraźny niebieski */
     color: white;
     text-decoration: none;
     font-size: 1em;
@@ -55,7 +55,7 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
+    background-color: #0058b7; /* Ciemniejszy odcień przy najechaniu */
     text-decoration: none;
 }
 
@@ -163,7 +163,7 @@ main {
 }
 
 .load-button {
-    background-color: #007bff; /* Wyraźny niebieski */
+    background-color: #606060; /* Wyraźny niebieski */
     color: white;
     border: none;
     padding: 10px 20px;
