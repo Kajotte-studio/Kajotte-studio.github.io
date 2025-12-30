@@ -14,6 +14,7 @@ This policy applies to all digital assets managed by Kajotte Studio:
 ### 📚 Resources & Documentation
 For technical details and project documentation, please visit:
 * 📖 **Official Documentation:** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
+*&* [kajotte-studio.com/docs_list_en.html](https://kajotte-studio.com/docs_list_en.html)
 * 🎨 **Project Assets:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
 
 ### 🛠️ Supported Versions
@@ -47,6 +48,7 @@ Niniejsza polityka obejmuje wszystkie zasoby cyfrowe zarządzane przez Kajotte S
 ### 📚 Zasoby i Dokumentacja
 Szczegółowe informacje techniczne oraz dokumentację projektową znajdziesz tutaj:
 * 📖 **Oficjalna Dokumentacja:** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
+*oraz* [kajotte-studio.com/docs_list_en.html](https://kajotte-studio.com/docs_list_pl.html)
 * 🎨 **Zasoby Projektowe:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
 
 ### 🛠️ Wspierane Wersje
