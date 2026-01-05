@@ -2,20 +2,24 @@ let currentScale = 1;
 
 function isSafeImageSrc(src) {
   if (typeof src !== 'string') {
-    return false;
+    return null;
   }
   const trimmed = src.trim();
   if (trimmed === '') {
-    return false;
+    return null;
   }
   try {
     const url = new URL(trimmed, window.location.href);
     const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
     const isSameOrigin = url.origin === window.location.origin;
-    return isHttp && isSameOrigin;
+    if (isHttp && isSameOrigin) {
+      // Zwracamy znormalizowany, bezpieczny adres URL
+      return url.href;
+    }
+    return null;
   } catch (e) {
     // Nieprawidłowy URL traktujemy jako niebezpieczny
-    return false;
+    return null;
   }
 }
 
@@ -64,8 +68,9 @@ if (menuToggle) {
 document.querySelectorAll('.load-button').forEach(button => {
     button.addEventListener('click', (event) => {
         const imageSrc = event.target.getAttribute('data-image-src');
-        if (isSafeImageSrc(imageSrc)) {
-            openModal(imageSrc)
+        const safeImageSrc = isSafeImageSrc(imageSrc);
+        if (safeImageSrc) {
+            openModal(safeImageSrc);
         }
     });
 });
