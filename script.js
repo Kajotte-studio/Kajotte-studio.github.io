@@ -1,21 +1,21 @@
 let currentScale = 1;
 
 function isSafeImageSrc(src) {
-  if (typeof src !== 'string' || src.trim() === '') {
+  if (typeof src !== 'string') {
+    return false;
+  }
+  const trimmed = src.trim();
+  if (trimmed === '') {
     return false;
   }
   try {
-    // Sprawdzamy, czy to bezpieczny protokół (http, https lub ścieżka względna)
-    const url = new URL(src, window.location.href);
-    return ['http:', 'https:'].includes(url.protocol);
+    const url = new URL(trimmed, window.location.href);
+    const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
+    const isSameOrigin = url.origin === window.location.origin;
+    return isHttp && isSameOrigin;
   } catch (e) {
-    // Jeśli to nie jest pełny URL, sprawdźmy czy to bezpieczna ścieżka względna
-    const normalizedSrc = src.trim().toLowerCase();
-    return !(
-      normalizedSrc.startsWith('javascript:') ||
-      normalizedSrc.startsWith('data:') ||
-      normalizedSrc.startsWith('vbscript:')
-    );
+    // Nieprawidłowy URL traktujemy jako niebezpieczny
+    return false;
   }
 }
 
