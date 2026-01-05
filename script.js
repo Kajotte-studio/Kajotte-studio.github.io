@@ -1,5 +1,23 @@
 let currentScale = 1;
 
+function isSafeImageSrc(src) {
+    if (typeof src !== 'string' || src.trim() === '') {
+        return false;
+    }
+    try {
+        const url = new URL(src, window.location.href);
+        const protocol = url.protocol.toLowerCase();
+        if (protocol === 'http:' || protocol === 'https:') {
+            return true;
+        }
+        // Disallow other protocols such as javascript:, data:, etc.
+        return false;
+    } catch (e) {
+        // If URL construction fails, treat as unsafe
+        return false;
+    }
+}
+
 function openModal(imageSrc) {
     const modal = document.getElementById("myModal");
     const modalImage = document.getElementById("modalImage");
@@ -44,7 +62,9 @@ if (menuToggle) {
 document.querySelectorAll('.load-button').forEach(button => {
     button.addEventListener('click', (event) => {
         const imageSrc = event.target.getAttribute('data-image-src');
-        openModal(imageSrc);
+        if (isSafeImageSrc(imageSrc)) {
+            openModal(imageSrc);
+        }
     });
 });
 
