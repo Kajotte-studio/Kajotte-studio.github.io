@@ -10,7 +10,12 @@ function isSafeImageSrc(src) {
     return ['http:', 'https:'].includes(url.protocol);
   } catch (e) {
     // Jeśli to nie jest pełny URL, sprawdźmy czy to bezpieczna ścieżka względna
-    return !src.startsWith('javascript:');
+    const normalizedSrc = src.trim().toLowerCase();
+    return !(
+      normalizedSrc.startsWith('javascript:') ||
+      normalizedSrc.startsWith('data:') ||
+      normalizedSrc.startsWith('vbscript:')
+    );
   }
 }
 
