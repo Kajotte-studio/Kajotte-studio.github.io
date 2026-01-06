@@ -27,7 +27,6 @@ This documentation covers two primary pillars of our digital craft:
 ### Python Engineering
 * **Compatibility:** Optimized for Python 3.9+.
 * **Structure:** Clean, PEP 8 compliant code designed for scalability.
-* **Deployment:** All dependencies are managed via `requirements.txt` for consistent environments.
 
 ## 03 / Open Source Philosophy (MIT License)
 We believe in the power of shared tools to drive the modern web forward. All resources within this documentation are released under the **MIT License**.
