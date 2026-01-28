@@ -1,0 +1,67 @@
+/* -------------------------- */
+/* Podstawowy Styl Linku */
+/* -------------------------- */
+.stylish-link-on-f {
+  /* Usuń domyślne podkreślenie */
+  text-decoration: none; 
+  
+  /* Kolor tekstu */
+  color: #004191; /* Jasny, przyjemny dla oka niebieski */
+  font-weight: 500; /* Pogrubienie czcionki */
+  
+  /* Dodaj subtelne przejście dla płynnych animacji */
+  transition: 
+    color 0.3s ease-in-out, 
+    transform 0.3s ease-in-out; 
+    
+  /* Ustawienie kontekstu dla pseudo-elementu (podkreślenia) */
+  position: relative;
+  
+  /* Wyrównanie i odstępy */
+  display: inline-block;
+  padding: 2px 0;
+
+}
+
+/* -------------------------- */
+/* Efekt Najechania (Hover) */
+/* -------------------------- */
+.stylish-link-on-f:hover {
+  /* Lekkie przyciemnienie koloru tekstu */
+  color: #000000;
+  font-weight: 600; /* Pogrubienie czcionki */
+  cursor: pointer; /* Zapewnia, że kursor zmienia się na rękę */
+  
+  /* Opcjonalnie: bardzo delikatne powiększenie (dodaje dynamiki) */
+  transform: translateY(-1px);
+}
+
+/* -------------------------- */
+/* Stylowe Podkreślenie (Pseudo-element) */
+/* -------------------------- */
+/* Utwórz niewidoczny pasek pod linkiem */
+.stylish-link-on-f::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Grubość podkreślenia */
+  background-color: #000000; /* Kolor podkreślenia (ten sam co tekst) */
+  
+  /* Ustaw podkreślenie na początku jako niewidoczne lub zerowej szerokości */
+  transform: scaleX(0); /* Początkowa szerokość 0 */
+  transform-origin: bottom right; /* Rozwijanie od prawej */
+  
+  /* Dodaj przejście dla animacji paska */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* -------------------------- */
+/* Animacja Podkreślenia podczas Najazdu */
+/* -------------------------- */
+.stylish-link-on-f:hover::after {
+  /* Rozwiń podkreślenie na pełną szerokość */
+  transform: scaleX(1); 
+  transform-origin: bottom left; /* Rozwijanie do lewej */
+}

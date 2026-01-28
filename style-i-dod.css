@@ -1,0 +1,21 @@
+.portal-subtitle {
+    font-family: 'Playfair Display', serif; /* Elegancki font szeryfowy (opcjonalnie) */
+    color: #1a1a1a;                         /* Głęboka czerń */
+    font-size: 1.2rem;                      /* Odpowiednia wielkość */
+    font-weight: 300;                       /* Lekka, smukła czcionka */
+    letter-spacing: 2px;                    /* Rozstrzelenie liter nadaje luksusowy charakter */
+    text-transform: uppercase;              /* Wielkie litery */
+    border-left: 5px solid #000;            /* Subtelna pionowa linia z boku */
+    padding-left: 15px;                     /* Odstęp od linii */
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.portal-subtitle {
+    animation: fadeIn 1s ease-out;
+}
