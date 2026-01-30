@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';frame-ancestors 'none'; upgrade-insecure-requests;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';  upgrade-insecure-requests;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -16,79 +19,7 @@
     <meta name="description" content="Kajotte Studio Aktualna data i godzina Oficialna strona 1">
     <title>Kajotte Studio Nr.1 | Aktualna data i godzina</title>
     <link rel="stylesheet" href="stylel.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            text-align: center;
-            padding: 2rem;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 90%;
-            margin-bottom: 2rem;
-        }
-        h1 {
-            color: #4CAF50;
-        }
-        .date-box {
-            border: 2px solid #4CAF50;
-            padding: 1rem;
-            margin: 1rem auto;
-            border-radius: 8px;
-            display: inline-block;
-        }
-        .date-box p {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .buttons {
-            margin-top: 1.5rem;
-        }
-        .buttons a {
-            text-decoration: none;
-            color: #fff;
-            background-color: #007BFF;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 0 10px;
-            transition: background-color 0.3s;
-        }
-        .buttons a:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            position: absolute;
-            bottom: 0;
-            color: #777;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.8rem;
-        }
-    </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T10NZFFEXN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-T10NZFFEXN');
-    </script>
+    <link rel="stylesheet" href="style-daty-php.css">
 </head>
 <body>
     <div class="container">
