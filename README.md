@@ -2,7 +2,9 @@
 # ✦ Technical Documentation
 **Kajotte Studio Open Resources & Engineering**
 
-Welcome to the official technical repository for resources hosted on [kajotte-studio.com](https://kajotte-studio.com). This space serves as the central documentation hub for our bespoke HTML templates and Python-based utility tools. | Download Center
+Welcome to the official technical repository for resources hosted on [kajotte-studio.com](https://kajotte-studio.com). This space serves as the central documentation hub for our bespoke HTML templates and Python-based utility tools. | [Download Center](https://kajotte-studio.com/index_download_en.html)
+
+---
 
 ### Documentation
 * **Technical Documentation** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
