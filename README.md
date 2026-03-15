@@ -8,7 +8,7 @@ Welcome to the official technical repository for resources hosted on [kajotte-st
 
 ### Documentation
 * **Technical Documentation** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
-* **Full documentation** [Technical & Legal Ecosystem](https://kajotte-studio.com/docs0_en.html)
+* **Full Documentation** [Technical & Legal Ecosystem](https://kajotte-studio.com/docs0_en.html)
 
 ---
 
