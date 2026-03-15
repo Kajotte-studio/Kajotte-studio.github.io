@@ -6,11 +6,6 @@ Welcome to the official technical repository for resources hosted on [kajotte-st
 
 ---
 
-### "Precision in every line. Elegance in every frame."
-[Visit Main Domain →](https://kajotte-studio.com)
-
----
-
 ## 01 / Resource Ecosystem
 
 This documentation covers two primary pillars of our digital craft:
@@ -37,6 +32,9 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 ✦ **Updates:** Follow our GitHub activity for the latest releases and patches.
 
 ---
+
+### "Precision in every line. Elegance in every frame."
+[Visit Main Domain →](https://kajotte-studio.com)
 <div align="center">
   <sub>© Kajotte Studio. Built with intention.</sub>
 </div>
