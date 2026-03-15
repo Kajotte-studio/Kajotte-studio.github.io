@@ -28,17 +28,7 @@ This documentation covers two primary pillars of our digital craft:
 * **Compatibility:** Optimized for Python 3.9+.
 * **Structure:** Clean, PEP 8 compliant code designed for scalability.
 
-## 03 / Open Source Philosophy (MIT License)
-We believe in the power of shared tools to drive the modern web forward. All resources within this documentation are released under the **MIT License**.
-
-**Your Rights:**
-✦ **Freedom to Modify:** Adapt the code to suit your specific creative or technical needs.
-✦ **Commercial Use:** Feel free to implement these tools in private or commercial client projects.
-✦ **Distribution:** Use these resources as a foundation for larger, more complex systems.
-
-*Note: We kindly ask that the original authorship notice (Kajotte Studio) remains in the source headers.*
-
-## 04 / Implementation & Support
+## 03 / Implementation & Support
 
 If you encounter technical challenges or wish to suggest an enhancement to our scripts or templates:
 
