@@ -38,5 +38,5 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 ---
 
 <div align="center">
-  <sub>© 2025 Kajotte Studio. Built with intention.</sub>
+  <sub>© Kajotte Studio. Built with intention.</sub>
 </div>
