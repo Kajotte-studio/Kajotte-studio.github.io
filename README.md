@@ -4,6 +4,10 @@
 
 Welcome to the official technical repository for resources hosted on [kajotte-studio.com](https://kajotte-studio.com). This space serves as the central documentation hub for our bespoke HTML templates and Python-based utility tools. | Download Center
 
+### Documentation
+* **Technical Documentation** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
+* **Full documentation** [Technical & Legal Ecosystem](https://kajotte-studio.com/docs0_en.html)
+
 ---
 
 ## 01 / Resource Ecosystem
