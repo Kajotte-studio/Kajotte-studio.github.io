@@ -38,7 +38,5 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 ---
 
 <div align="center">
-  <img src="https://img.shields.io/badge/License-MIT-black?style=flat-square" alt="MIT License" />
-  <br />
   <sub>© 2025 Kajotte Studio. Built with intention.</sub>
 </div>
