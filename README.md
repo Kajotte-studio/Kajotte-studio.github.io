@@ -36,7 +36,7 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 ✦ **Updates:** Follow our GitHub activity for the latest releases and patches.
 
 ---
-
+![Status](https://img.shields.io/badge/status-active%20development-green.svg)
 <div align="center">
   <sub>© Kajotte Studio. Built with intention.</sub>
 </div>
