@@ -1,3 +1,4 @@
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-Kajotte--Studio-ea4aaa?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/Kajotte-studio)
 ![Status](https://img.shields.io/badge/status-active%20development-green.svg)
 # ✦ Technical Documentation
 **Kajotte Studio Open Resources & Engineering**
