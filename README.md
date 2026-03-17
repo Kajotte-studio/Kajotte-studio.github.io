@@ -1,42 +1,60 @@
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-Kajotte--Studio-ea4aaa?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/Kajotte-studio)
 ![Status](https://img.shields.io/badge/status-active%20development-green.svg)
-# ✦ Technical Documentation
+
+---
+
+# ✦ Repository Documentation: GitHub High-Resolution Gallery
+
+This repository serves as a dedicated storage and documentation hub for high-resolution assets and large files associated with the Kajotte Studio project. It is designed to host media that requires significant bandwidth or storage, maintaining the project's commitment to speed and clean architecture.
+
+---
+
+## Project Overview
+The main purpose of this repository is to manage and serve high-quality visual content. By separating large assets from the core codebase, the overall project remains lightweight and efficient.
+
+### Key Features:
+- **High-Resolution Assets:** Storage for uncompressed images and large media files.
+- **Minimalist Structure:** Pure HTML implementation without external content management systems (CMS).
+- **Optimization:** Strategic file organization to ensure fast delivery of high-quality content.
+
+---
+
+## Dokumentacja Projektu
+Niniejsze repozytorium pełni funkcję centrum dokumentacji oraz miejsca przechowywania plików o wysokiej rozdzielczości dla projektu Kajotte Studio. Zostało zaprojektowane do hostowania multimediów wymagających dużej przepustowości, zgodnie z zasadą szybkości i czystej architektury.
+
+### Główne założenia:
+- **Zasoby High-Res:** Przechowywanie nieskompresowanych obrazów i dużych plików multimedialnych.
+- **Minimalistyczna Struktura:** Wykorzystanie czystego HTML, bez zewnętrznych systemów zarządzania treścią (CMS).
+- **Optymalizacja:** Strategiczna organizacja plików zapewniająca szybkie dostarczanie treści wysokiej jakości.
+
+---
+
+## 🛠 Technical Details
+- **Environment:** GitHub Pages / GitHub Storage
+- **Architecture:** Pure HTML (No CMS / No WordPress)
+- **Focus:** Performance, Clarity, Minimalism
+
+---
+
+### 🌐 Links
+- **Official Website:** [Kajotte-studio.com](https://Kajotte-studio.com)
+
 **Kajotte Studio Open Resources & Engineering**
 
 Welcome to the official technical repository for resources hosted on [kajotte-studio.com](https://kajotte-studio.com). This space serves as the central documentation hub for our bespoke HTML templates and Python-based utility tools. | [Download Center](https://kajotte-studio.com/index_download_en.html)
+
+## Implementation & Support
+
+If you encounter technical challenges or wish to suggest an enhancement to our scripts or templates:
+
+✦ **Inquiries:** [help@kajotte-studio.com]  
+✦ **Updates:** Follow our GitHub activity for the latest releases and patches.
 
 ---
 
 ### Documentation
 * **Technical Documentation** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
 * **Full Documentation** [Technical & Legal Ecosystem](https://kajotte-studio.com/docs0_en.html)
-
----
-
-## 01 / Resource Ecosystem
-
-This documentation covers two primary pillars of our digital craft:
-
-* **Bespoke HTML Templates:** High-end web structures focused on minimalist aesthetics, fluid motion, and intentional typography.
-* **Python Toolset:** Standalone scripts and automation modules engineered for clean logic and seamless performance.
-
-## 02 / Technical Standards
-
-### HTML & Creative Development
-* **Methodology:** Semantic HTML5 and modern CSS3 (Grid/Flexbox).
-* **Motion:** Lightweight interactions powered by Vanilla JS or refined animation libraries.
-* **Architecture:** Modular components with CSS variables for rapid brand adaptation.
-
-### Python Engineering
-* **Compatibility:** Optimized for Python 3.9+.
-* **Structure:** Clean, PEP 8 compliant code designed for scalability.
-
-## 03 / Implementation & Support
-
-If you encounter technical challenges or wish to suggest an enhancement to our scripts or templates:
-
-✦ **Inquiries:** [help@kajotte-studio.com]  
-✦ **Updates:** Follow our GitHub activity for the latest releases and patches.
 
 ---
 
