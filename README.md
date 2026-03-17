@@ -30,7 +30,7 @@ Niniejsze repozytorium pełni funkcję centrum dokumentacji oraz miejsca przecho
 ---
 
 ## 🛠 Technical Details
-- **Environment:** GitHub Pages / GitHub Storage
+- **Environment:** GitHub Pages
 - **Architecture:** Pure HTML (No CMS / No WordPress)
 - **Focus:** Performance, Clarity, Minimalism
 
