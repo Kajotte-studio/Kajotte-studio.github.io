@@ -41,7 +41,9 @@ Niniejsze repozytorium pełni funkcję centrum dokumentacji oraz miejsca przecho
 
 **Kajotte Studio Open Resources & Engineering**
 
-Welcome to the official technical repository for resources hosted on [kajotte-studio.com](https://kajotte-studio.com). This space serves as the central documentation hub for our bespoke HTML templates and Python-based utility tools. | [Download Center](https://kajotte-studio.com/index_download_en.html)
+- [Download Center](https://kajotte-studio.com/index_download_en.html)
+
+---
 
 ## Implementation & Support
 
@@ -58,8 +60,7 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 
 ---
 
-### "Precision in every line. Elegance in every frame."
-[Visit Main Domain →](https://kajotte-studio.com)
 <div align="center">
+  "Precision in every line. Elegance in every frame."<br>
   <sub>© Kajotte Studio. Built with intention.</sub>
 </div>
