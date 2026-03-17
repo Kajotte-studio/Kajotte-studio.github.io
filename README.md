@@ -9,7 +9,7 @@ This repository serves as a dedicated storage and documentation hub for high-res
 
 ---
 
-## Project Overview
+## &#8505;&#65039; Project Overview
 The main purpose of this repository is to manage and serve high-quality visual content. By separating large assets from the core codebase, the overall project remains lightweight and efficient.
 
 ### Key Features:
@@ -19,7 +19,7 @@ The main purpose of this repository is to manage and serve high-quality visual c
 
 ---
 
-## Dokumentacja Projektu
+## &#8505;&#65039; Dokumentacja Projektu
 Niniejsze repozytorium pełni funkcję centrum dokumentacji oraz miejsca przechowywania plików o wysokiej rozdzielczości dla projektu Kajotte Studio. Zostało zaprojektowane do hostowania multimediów wymagających dużej przepustowości, zgodnie z zasadą szybkości i czystej architektury.
 
 ### Główne założenia:
