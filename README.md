@@ -55,8 +55,8 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 ---
 
 ### Documentation
-* **Technical Documentation** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
-* **Full Documentation** [Technical & Legal Ecosystem](https://kajotte-studio.com/docs0_en.html)
+* **Technical Documentation:** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
+* **Full Documentation:** [Technical & Legal Ecosystem](https://kajotte-studio.com/docs0_en.html)
 
 ---
 
