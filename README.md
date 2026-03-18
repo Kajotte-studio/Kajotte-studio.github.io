@@ -24,7 +24,7 @@ Niniejsze repozytorium pełni funkcję centrum dokumentacji oraz miejsca przecho
 
 ### Główne założenia:
 - **Zasoby High-Res:** Przechowywanie nieskompresowanych obrazów i dużych plików multimedialnych.
-- **Minimalistyczna Struktura:** Wykorzystanie czystego HTML, bez zewnętrznych systemów zarządzania treścią (CMS).
+- **Minimalistyczna struktura:** Wykorzystanie czystego HTML, bez zewnętrznych systemów zarządzania treścią (CMS).
 - **Optymalizacja:** Strategiczna organizacja plików zapewniająca szybkie dostarczanie treści wysokiej jakości.
 
 ---
