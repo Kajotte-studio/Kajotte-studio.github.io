@@ -1,4 +1,4 @@
-# Security Policy / Polityka Bezpieczeństwa
+# &#128737; Security Policy / Polityka Bezpieczeństwa
 [English Version](#en) | [Wersja Polska](#pl)
 
 ---
@@ -6,7 +6,7 @@
 <a name="en"></a>
 ## English Version
 
-### 🛡️ Introduction
+### Introduction
 This document outlines the security policy for the **Kajotte Studio** ecosystem. We value the community's help in keeping our artistic and educational space safe.
 
 ### 🌐 Scope
@@ -41,7 +41,7 @@ If you discover a security vulnerability, please report it privately:
 <a name="pl"></a>
 ## Wersja Polska
 
-### 🛡️ Wstęp
+### Wstęp
 Ten dokument opisuje politykę bezpieczeństwa ekosystemu **Kajotte Studio**. Doceniamy pomoc społeczności w dbaniu o bezpieczeństwo naszej przestrzeni artystyczno-edukacyjnej.
 
 ### 🌐 Zakres
