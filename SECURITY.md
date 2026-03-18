@@ -1,5 +1,9 @@
 # Security Policy / Polityka Bezpieczeństwa
+[English Version](#en) | [Wersja Polska](#pl)
 
+---
+
+<a name="en"></a>
 ## English Version
 
 ### 🛡️ Introduction
@@ -34,6 +38,7 @@ If you discover a security vulnerability, please report it privately:
 
 ---
 
+<a name="pl"></a>
 ## Wersja Polska
 
 ### 🛡️ Wstęp
