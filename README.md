@@ -1,4 +1,4 @@
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-Kajotte--Studio-ea4aaa?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/Kajotte-studio)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-Kajotte--Studio-ea4aaa?style=for-the-badge&logo=github-sponsors)](https://kajotte-studio.com/support_en.html)
 ![Status](https://img.shields.io/badge/status-active%20development-green.svg)
 
 ---
@@ -42,6 +42,13 @@ Niniejsze repozytorium pełni funkcję centrum dokumentacji oraz miejsca przecho
 **Kajotte Studio Open Resources & Engineering**
 
 - [Download Center](https://kajotte-studio.com/index_download_en.html)
+
+---
+
+### Support the project
+If you find this project useful, you can support its further development:
+- [Sponsor via GitHub](https://github.com/sponsors/Kajotte-studio) (Preferred for GitHub users)
+- [Support via Ko-fi / Stripe](https://ko-fi.com/kajottestudio) (No GitHub account required)
 
 ---
 
