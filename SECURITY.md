@@ -46,24 +46,24 @@ Ten dokument opisuje politykę bezpieczeństwa ekosystemu **Kajotte Studio**. Do
 
 ### 🌐 Zakres
 Niniejsza polityka obejmuje wszystkie zasoby cyfrowe zarządzane przez Kajotte Studio:
-* **Główny Portal:** [kajotte-studio.com](https://kajotte-studio.com)
-* **Kod Źródłowy:** [github.com/kajotte-studio](https://github.com/kajotte-studio)
-* **Zasoby Techniczne:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
+* **Główny portal:** [kajotte-studio.com](https://kajotte-studio.com)
+* **Kod źródłowy:** [github.com/kajotte-studio](https://github.com/kajotte-studio)
+* **Zasoby techniczne:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
 
-### 📚 Zasoby i Dokumentacja
+### 📚 Zasoby i dokumentacja
 Szczegółowe informacje techniczne oraz dokumentację projektową znajdziesz tutaj:
-* 📖 **Oficjalna Dokumentacja:** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
+* 📖 **Oficjalna dokumentacja:** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
 *oraz* [kajotte-studio.com/docs_list_pl.html](https://kajotte-studio.com/docs_list_pl.html)
-* 🎨 **Zasoby Projektowe:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
+* 🎨 **Zasoby projektowe:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
 
-### 🛠️ Wspierane Wersje
-| Typ Zasobu | Status Wsparcia |
+### 🛠️ Wspierane wersje
+| Typ zasobu | Status wsparcia |
 | :--- | :--- |
-| Portal i Aplikacje Webowe | ✅ Aktywne |
+| Portal i aplikacje webowe | ✅ Aktywne |
 | Repozytoria GitHub | ✅ Aktywne |
-| Starsze Projekty | 🛡️ Tylko błędy krytyczne |
+| Starsze projekty | 🛡️ Tylko błędy krytyczne |
 
-### ✉️ Zgłaszanie Luk
+### ✉️ Zgłaszanie luk
 Jeśli znajdziesz błąd w zabezpieczeniach, pomóż nam chronić naszą przestrzeń edukacyjną:
 1.  **E-mail:** Wyślij zgłoszenie na adres **support@kajotte-studio.com**.
 2.  **Temat:** Wpisz `Vulnerability Report: [Nazwa projektu]`.
