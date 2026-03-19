@@ -3,10 +3,10 @@
 ---
 
 ![Status](https://img.shields.io/badge/status-active%20development-green.svg)
+![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fkajotte-studio.github.io&label=Website%20Status)
 ![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-2ea44f?style=flat&logo=github)
 ![Security Policy](https://img.shields.io/badge/Security-Policy%20Active-success?style=flat&logo=github-security)
 ![Dependabot](https://img.shields.io/badge/Dependabot-Active-0250a3?style=flat&logo=dependabot)
-![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fkajotte-studio.github.io&label=Website%20Status)
 
 # ✦ Repository Documentation: GitHub High-Resolution Gallery
 
