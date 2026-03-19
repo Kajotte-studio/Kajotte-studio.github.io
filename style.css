@@ -278,6 +278,13 @@ main {
     text-decoration: underline;
 }
 
+/* Usuwa kropki i resetuje wcięcia dla listy w sekcji linków */
+.before-footer-links ul {
+  list-style-type: none; /* To kluczowa linia, która usuwa kropki */
+  padding: 0;            /* Usuwa domyślne wcięcie listy po lewej */
+  margin: 0;             /* Usuwa domyślne marginesy listy */
+}
+
 footer {
     text-align: center;
     padding: 20px;
