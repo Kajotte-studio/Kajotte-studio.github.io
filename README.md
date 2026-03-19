@@ -24,16 +24,6 @@ The main purpose of this repository is to manage and serve high-quality visual c
 
 ---
 
-## &#8505;&#65039; Dokumentacja Projektu
-Niniejsze repozytorium pełni funkcję centrum dokumentacji oraz miejsca przechowywania plików o wysokiej rozdzielczości dla projektu Kajotte Studio. Zostało zaprojektowane do hostowania multimediów wymagających dużej przepustowości, zgodnie z zasadą szybkości i czystej architektury.
-
-### Główne założenia:
-- **Zasoby High-Res:** Przechowywanie nieskompresowanych obrazów i dużych plików multimedialnych.
-- **Minimalistyczna struktura:** Wykorzystanie czystego HTML, bez zewnętrznych systemów zarządzania treścią (CMS).
-- **Optymalizacja:** Strategiczna organizacja plików zapewniająca szybkie dostarczanie treści wysokiej jakości.
-
----
-
 ## 🛠 Technical Details
 - **Environment:** GitHub Pages
 - **Architecture:** Pure HTML (No CMS / No WordPress)
