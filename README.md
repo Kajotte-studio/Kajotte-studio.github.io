@@ -33,6 +33,7 @@ The main purpose of this repository is to manage and serve high-quality visual c
 
 ### 🌐 Links
 - **Official Website:** [Kajotte-studio.com](https://Kajotte-studio.com)
+- **GitHub Gallery:** [kajotte-studio.github.io](https://kajotte-studio.github.io/)
 
 **Kajotte Studio Open Resources & Engineering**
 
