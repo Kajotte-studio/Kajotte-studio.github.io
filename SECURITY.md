@@ -52,7 +52,7 @@ Niniejsza polityka obejmuje wszystkie zasoby cyfrowe zarządzane przez Kajotte S
 
 ### 📚 Zasoby i dokumentacja
 Szczegółowe informacje techniczne oraz dokumentację projektową znajdziesz tutaj:
-* 📖 **Oficjalna dokumentacja:** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
+* 📖 **Oficjalna dokumentacja:** [kajotte-studio.com/docs-pl](https://kajotte-studio.com/docs-pl)
 *oraz* [kajotte-studio.com/docs_list_pl.html](https://kajotte-studio.com/docs_list_pl.html)
 * 🎨 **Zasoby projektowe:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
 
