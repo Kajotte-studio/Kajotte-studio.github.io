@@ -29,11 +29,20 @@ The main purpose of this repository is to manage and serve high-quality visual c
 - **Architecture:** Pure HTML (No CMS / No WordPress)
 - **Focus:** Performance, Clarity, Minimalism
 
+### Project Hosting & Security
+
+The official gallery and live preview of this project are hosted via **GitHub Pages** at:
+👉 [kajotte-studio.github.io](https://kajotte-studio.github.io)
+
+**Security Compliance:**
+* **Continuous Monitoring:** Powered by GitHub CodeQL for automated vulnerability scanning.
+* **Supply Chain Protection:** Active Dependabot monitoring for malware and security updates.
+* **Integrity:** Automated secret protection and push filtering enabled.
+
 ---
 
 ### 🌐 Links
 - **Official Website:** [kajotte-studio.com](https://kajotte-studio.com)
-- **GitHub Gallery:** [kajotte-studio.github.io](https://kajotte-studio.github.io/)
 
 **Kajotte Studio Open Resources & Engineering**
 
