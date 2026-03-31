@@ -1,12 +1,15 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
 .portal-subtitle {
-    font-family: 'Playfair Display', serif; /* Elegancki font szeryfowy (opcjonalnie) */
-    color: #1a1a1a;                         /* Głęboka czerń */
-    font-size: 1.2rem;                      /* Odpowiednia wielkość */
-    font-weight: 300;                       /* Lekka, smukła czcionka */
-    letter-spacing: 2px;                    /* Rozstrzelenie liter nadaje luksusowy charakter */
-    text-transform: uppercase;              /* Wielkie litery */
-    border-left: 5px solid #000;            /* Subtelna pionowa linia z boku */
-    padding-left: 15px;                     /* Odstęp od linii */
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-left: 5px solid #000;
+    padding-left: 15px;
     margin: 10px 0;
     line-height: 1.4;
 }
