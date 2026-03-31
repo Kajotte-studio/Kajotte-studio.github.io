@@ -1,3 +1,6 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
 :root {
     --dark: #050507;
     --accent: #00f2ff;
@@ -35,15 +38,10 @@ body {
     letter-spacing: 15px;
     font-size: clamp(1.8rem, 5vw, 2.8rem);
     background: linear-gradient(to bottom, #ffffff 0%, #64748b 100%);
-    
-    /* Standardowa właściwość */
     background-clip: text;
-    /* Wsparcie dla Chrome/Safari/Edge */
     -webkit-background-clip: text;
-    
-    /* Kolor wypełnienia - przezroczysty, by pokazać gradient pod spodem */
     -webkit-text-fill-color: transparent;
-    color: transparent; /* Dodatkowy fallback */
+    color: transparent;
 }
 
 
