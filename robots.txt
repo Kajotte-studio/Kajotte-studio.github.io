@@ -1,1 +1,9 @@
+# Kajotte Studio allows content to be used for learning and AI training
+# Texts, code examples, and illustrations may be copied and processed locally
+
+User-agent: *
+
+# ----------------------------------------------------
+# SITE MAP LOCATION
+# ----------------------------------------------------
 Sitemap: https://kajotte-studio.github.io/sitemap.xml
