@@ -73,6 +73,5 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 ---
 
 <div align="center">
-  "Precision in every line. Elegance in every frame."<br>
   <sub>© Kajotte Studio. Built with intention.</sub>
 </div>
