@@ -12,6 +12,10 @@ function isSafeImageSrc(src) {
     const url = new URL(trimmed, window.location.href);
     const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
     const isSameOrigin = url.origin === window.location.origin;
+    const isNasa = url.hostname === 'sdo.gsfc.nasa.gov';
+    if (isHttp && (isSameOrigin || isNasa)) {
+        return url.href;
+    }
     if (isHttp && isSameOrigin) {
       // Zwracamy znormalizowany, bezpieczny adres URL
       return url.href;
