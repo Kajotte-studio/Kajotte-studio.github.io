@@ -1,3 +1,6 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +12,6 @@ body {
     flex-direction: column;
 }
 
-/* Nagłówek, który pozostaje na górze */
 .fixed-header {
     position: fixed;
     top: 0;
@@ -43,9 +45,8 @@ body {
     white-space: nowrap;
 }
 
-/* Styl linków-przycisków w menu głównym */
 .nav-button {
-    background-color: #1e1e1e; /* Wyraźny niebieski */
+    background-color: #1e1e1e;
     color: white;
     text-decoration: none;
     font-size: 1em;
@@ -55,16 +56,14 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #0058b7; /* Ciemniejszy odcień przy najechaniu */
+    background-color: #0058b7;
     text-decoration: none;
 }
 
-/* Ukrycie przycisku menu mobilnego na dużych ekranach */
 .menu-toggle {
     display: none;
 }
 
-/* Ustawienia dla urządzeń mobilnych */
 @media (max-width: 768px) {
     .fixed-header {
         justify-content: space-between;
@@ -97,7 +96,6 @@ body {
         padding: 10px 0;
     }
 
-    /* Zmiana stylu przycisków w menu mobilnym */
     .nav-menu li a {
         background-color: transparent;
         color: white;
@@ -139,13 +137,13 @@ main {
 }
 
 .separator-div {
-    border-top: 2px solid #777777; /* Tworzy górną krawędź jako linię */
-    width: 80%; /* Ustawia szerokość */
-    margin: 30px auto; /* Centruje i dodaje margines */
+    border-top: 2px solid #777777;
+    width: 80%;
+    margin: 30px auto;
 }
 
 .dotted-separator {
-    border-top: 3px dotted #777777; /* Linia kropkowana */
+    border-top: 3px dotted #777777;
 }
 
 .image-placeholder {
@@ -163,7 +161,7 @@ main {
 }
 
 .load-button {
-    background-color: #606060; /* Wyraźny niebieski */
+    background-color: #606060;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -175,7 +173,7 @@ main {
 }
 
 .load-button:hover {
-    background-color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
+    background-color: #0056b3;
 }
 
 .dummy-content {
@@ -244,7 +242,7 @@ main {
 }
 
 .zoom-controls button {
-    background-color: #007bff; /* Wyraźny niebieski */
+    background-color: #007bff;
     border: none;
     color: white;
     padding: 10px 15px;
@@ -256,7 +254,7 @@ main {
 }
 
 .zoom-controls button:hover {
-    background-color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
+    background-color: #0056b3;
 }
 
 .before-footer-links {
@@ -268,21 +266,20 @@ main {
 }
 
 .before-footer-links a {
-    color: #007bff; /* Wyraźny niebieski */
+    color: #007bff;
     text-decoration: none;
     margin: 0 10px;
 }
 
 .before-footer-links a:hover {
-    color: #0056b3; /* Ciemniejszy odcień przy najechaniu */
+    color: #0056b3;
     text-decoration: underline;
 }
 
-/* Usuwa kropki i resetuje wcięcia dla listy w sekcji linków */
 .before-footer-links ul {
-  list-style-type: none; /* To kluczowa linia, która usuwa kropki */
-  padding: 0;            /* Usuwa domyślne wcięcie listy po lewej */
-  margin: 0;             /* Usuwa domyślne marginesy listy */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 footer {
@@ -297,31 +294,38 @@ footer {
 #myModal {
     display: none;
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.95);
     z-index: 9999;
-    overflow: auto; /* Pozwala na scrollowanie we wszystkie strony */
-    cursor: zoom-out;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#myModal {
+    display: none;
+    align-items: center;
+    justify-content: center;
 }
 
 #modalImage {
-    position: relative; /* Ważne! */
+    margin: auto;
     display: block;
-    margin: auto; /* Centrowanie początkowe */
-    max-width: 90%; /* Nie pozwól mu być za dużym na start */
-    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform-origin: center center; /* Powiększanie od środka */
-    padding: 50px; /* Daje "oddech" przy krawędziach po powiększeniu */
+    max-width: 90%;
+    max-height: 90vh;
+    transition: transform 0.2s ease-out;
+    transform-origin: center center;
+    padding: 100px; 
 }
 
-/* Panel przycisków - musi być FIXED, żeby nie uciekał przy scrollu */
 .zoom-controls {
     position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10000;
+    z-index: 10001;
     display: flex;
     gap: 15px;
 }

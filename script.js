@@ -1,20 +1,16 @@
-/**
- * Kajotte Studio - Pro Zoom Solution
- */
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
 
 let currentScale = 1;
-const SCALE_STEP = 0.3;
 
-// --- Funkcja bezpieczeństwa (Twoja oryginalna) ---
 function isSafeImageSrc(src) {
     if (typeof src !== 'string') return null;
-    const trimmed = src.trim();
-    if (trimmed === '') return null;
     try {
-        const url = new URL(trimmed, window.location.href);
+        const url = new URL(src.trim(), window.location.href);
         const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
         const isSameOrigin = url.origin === window.location.origin;
-        const isNasa = url.hostname === 'sdo.gsfc.nasa.gov' || url.hostname === 'soho.nascom.nasa.gov';
+        const isNasa = url.hostname.includes('nasa.gov');
         return (isHttp && (isSameOrigin || isNasa)) ? url.href : null;
     } catch (e) { return null; }
 }
@@ -22,24 +18,17 @@ function isSafeImageSrc(src) {
 const modal = document.getElementById("myModal");
 const modalImage = document.getElementById("modalImage");
 
-function updateZoom() {
-    if (modalImage) {
-        // Używamy transform: scale, ale w połączeniu z odpowiednim CSS (patrz niżej)
-        // To pozwala na płynność i nie "psuje" układu strony
-        modalImage.style.transform = `scale(${currentScale})`;
-    }
-}
-
 function openModal(imageSrc) {
     if (!modal || !modalImage) return;
 
-    modal.style.display = "block";
+    // Używamy FLEX, aby margin: auto na obrazku działało poprawnie
+    modal.style.display = "flex"; 
     modalImage.src = imageSrc;
     
     currentScale = 1;
-    updateZoom();
+    modalImage.style.transform = `scale(${currentScale})`;
     
-    // Reset pozycji przewijania na środek/górę
+    // Reset scrolla
     modal.scrollTop = 0;
     modal.scrollLeft = 0;
     document.body.style.overflow = 'hidden';
@@ -52,30 +41,26 @@ function closeModal() {
     }
 }
 
-// --- Event Listeners ---
-
+// Obsługa Zoomu
 document.getElementById('zoomInBtn')?.addEventListener('click', (e) => {
     e.stopPropagation();
-    currentScale += SCALE_STEP;
-    updateZoom();
+    currentScale += 0.3;
+    modalImage.style.transform = `scale(${currentScale})`;
 });
 
 document.getElementById('zoomOutBtn')?.addEventListener('click', (e) => {
     e.stopPropagation();
     if (currentScale > 0.4) {
-        currentScale -= SCALE_STEP;
-        updateZoom();
+        currentScale -= 0.3;
+        modalImage.style.transform = `scale(${currentScale})`;
     }
 });
 
+// Zamykanie
 document.querySelector('.close-btn')?.addEventListener('click', closeModal);
+modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-if (modal) {
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
-}
-
+// Ładowanie obrazków
 document.querySelectorAll('.load-button').forEach(button => {
     button.addEventListener('click', (e) => {
         const src = e.target.getAttribute('data-image-src');
@@ -95,6 +80,4 @@ if (menuToggle && navMenu) {
     });
 }
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") closeModal();
-});
+document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
