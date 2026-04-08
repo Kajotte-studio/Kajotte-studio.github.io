@@ -2,7 +2,8 @@
 /*      Kajotte Studio        */
 /* -------------------------- */
 
-let currentScale = 1;
+let currentScale = 1.0;
+const SCALE_STEP = 0.2;
 
 function isSafeImageSrc(src) {
     if (typeof src !== 'string') return null;
@@ -10,22 +11,33 @@ function isSafeImageSrc(src) {
         const url = new URL(src.trim(), window.location.href);
         const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
         const isSameOrigin = url.origin === window.location.origin;
-        return (isHttp && (isSameOrigin || url.hostname.includes('nasa.gov'))) ? url.href : null;
+        const isNasa = url.hostname.includes('nasa.gov');
+        return (isHttp && (isSameOrigin || isNasa)) ? url.href : null;
     } catch (e) { return null; }
 }
 
 const modal = document.getElementById("myModal");
 const modalImage = document.getElementById("modalImage");
 
+function updateImageSize() {
+    if (modalImage) {
+        const newWidth = currentScale * 90;
+        modalImage.style.maxWidth = "none"; 
+        modalImage.style.width = newWidth + "vw";
+    }
+}
+
 function openModal(imageSrc) {
     if (!modal || !modalImage) return;
-    
+
     modal.style.display = "block";
     modalImage.src = imageSrc;
-    currentScale = 1;
-    modalImage.style.transform = `scale(${currentScale})`;
     
-    document.body.style.overflow = 'hidden';
+    currentScale = 1.0;
+    modalImage.style.width = "90vw";
+    modalImage.style.maxWidth = "90vw";
+    
+    document.body.style.overflow = 'hidden'; // Blokada scrolla strony
     modal.scrollTop = 0;
     modal.scrollLeft = 0;
 }
@@ -39,15 +51,15 @@ function closeModal() {
 
 document.getElementById('zoomInBtn')?.addEventListener('click', (e) => {
     e.stopPropagation();
-    currentScale += 0.3;
-    modalImage.style.transform = `scale(${currentScale})`;
+    currentScale += SCALE_STEP;
+    updateImageSize();
 });
 
 document.getElementById('zoomOutBtn')?.addEventListener('click', (e) => {
     e.stopPropagation();
     if (currentScale > 0.4) {
-        currentScale -= 0.3;
-        modalImage.style.transform = `scale(${currentScale})`;
+        currentScale -= SCALE_STEP;
+        updateImageSize();
     }
 });
 
