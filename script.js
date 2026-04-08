@@ -10,8 +10,7 @@ function isSafeImageSrc(src) {
         const url = new URL(src.trim(), window.location.href);
         const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
         const isSameOrigin = url.origin === window.location.origin;
-        const isNasa = url.hostname.includes('nasa.gov');
-        return (isHttp && (isSameOrigin || isNasa)) ? url.href : null;
+        return (isHttp && (isSameOrigin || url.hostname.includes('nasa.gov'))) ? url.href : null;
     } catch (e) { return null; }
 }
 
@@ -20,18 +19,15 @@ const modalImage = document.getElementById("modalImage");
 
 function openModal(imageSrc) {
     if (!modal || !modalImage) return;
-
-    // Używamy FLEX, aby margin: auto na obrazku działało poprawnie
-    modal.style.display = "flex"; 
-    modalImage.src = imageSrc;
     
+    modal.style.display = "block";
+    modalImage.src = imageSrc;
     currentScale = 1;
     modalImage.style.transform = `scale(${currentScale})`;
     
-    // Reset scrolla
+    document.body.style.overflow = 'hidden';
     modal.scrollTop = 0;
     modal.scrollLeft = 0;
-    document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
@@ -41,7 +37,6 @@ function closeModal() {
     }
 }
 
-// Obsługa Zoomu
 document.getElementById('zoomInBtn')?.addEventListener('click', (e) => {
     e.stopPropagation();
     currentScale += 0.3;
@@ -56,20 +51,16 @@ document.getElementById('zoomOutBtn')?.addEventListener('click', (e) => {
     }
 });
 
-// Zamykanie
 document.querySelector('.close-btn')?.addEventListener('click', closeModal);
 modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-// Ładowanie obrazków
 document.querySelectorAll('.load-button').forEach(button => {
     button.addEventListener('click', (e) => {
-        const src = e.target.getAttribute('data-image-src');
-        const safeSrc = isSafeImageSrc(src);
+        const safeSrc = isSafeImageSrc(e.target.getAttribute('data-image-src'));
         if (safeSrc) openModal(safeSrc);
     });
 });
 
-// Menu mobilne
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 if (menuToggle && navMenu) {
