@@ -9,7 +9,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov https://soho.nascom.nasa.gov; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="author" content="Kajotte Studio">
     <meta name="description" content="Explore high-resolution images and large files in full detail! Kajotte Studio Gallery offers smooth zoom in and zoom out functionality so you don't miss a single pixel.">
@@ -53,7 +53,6 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
         </p>
         <h1 class="page-title">Kajotte Studio</h1>
         <section class="gallery">
-            <h5>Project:</h5>
             <div class="image-placeholder">
                 <p><b>Blog PL</b></p>
                 <h6><em>File size: 16 MB</em></h6>
@@ -65,6 +64,32 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
                 <button class="load-button" data-image-src="html/images/kajotte_studio_blog.png">Show graphics</button>
             </div>
         </section>
+        <h2><a href="https://kajotte-studio.com/index_blog_en.html" class="stylish-link-on-f">Blog</a></h2>
+        <p>
+            A space dedicated to technology, photography, music, and film.<br>
+            Pure HTML, Python, and a passion for visual and sound arts.
+        </p>
+        <section class="gallery">
+            <div class="image-placeholder">
+                <p><b>NASA SDO</b></p>
+                <h6><em>Current image of the Sun</em></h6>
+                <button class="load-button" data-image-src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_4096_0171.jpg">
+                    Show graphics
+                </button>
+            </div>
+            <div class="image-placeholder">
+                <p><b>NASA SOHO</b></p>
+                <h6><em>Current image of the Sun</em></h6>
+                <button class="load-button" data-image-src="https://soho.nascom.nasa.gov/data/realtime/hmi_igr/1024/latest.jpg">
+                    Show graphics
+                </button>
+            </div>
+        </section>
+        <h2><a href="https://kajotte-studio.com/nasa_sun_en.html" class="stylish-link-on-f">Solar Activity Center</a></h2>
+        <p>
+            Live feed from NASA SDO.<br>
+            Real-time monitoring of solar dynamics and space weather.
+        </p>
         <div class="dummy-content">
             <h2>Visual Space</h2>
             <p>
@@ -148,6 +173,6 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     </footer>
     <script src="script.js?v=2"></script>
     <script src="current-year.js?v=22025"></script>
-    <script src="frame-buster.js"></script>
+    <script src="frame-buster.js?v=2"></script>
 </body>
 </html>
