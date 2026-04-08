@@ -9,7 +9,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov https://soho.nascom.nasa.gov; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Galeria Kajotte Studio: Duże pliki w detalu. Zoom In/Out</title>
     <meta name="author" content="Kajotte Studio">
@@ -53,7 +53,6 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
         </p>
         <h1 class="page-title">Kajotte Studio</h1>
         <section class="gallery">
-            <h5>Projekt:</h5>
             <div class="image-placeholder">
                 <p><b>Blog PL</b></p>
                 <h6><em>Wielkość pliku: 16 MB</em></h6>
@@ -64,6 +63,13 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
                 <h6><em>Wielkość pliku: 16 MB</em></h6>
                 <button class="load-button" data-image-src="html/images/kajotte_studio_blog.png">Pokaż grafikę</button>
             </div>
+        </section>
+        <h2><a href="https://kajotte-studio.com/index_blog_pl.html" class="stylish-link-on-f">Blog</a></h2>
+        <p>
+            Przestrzeń poświęcona technologii, fotografii, muzyce i filmowi.<br>
+            Czysty HTML, Python oraz pasja do sztuki wizualnej i dźwięku.
+        </p>
+        <section class="gallery">
             <div class="image-placeholder">
                 <p><b>NASA SDO</b></p>
                 <h6><em>Aktualny obraz Słońca</em></h6>
@@ -71,7 +77,19 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
                     Pokaż grafikę
                 </button>
             </div>
+            <div class="image-placeholder">
+                <p><b>NASA SOHO</b></p>
+                <h6><em>Aktualny obraz Słońca</em></h6>
+                <button class="load-button" data-image-src="https://soho.nascom.nasa.gov/data/realtime/hmi_igr/1024/latest.jpg">
+                    Pokaż grafikę
+                </button>
+            </div>
         </section>
+        <h2><a href="https://kajotte-studio.com/nasa_sun_pl.html" class="stylish-link-on-f">Centrum Aktywności Słońca</a></h2>
+        <p>
+            Podgląd na żywo z NASA.<br>
+            Monitorowanie dynamiki Słońca i pogody kosmicznej w czasie rzeczywistym.
+        </p>
         <div class="dummy-content">
             <h2>Przestrzeń wizualna</h2>
             <p>
@@ -156,6 +174,6 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     </footer>
     <script src="script.js?v=2"></script>
     <script src="current-year.js?v=22025"></script>
-    <script src="frame-buster.js"></script>
+    <script src="frame-buster.js?v=2"></script>
 </body>
 </html>
