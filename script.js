@@ -11,14 +11,8 @@ function isSafeImageSrc(src) {
         const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
         const isSameOrigin = url.origin === window.location.origin;
         const isNasa = url.hostname === 'sdo.gsfc.nasa.gov' || url.hostname === 'soho.nascom.nasa.gov';
-        
-        if (isHttp && (isSameOrigin || isNasa)) {
-            return url.href;
-        }
-        return null;
-    } catch (e) {
-        return null;
-    }
+        return (isHttp && (isSameOrigin || isNasa)) ? url.href : null;
+    } catch (e) { return null; }
 }
 
 const modal = document.getElementById("myModal");
@@ -37,21 +31,32 @@ function openModal(imageSrc) {
 }
 
 function updateZoom(delta) {
+    if (!modalImg) return;
     currentScale += delta;
     if (currentScale < 0.5) currentScale = 0.5;
+    if (currentScale > 5) currentScale = 5;
+    
     modalImg.style.maxWidth = "none";
     modalImg.style.width = (currentScale * 90) + "%";
+    console.log("Aktualna skala:", currentScale); // Sprawdź w F12 czy to się pojawia
 }
 
-document.getElementById('zoomInBtn')?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    updateZoom(0.3);
-});
+const btnIn = document.getElementById('zoomInBtn');
+const btnOut = document.getElementById('zoomOutBtn');
 
-document.getElementById('zoomOutBtn')?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    updateZoom(-0.3);
-});
+if (btnIn) {
+    btnIn.onclick = function(e) {
+        e.stopPropagation();
+        updateZoom(0.3);
+    };
+}
+
+if (btnOut) {
+    btnOut.onclick = function(e) {
+        e.stopPropagation();
+        updateZoom(-0.3);
+    };
+}
 
 function closeModal() {
     if (modal) {
@@ -61,28 +66,24 @@ function closeModal() {
 }
 
 document.querySelector('.close-btn')?.addEventListener('click', closeModal);
-
-modal?.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-});
+modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
 document.querySelectorAll('.load-button').forEach(button => {
-    button.addEventListener('click', (e) => {
-        const safe = isSafeImageSrc(e.target.getAttribute('data-image-src'));
+    button.onclick = function(e) {
+        const src = e.target.getAttribute('data-image-src');
+        const safe = isSafeImageSrc(src);
         if (safe) openModal(safe);
-    });
+    };
 });
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
+    menuToggle.onclick = function() {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', !isExpanded);
         navMenu.classList.toggle('active');
-    });
+    };
 }
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") closeModal();
-});
+document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
