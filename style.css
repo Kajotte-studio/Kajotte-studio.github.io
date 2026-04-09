@@ -223,23 +223,26 @@ main {
     display: none;
     position: fixed;
     z-index: 9999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.95);
-    overflow: auto; /* To pozwala przewijać powiększone zdjęcie */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    overflow: auto;
     text-align: center;
 }
 
 #modalImage {
     display: inline-block;
-    margin-top: 50px; /* Odstęp od góry, żeby nie ucinało */
-    margin-bottom: 100px; /* Odstęp od dołu na przyciski */
-    transition: width 0.2s ease;
-    height: auto;
+    margin: 60px auto;
+    width: 90%;
+    height: auto !important;
+    max-height: none !important;
+    transition: width 0.15s ease;
 }
 
 .zoom-controls {
-    position: fixed; /* PRZYKLEJONE DO EKRANU */
+    position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -249,35 +252,24 @@ main {
 }
 
 .zoom-controls button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    font-size: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-.zoom-controls button {
     background-color: #007bff;
     border: none;
     color: white;
-    padding: 15px 25px;
+    padding: 12px 20px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .close-btn {
     position: fixed;
     top: 20px;
-    right: 35px;
+    right: 30px;
     color: white;
-    font-size: 50px;
-    z-index: 10001;
+    font-size: 45px;
     cursor: pointer;
+    z-index: 10001;
 }
 
 .zoom-controls button:hover {
