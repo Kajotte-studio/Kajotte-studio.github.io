@@ -9,7 +9,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov https://soho.nascom.nasa.gov; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov https://soho.nascom.nasa.gov https://fastly.picsum.photos https://picsum.photos; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="author" content="Kajotte Studio">
     <meta name="description" content="Explore high-resolution images and large files in full detail! Kajotte Studio Gallery offers smooth zoom in and zoom out functionality so you don't miss a single pixel.">
@@ -72,6 +72,26 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
         <p>
             Live feed from NASA SDO.<br>
             Real-time monitoring of solar dynamics and space weather.
+        </p>
+        <section class="gallery">
+            <div class="image-placeholder">
+                <p><b>Lorem Picsum Photos</b></p>
+                <h6><em>science 800/600</em></h6>
+                <button class="load-button" data-image-src="https://picsum.photos/800/600.jpg?science">
+                    Show graphics
+                </button>
+            </div>
+            <div class="image-placeholder">
+                <p><b>Lorem Picsum Photos</b></p>
+                <h6><em>minimalist 1200/800</em></h6>
+                <button class="load-button" data-image-src="https://picsum.photos/1200/800.jpg?minimalist">
+                    Show graphics
+                </button>
+            </div>
+        </section>
+        <h2>Random Photo</h2>
+        <p>
+            A collection of science-tech shots and minimalist aesthetics.
         </p>
         <section class="gallery">
             <div class="image-placeholder">
@@ -187,7 +207,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
             <span itemprop="name">KAJOTTE STUDIO</span>. All rights reserved.
         </p>
     </footer>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
     <script src="current-year.js?v=22025"></script>
     <script src="frame-buster.js?v=8"></script>
 </body>

@@ -9,7 +9,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov https://soho.nascom.nasa.gov; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://sdo.gsfc.nasa.gov https://soho.nascom.nasa.gov https://fastly.picsum.photos https://picsum.photos; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Galeria Kajotte Studio: Duże pliki w detalu. Zoom In/Out</title>
     <meta name="author" content="Kajotte Studio">
@@ -72,6 +72,26 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
         <p>
             Podgląd na żywo z NASA.<br>
             Monitorowanie dynamiki Słońca i pogody kosmicznej w czasie rzeczywistym.
+        </p>
+        <section class="gallery">
+            <div class="image-placeholder">
+                <p><b>Lorem Picsum Photos</b></p>
+                <h6><em>Nauka 800/600</em></h6>
+                <button class="load-button" data-image-src="https://picsum.photos/800/600.jpg?science">
+                    Pokaż grafikę
+                </button>
+            </div>
+            <div class="image-placeholder">
+                <p><b>Lorem Picsum Photos</b></p>
+                <h6><em>minimalistyczny 1200/800</em></h6>
+                <button class="load-button" data-image-src="https://picsum.photos/1200/800.jpg?minimalist">
+                    Pokaż grafikę
+                </button>
+            </div>
+        </section>
+        <h2>Losowe zdjęcie</h2>
+        <p>
+            Zestawienie kadrów naukowo-technicznych oraz estetyki minimalizmu.
         </p>
         <section class="gallery">
             <div class="image-placeholder">
@@ -188,7 +208,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
             <span itemprop="name">KAJOTTE STUDIO</span>. Wszelkie prawa zastrzeżone.
         </p>
     </footer>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
     <script src="current-year.js?v=22025"></script>
     <script src="frame-buster.js?v=8"></script>
 </body>

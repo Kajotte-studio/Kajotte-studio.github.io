@@ -11,7 +11,8 @@ function isSafeImageSrc(src) {
         const isHttp = url.protocol === 'http:' || url.protocol === 'https:';
         const isSameOrigin = url.origin === window.location.origin;
         const isNasa = url.hostname === 'sdo.gsfc.nasa.gov' || url.hostname === 'soho.nascom.nasa.gov';
-        return (isHttp && (isSameOrigin || isNasa)) ? url.href : null;
+        const isPicsum = url.hostname === 'picsum.photos'; 
+        return (isHttp && (isSameOrigin || isNasa || isPicsum)) ? url.href : null;
     } catch (e) { return null; }
 }
 
