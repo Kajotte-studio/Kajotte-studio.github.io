@@ -39,7 +39,7 @@ function updateZoom(delta) {
     
     modalImg.style.maxWidth = "none";
     modalImg.style.width = (currentScale * 90) + "%";
-    console.log("Aktualna skala:", currentScale); // Sprawdź w F12 czy to się pojawia
+    console.log("Aktualna skala:", currentScale);
 }
 
 const btnIn = document.getElementById('zoomInBtn');
