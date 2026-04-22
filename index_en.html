@@ -147,7 +147,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     <div class="before-footer-links">
         <p class="page-title">Documentation:</p>
         <ul class="before-footer-links">
-            <li><a href="https://github.com/Kajotte-studio/Kajotte-studio.github.io/blob/main/README.md" target="_blank">
+            <li><a href="https://github.com/Kajotte-studio/Kajotte-studio.github.io/blob/main/README.md" rel="noopener" target="_blank">
                 kajotte-studio.github.io
             </a></li>
             <li><a href="https://kajotte-studio.com/docs">kajotte-studio.com/docs</a></li>
@@ -163,12 +163,28 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
         <a href="https://kajotte-studio.com/index_download_en.html">Download Center</a> | 
         <a href="https://kajotte-studio.com/index_linki_en.html">Quick access</a>
     </div>
-    <footer>
+    <footer class="minimal-footer" itemscope itemtype="https://schema.org/Organization" itemid="https://kajotte-studio.com/#organization">
+        <link itemprop="mainEntityOfPage" href="https://kajotte-studio.com/">
+        <meta itemprop="name" content="Kajotte Studio">
+        <meta itemprop="alternateName" content="Kajotte">
+        <meta itemprop="foundingDate" content="2020">
+        <meta itemprop="areaServed" content="Worldwide">
+        <link itemprop="url" href="https://kajotte-studio.com">
+        <link itemprop="logo" href="https://kajotte-studio.com/web-app-manifest-512x512.png">
+        <meta itemprop="description" content="A versatile educational platform supporting creators in the fields of programming, music, film, and photography. Kajotte Studio provides the knowledge and tools necessary for creative development, while promoting the idea of minimalism and clean code.">
+        <div itemprop="brand" itemscope itemtype="https://schema.org/Brand">
+            <meta itemprop="name" content="Kajotte Studio">
+        </div>
+        <link itemprop="sameAs" href="https://github.com/Kajotte-studio/">
+        <link itemprop="sameAs" href="https://pypi.org/user/Kajotte-Studio/">
+        <link itemprop="sameAs" href="https://www.youtube.com/@KajotteStudio/">
+        <link itemprop="sameAs" href="https://pinterest.com/kajottestudio/">
+        <link itemprop="sameAs" href="https://kajotte-studio.github.io/">
+        <link itemprop="sameAs" href="https://host447933.xce.pl/">
         <p id="foot">
             Independent project, hosted on GitHub.<br>
             &copy; 2020-<span id="current-year"></span> 
-            Kajotte Studio. 
-            All rights reserved. 
+            <span itemprop="name">KAJOTTE STUDIO</span>. All rights reserved.
         </p>
     </footer>
     <script src="script.js?v=2"></script>
