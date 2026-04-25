@@ -1,0 +1,88 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
+.nasa-table-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow-x: auto;
+}
+
+.nasa-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+.nasa-table th, .nasa-table td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nasa-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.project-name {
+    font-weight: bold;
+    color: #222;
+    white-space: nowrap;
+}
+
+.project-desc {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.table-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+}
+
+.table-btn:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 600px) {
+    .nasa-table, .nasa-table tbody, .nasa-table tr, .nasa-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .nasa-table thead {
+        display: none;
+    }
+    
+    .nasa-table tr {
+        margin-bottom: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    .nasa-table td {
+        text-align: center;
+        border-bottom: none;
+        padding: 10px 5px;
+    }
+    
+    .project-name {
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
