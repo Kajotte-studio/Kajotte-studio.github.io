@@ -10,7 +10,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    user-select: none;
 }
 
 .fixed-header {
@@ -26,6 +25,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2c3e50, transparent);
+  width: 50%;
+  margin: 50px auto;
+  border-radius: 2px;
 }
 
 .main-nav {
