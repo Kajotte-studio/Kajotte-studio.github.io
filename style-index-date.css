@@ -1,0 +1,59 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
+.system-monitor {
+    margin: 20px auto; /* Wyśrodkowanie */
+    padding: 12px 25px;
+    display: inline-flex; /* Łączy datę i czas w jednej linii */
+    align-items: center;
+    position: relative; /* Dla pozycjonowania rogów */
+    
+    /* Półprzezroczyste tło z rozmytem - "przypina" zegar do pierwszego planu */
+    background-color: rgba(5, 5, 10, 0.7);
+    backdrop-filter: blur(8px);
+    
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Cień pod kartą dla głębi */
+    
+    transition: all 0.3s ease; /* Płynna zmiana przy hoverze (opcja) */
+}
+
+/* EFEKT NEONOWYCH ROGÓW (Klamry) */
+.system-monitor::before,
+.system-monitor::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: #00d4ff; /* Twój błękit */
+    border-style: solid;
+    opacity: 0.8;
+}
+
+/* Pozycjonowanie rogów - styl HUD */
+.system-monitor::before {
+    top: -5px; left: -5px;
+    border-width: 2px 0 0 2px; /* Lewy górny róg */
+}
+
+.system-monitor::after {
+    bottom: -5px; right: -5px;
+    border-width: 0 2px 2px 0; /* Prawy dolny róg */
+}
+
+/* STYL TEKSTU */
+#live-timestamp {
+    /* Używamy fontu monospace, np. 'Roboto Mono', dla "technicznego" wyglądu */
+    font-family: 'Roboto Mono', 'Courier New', monospace; 
+    color: #00f0ff; /* Jaśniejszy cyjan, bardziej czytelny */
+    font-size: 1.1rem; /* Trochę powiększony */
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    white-space: nowrap; /* Zapobiega łamaniu wierszy */
+    
+    /* EFEKT NEONOWEGO ŚWIECENIA TEKSTU */
+    text-shadow: 0 0 5px rgba(0, 240, 255, 0.4), 
+                 0 0 10px rgba(0, 240, 255, 0.2),
+                 0 0 15px rgba(0, 240, 255, 0.1);
+}
