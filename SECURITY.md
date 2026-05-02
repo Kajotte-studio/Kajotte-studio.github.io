@@ -30,7 +30,7 @@ For technical details and project documentation, please visit:
 
 ### ✉️ Reporting a Vulnerability
 If you discover a security vulnerability, please report it privately:
-1.  **Email:** Send your report to **support@kajotte-studio.com**.
+1.  **Email:** Send your report to **help@kajotte-studio.com**.
 2.  **Subject:** Use `Vulnerability Report: [Project Name]`.
 3.  **Content:** Include a description of the issue and steps to reproduce it.
 
