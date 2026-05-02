@@ -11,6 +11,7 @@ This repository serves as a dedicated storage and documentation hub for high-res
 ![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-2ea44f?style=flat&logo=github)
 ![Security Policy](https://img.shields.io/badge/Security-Policy%20Active-success?style=flat&logo=github-security)
 ![Dependabot](https://img.shields.io/badge/Dependabot-Active-0250a3?style=flat&logo=dependabot)
+![GitHub last commit](https://img.shields.io/github/last-commit/Kajotte-studio/Kajotte-studio.github.io)
 
 ---
 
