@@ -65,7 +65,7 @@ Szczegółowe informacje techniczne oraz dokumentację projektową znajdziesz tu
 
 ### ✉️ Zgłaszanie luk
 Jeśli znajdziesz błąd w zabezpieczeniach, pomóż nam chronić naszą przestrzeń edukacyjną:
-1.  **E-mail:** Wyślij zgłoszenie na adres **support@kajotte-studio.com**.
+1.  **E-mail:** Wyślij zgłoszenie na adres **help@kajotte-studio.com**.
 2.  **Temat:** Wpisz `Vulnerability Report: [Nazwa projektu]`.
 3.  **Treść:** Podaj opis problemu oraz instrukcję, jak go odtworzyć.
 
