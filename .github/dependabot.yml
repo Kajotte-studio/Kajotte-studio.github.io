@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "pip" # Dla projektów w Pythonie
+    directory: "/" # Szuka pliku wymagań w głównym folderze
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    target-branch: "main"
