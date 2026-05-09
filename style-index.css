@@ -204,6 +204,23 @@ body {
     animation: shine 1.2s ease-out;
 }
 
+.url-label {
+    display: block;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    color: #464646;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.url-label:hover {
+    opacity: 0.9;
+    color: #24d7e1;
+}
+
 @keyframes shine {
     100% { left: 150%; }
 }
