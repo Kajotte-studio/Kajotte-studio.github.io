@@ -11,7 +11,7 @@
     border-radius: 20px;
     padding: 3rem;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    color: #d1d5db;
+    color: #538cff;
     font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -29,7 +29,7 @@
     text-align: center;
     font-style: italic;
     margin-bottom: 2.5rem;
-    color: #d3d3d3;
+    color: #cacaca;
 }
 
 .competition-grid {
@@ -76,6 +76,6 @@
 .comp-desc {
     margin-top: 0.5rem;
     font-size: 0.95rem;
-    color: #93b2d5;
+    color: #9bcaff;
     line-height: 1.5;
 }
