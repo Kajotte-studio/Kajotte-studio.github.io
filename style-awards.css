@@ -1,0 +1,81 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
+.photo-vision-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    background: rgba(20, 24, 30, 0.7);
+    backdrop-filter: blur(20px) saturate(170%);
+    -webkit-backdrop-filter: blur(20px) saturate(170%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    color: #d1d5db;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.photo-vision-container h3 {
+    color: #58a6ff;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.vision-intro {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    color: #d3d3d3;
+}
+
+.competition-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.comp-link {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.comp-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.comp-item:hover {
+    background: rgba(88, 166, 255, 0.05);
+    border-color: rgba(88, 166, 255, 0.3);
+    transform: translateX(5px);
+}
+
+.comp-name {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comp-name::after {
+    content: '→';
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.comp-desc {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #93b2d5;
+    line-height: 1.5;
+}
