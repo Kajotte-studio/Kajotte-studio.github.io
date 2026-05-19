@@ -1,4 +1,5 @@
 2026-05-19: 
+[UPD] No.1/newsletter_en/_pl.html
 [UPD] No.3/nasa_en/_pl.html
 [UPD] No.3/index_en/_pl.html
 [UPD] No.1/index_en/_pl.html
