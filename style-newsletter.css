@@ -153,3 +153,54 @@ footer {
     color: var(--text-muted);
     font-size: 0.8rem;
 }
+
+@media (max-width: 600px) {
+    /* Zmiana kontenera nawigacji na układ pionowy */
+    .main-nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 16px;
+        border-radius: 16px; /* Nieco mniejszy promień na mobilu */
+        margin-bottom: 35px;
+    }
+
+    /* Układamy linki jeden pod drugim, wycentrowane */
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px; /* Odpowiednie odstępy, żeby łatwo było klikać palcem */
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 1rem; /* Lekko większy font dla lepszej czytelności na ekranie telefonu */
+        width: 100%;
+        text-align: center;
+        padding: 4px 0;
+    }
+
+    /* Przełącznik języka ląduje centralnie na dole menu */
+    .lang-switch {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        border-top: 1px solid var(--glass-border); /* Delikatna linia oddzielająca język */
+        padding-top: 15px;
+    }
+
+    .lang-btn {
+        display: inline-block;
+        padding: 6px 20px; /* Większy obszar kliknięcia */
+        font-size: 0.9rem;
+    }
+    
+    /* Korekta nagłówków na mobile, żeby tekst nie był za wielki */
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+}
