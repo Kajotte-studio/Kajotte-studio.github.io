@@ -1,6 +1,8 @@
-2026-05-19: No.3/nasa_en/_pl.html
-No.3/index_en/_pl.html
-No.1/index_en/_pl.html
-No.1/newsletter_en/_pl.html
+2026-05-19: 
+[UPD] No.3/nasa_en/_pl.html
+[UPD] No.3/index_en/_pl.html
+[UPD] No.1/index_en/_pl.html
+[NEW] No.1/newsletter_en/_pl.html
 ---
-2026-05-17: No.2/index0_en/_pl.html
+2026-05-17: 
+[FIX] No.2/index0_en/_pl.html
