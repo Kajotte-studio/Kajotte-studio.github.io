@@ -1,0 +1,45 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
+.glass-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px;
+    color: #f1f5f9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    
+    background: rgba(18, 18, 24, 0.45);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.glass-nav-link:hover {
+    background: rgba(42, 186, 248, 0.08);
+    border-color: rgba(31, 183, 248, 0.3);
+    color: #5c4fee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+}
+
+.glass-nav-link .link-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.glass-nav-link:hover .link-icon {
+    transform: translateX(4px);
+}
+
+.glass-nav-link:active {
+    transform: translateY(1px);
+}

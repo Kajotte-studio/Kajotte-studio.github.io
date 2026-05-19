@@ -1,0 +1,155 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
+:root {
+    --bg-color: #0d0d11;
+    --glass-bg: rgba(18, 18, 24, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --text-main: #f1f5f9;
+    --text-muted: #64748b;
+    --accent: #38bdf8;
+    --error-color: #f87171;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at 50% 0%, #1e1b4b 0%, var(--bg-color) 75%);
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 10px 24px;
+    margin-bottom: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.lang-btn {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid var(--glass-border);
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background: var(--accent);
+    color: var(--bg-color);
+    border-color: var(--accent);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    margin: 0 0 12px 0;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.intro-section h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.intro-section p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+.news-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.news-content {
+    font-size: 1.05rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#status-message {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 30px 0;
+}
+
+#status-message.error-state {
+    color: var(--error-color);
+    font-style: normal;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
