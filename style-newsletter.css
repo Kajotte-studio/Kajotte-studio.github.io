@@ -168,15 +168,15 @@ footer {
 }
 
 .badge-new {
-    color: #418ce3;
+    color: #daf281;
 }
 
 .badge-upd {
-    color: #eeca3b;
+    color: #eecf52;
 }
 
 .badge-fix {
-    color: #4ae142;
+    color: #52ee6f;
 }
 
 @media (max-width: 600px) {
