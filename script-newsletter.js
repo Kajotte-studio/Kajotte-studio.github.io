@@ -60,7 +60,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const contentDiv = document.createElement("div");
                 contentDiv.className = "news-content";
-                contentDiv.textContent = contentText;
+
+                const lines = contentText.split("\n");
+
+                lines.forEach(line => {
+                    const trimmedLine = line.trim();
+                    if (trimmedLine.length === 0) return;
+
+                    const lineContainer = document.createElement("div");
+                    lineContainer.className = "log-line";
+
+                    if (trimmedLine.startsWith("[NEW]")) {
+                        const badge = document.createElement("span");
+                        badge.className = "badge badge-new";
+                        badge.textContent = "[NEW]";
+                        lineContainer.appendChild(badge);
+                        lineContainer.appendChild(document.createTextNode(trimmedLine.substring(5)));
+                    } else if (trimmedLine.startsWith("[UPD]")) {
+                        const badge = document.createElement("span");
+                        badge.className = "badge badge-upd";
+                        badge.textContent = "[UPD]";
+                        lineContainer.appendChild(badge);
+                        lineContainer.appendChild(document.createTextNode(trimmedLine.substring(5)));
+                    } else if (trimmedLine.startsWith("[FIX]")) {
+                        const badge = document.createElement("span");
+                        badge.className = "badge badge-fix";
+                        badge.textContent = "[FIX]";
+                        lineContainer.appendChild(badge);
+                        lineContainer.appendChild(document.createTextNode(trimmedLine.substring(5)));
+                    } else {
+                        lineContainer.textContent = line;
+                    }
+
+                    contentDiv.appendChild(lineContainer);
+                });
 
                 card.appendChild(dateDiv);
                 card.appendChild(contentDiv);
@@ -79,41 +112,4 @@ document.addEventListener("DOMContentLoaded", () => {
                 statusMessage.className = "error-state";
             }
         });
-});
-
-const contentDiv = document.createElement("div");
-contentDiv.className = "news-content";
-
-const lines = contentText.split("\n");
-
-lines.forEach((line, index) => {
-    const trimmedLine = line.trim();
-    if (trimmedLine.length === 0) return;
-
-    const lineContainer = document.createElement("div");
-    lineContainer.className = "log-line";
-
-    if (trimmedLine.startsWith("[NEW]")) {
-        const badge = document.createElement("span");
-        badge.className = "badge badge-new";
-        badge.textContent = "[NEW]";
-        lineContainer.appendChild(badge);
-        lineContainer.appendChild(document.createTextNode(trimmedLine.substring(5)));
-    } else if (trimmedLine.startsWith("[UPD]")) {
-        const badge = document.createElement("span");
-        badge.className = "badge badge-upd";
-        badge.textContent = "[UPD]";
-        lineContainer.appendChild(badge);
-        lineContainer.appendChild(document.createTextNode(trimmedLine.substring(5)));
-    } else if (trimmedLine.startsWith("[FIX]")) {
-        const badge = document.createElement("span");
-        badge.className = "badge badge-fix";
-        badge.textContent = "[FIX]";
-        lineContainer.appendChild(badge);
-        lineContainer.appendChild(document.createTextNode(trimmedLine.substring(5)));
-    } else {
-        lineContainer.textContent = line;
-    }
-
-    contentDiv.appendChild(lineContainer);
 });
