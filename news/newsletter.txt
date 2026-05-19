@@ -2,4 +2,4 @@
 ---
 2026-05-18: /saks/modules/core_monitor.py
 ---
-2026-05-17: No.2/index0.html
+2026-05-17: No.2/index0
