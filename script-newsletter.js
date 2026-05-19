@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 feedContainer.removeChild(feedContainer.firstChild);
             }
 
-            const entries = data.split("---");
+            const entries = data.split("---").slice(0, 7);
             let hasValidContent = false;
 
             entries.forEach(entry => {
