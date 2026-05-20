@@ -1,4 +1,5 @@
 2026-05-20: 
+[NEW] No.3/index_blog_post_47
 [UPD] No.1/newsletter
 ---
 2026-05-19: 
@@ -6,4 +7,4 @@
 [UPD] No.3/nasa
 [UPD] No.3/index_en/_pl
 [UPD] No.1/index_en/_pl
-[NEW] No.1/newsletter
+No.1/newsletter
