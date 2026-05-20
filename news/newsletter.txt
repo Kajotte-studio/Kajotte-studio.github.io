@@ -1,4 +1,5 @@
 2026-05-20: 
+[FIX] No.3/index_blog_post_45_en
 [NEW] No.3/index_blog_post_47
 [UPD] No.1/newsletter
 ---
