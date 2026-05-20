@@ -1,9 +1,9 @@
 2026-05-19: 
 [UPD] No.1/newsletter
+---
+2026-05-19: 
+[UPD] No.1/newsletter
 [UPD] No.3/nasa
 [UPD] No.3/index_en/_pl
 [UPD] No.1/index_en/_pl
 [NEW] No.1/newsletter
----
-2026-05-17: 
-[FIX] No.2/index0
