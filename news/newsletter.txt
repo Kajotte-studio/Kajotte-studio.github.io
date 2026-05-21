@@ -1,3 +1,6 @@
+2026-05-21: 
+[UPD] No.3/docs_list
+---
 2026-05-20: 
 [FIX] No.3/index_blog_post_47
 [FIX] No.3/index_blog_post_45
