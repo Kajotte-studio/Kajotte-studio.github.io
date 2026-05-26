@@ -1,3 +1,6 @@
+2026-05-26: 
+[FIX] No.3/index_blog
+---
 2026-05-25: 
 [UPD] No.3/index_blog_post_48
 ---
