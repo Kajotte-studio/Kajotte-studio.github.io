@@ -1,3 +1,6 @@
+2026-05-27: 
+[FIX] No.3/index_en/_pl
+---
 2026-05-26: 
 [FIX] No.3/index_blog
 ---
