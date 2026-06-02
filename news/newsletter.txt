@@ -1,3 +1,8 @@
+2026-06-02: 
+[FIX] No.3/system_autostart..
+[FIX] No.3/index_blog
+[NEW] No.3/index_blog_post_49
+---
 2026-05-31: 
 [FIX] No.3/prime0
 [FIX] No.1/newsletter
