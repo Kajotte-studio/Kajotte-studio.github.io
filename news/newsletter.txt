@@ -1,3 +1,9 @@
+2026-06-17: 
+[UPD] No.3/prime0
+[UPD] No.3/index_en/_pl
+[FIX] No.3/index_blog_post_27
+[FIX] No.3/testsite0
+---
 2026-06-02: 
 [FIX] No.3/system_autostart..
 [FIX] No.3/index_blog
