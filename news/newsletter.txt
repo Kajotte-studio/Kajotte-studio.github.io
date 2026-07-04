@@ -1,4 +1,5 @@
 2026-07-04: 
+[FIX] No.1
 [UPD] No.3/index_info
 [FIX] No.3/tel
 ---
