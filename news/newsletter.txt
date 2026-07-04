@@ -1,6 +1,7 @@
 2026-07-04: 
 [UPD] No.3/index_info
 [FIX] No.3/tel
+---
 2026-06-17: 
 [UPD] No.3/prime0
 [UPD] No.3/index_en/_pl
