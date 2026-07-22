@@ -14,6 +14,7 @@ This policy applies to all digital assets managed by Kajotte Studio:
 * **Main Portal:** [kajotte-studio.com](https://kajotte-studio.com)
 * **Source Code:** [github.com/kajotte-studio](https://github.com/kajotte-studio)
 * **Technical Assets:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
+[kajotte-studio.pl](https://kajotte-studio.pl)
 
 ### 📚 Resources & Documentation
 For technical details and project documentation, please visit:
@@ -49,6 +50,7 @@ Niniejsza polityka obejmuje wszystkie zasoby cyfrowe zarządzane przez Kajotte S
 * **Główny portal:** [kajotte-studio.com](https://kajotte-studio.com)
 * **Kod źródłowy:** [github.com/kajotte-studio](https://github.com/kajotte-studio)
 * **Zasoby techniczne:** [kajotte-studio.github.io](https://kajotte-studio.github.io)
+[kajotte-studio.pl](https://kajotte-studio.pl)
 
 ### 📚 Zasoby i dokumentacja
 Szczegółowe informacje techniczne oraz dokumentację projektową znajdziesz tutaj:
