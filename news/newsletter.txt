@@ -1,3 +1,7 @@
+2026-07-29: 
+[FIX] No.3/index_card
+[FIX] No.2/index0
+---
 2026-07-28: 
 [FIX] No.3/prime_reset
 [UPD] No.3/index_foto
