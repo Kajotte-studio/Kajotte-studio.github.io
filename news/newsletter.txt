@@ -1,3 +1,7 @@
+2026-07-31: 
+[NEW] No.3/physics
+[UPD] No.3/panel
+---
 2026-07-30: 
 [FIX] No.3/docs
 ---
