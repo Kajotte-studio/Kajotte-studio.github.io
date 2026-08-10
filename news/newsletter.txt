@@ -1,11 +1,12 @@
 2026-08-10: 
 [NEW] No.3/reflection
+[UPD] No.3/index_pl/_en
 ---
 2026-08-02: 
 [NEW] No.3/safe
 ---
 2026-08-01: 
-[UPD] No.3/index_pl/ _en
+[UPD] No.3/index_pl/_en
 [FIX] No.3/index_info
 ---
 2026-07-31: 
