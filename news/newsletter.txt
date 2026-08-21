@@ -1,3 +1,6 @@
+2026-08-21: 
+[NEW] No.1/waves
+---
 2026-08-12: 
 [UPD] No.3/reflection
 [UPD] No.3/index_info
