@@ -23,6 +23,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     <link rel="alternate" href="https://kajotte-studio.github.io/waves_en.html" hreflang="x-default">
     <!-- Style -->
     <link rel="stylesheet" href="style-waves.css?v=3">
+    <link rel="stylesheet" href="style-waves-svg.css">
 </head>
 <body>
     <nav class="top-nav">
@@ -69,6 +70,35 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
                     </tbody>
                 </table>
             </div>
+            <div class="svg-wave-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" class="wave-svg">
+                    <defs>
+                        <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" class="svg-grid-line"/>
+                        </pattern>
+                        <marker id="arrow-marker" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" class="svg-arrow-head"/>
+                        </marker>
+                    </defs>
+                    <rect width="100%" height="100%" class="svg-bg"/>
+                    <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+                    <line x1="50" y1="150" x2="750" y2="150" class="svg-axis"/>
+                    <path d="M 50 150 Q 125 30, 200 150 T 350 150 T 500 150 T 650 150" class="svg-wave-path"/>
+                    <line x1="200" y1="30" x2="500" y2="30" class="svg-metric-line" marker-start="url(#arrow-marker)" marker-end="url(#arrow-marker)"/>
+                    <line x1="200" y1="30" x2="200" y2="140" class="svg-guide-line"/>
+                    <line x1="500" y1="30" x2="500" y2="140" class="svg-guide-line"/>
+                    <text x="350" y="22" class="svg-label svg-label-primary" text-anchor="middle">Długość fali (λ)</text>
+                    <line x1="350" y1="150" x2="350" y2="270" class="svg-metric-line" marker-start="url(#arrow-marker)" marker-end="url(#arrow-marker)"/>
+                    <text x="365" y="215" class="svg-label svg-label-primary">Amplituda (A)</text>
+                    <circle cx="200" cy="30" r="4" class="svg-point-peak"/>
+                    <text x="200" y="18" class="svg-label svg-label-muted" text-anchor="middle">Grzbiet</text>
+                    <circle cx="350" cy="270" r="4" class="svg-point-peak"/>
+                    <text x="350" y="290" class="svg-label svg-label-muted" text-anchor="middle">Dolina</text>
+                    <circle cx="50" cy="150" r="4" class="svg-point-node"/>
+                    <circle cx="200" cy="150" r="4" class="svg-point-node"/>
+                    <circle cx="350" cy="150" r="4" class="svg-point-node"/>
+                </svg>
+            </div>
             <h2>Strefa fotografa: Struktura światła widzialnego</h2>
             <p>
                 Optyka aparatów i ludzkie oko operują w ściśle określonym przedziale fal. 
@@ -93,6 +123,80 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
                     </tbody>
                 </table>
             </div>
+            <section class="sound-vs-light">
+                <h2>Fala elektromagnetyczna a fala dźwiękowa</h2>
+                <p>
+                    Podczas gdy światło jest zaburzeniem pola elektromagnetycznego, 
+                    dźwięk to <strong>fala mechaniczna</strong> (podłużna). 
+                    Rozchodzi się poprzez mechaniczne drgania cząsteczek ośrodka – zwięzłości i rozrzedzenia materii.
+                </p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cecha</th>
+                                <th>Fala świetlna (EM)</th>
+                                <th>Fala dźwiękowa (Mechaniczna)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Natura zaburzenia</strong></td>
+                                <td>Pole elektromagnetyczne</td>
+                                <td>Drgania cząsteczek ośrodka</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rozchodzenie w próżni</strong></td>
+                                <td>Tak (nie wymaga materii)</td>
+                                <td>Nie (wymaga ośrodka)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prędkość (w powietrzu)</strong></td>
+                                <td>~300 000 000 m/s</td>
+                                <td>~343 m/s</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Typ fali (w gazach)</strong></td>
+                                <td>Poprzeczna</td>
+                                <td>Podłużna</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="advanced-waves">
+                <h2>Fizyka współczesna: Fale grawitacyjne i materii</h2>
+                <p>
+                    Oprócz fal elektromagnetycznych i mechanicznych, 
+                    fizyka opisuje fundamentalne zjawiska falowe stanowiące filary mechaniki kwantowej i ogólnej teorii względności:
+                </p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rodzaj fali</th>
+                                <th>Natura fizyczna</th>
+                                <th>Prędkość rozchodzenia</th>
+                                <th>Detekcja / Zjawisko</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Fale grawitacyjne</strong></td>
+                                <td>Zaburzenia (zmarszczki) samej czasoprzestrzeni</td>
+                                <td>~300 000 000 m/s (prędkość światła)</td>
+                                <td>Zderzenia czarnych dziur, połączenia gwiazd neutronowych (obserwatoria LIGO / Virgo)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fale materii (de Broglie’a)</strong></td>
+                                <td>Kwantowa natura cząstek (elektronów, neutronów)</td>
+                                <td>Zależy od pędu cząstki ($v = p / m$)</td>
+                                <td>Dyfrakcja elektronów, mikroskopia elektronowa (TEM/SEM)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
             <div class="sources">
                 <strong>Źródła danych i wiarygodność:</strong>
                 <ul>

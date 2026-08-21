@@ -23,6 +23,7 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
     <link rel="alternate" href="https://kajotte-studio.github.io/waves_en.html" hreflang="x-default">
     <!-- Styles -->
     <link rel="stylesheet" href="style-waves.css?v=3">
+    <link rel="stylesheet" href="style-waves-svg.css">
 </head>
 <body>
     <nav class="top-nav">
@@ -68,6 +69,35 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
                     </tbody>
                 </table>
             </div>
+            <div class="svg-wave-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" class="wave-svg">
+                    <defs>
+                        <pattern id="grid-pattern-en" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 40 0 L 0 0 0 40" class="svg-grid-line"/>
+                        </pattern>
+                        <marker id="arrow-marker-en" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                            <path d="M 0 0 L 10 5 L 0 10 z" class="svg-arrow-head"/>
+                        </marker>
+                    </defs>
+                    <rect width="100%" height="100%" class="svg-bg"/>
+                    <rect width="100%" height="100%" fill="url(#grid-pattern-en)"/>
+                    <line x1="50" y1="150" x2="750" y2="150" class="svg-axis"/>
+                    <path d="M 50 150 Q 125 30, 200 150 T 350 150 T 500 150 T 650 150" class="svg-wave-path"/>
+                    <line x1="200" y1="30" x2="500" y2="30" class="svg-metric-line" marker-start="url(#arrow-marker-en)" marker-end="url(#arrow-marker-en)"/>
+                    <line x1="200" y1="30" x2="200" y2="140" class="svg-guide-line"/>
+                    <line x1="500" y1="30" x2="500" y2="140" class="svg-guide-line"/>
+                    <text x="350" y="22" class="svg-label svg-label-primary" text-anchor="middle">Wavelength (λ)</text>
+                    <line x1="350" y1="150" x2="350" y2="270" class="svg-metric-line" marker-start="url(#arrow-marker-en)" marker-end="url(#arrow-marker-en)"/>
+                    <text x="365" y="215" class="svg-label svg-label-primary">Amplitude (A)</text>
+                    <circle cx="200" cy="30" r="4" class="svg-point-peak"/>
+                    <text x="200" y="18" class="svg-label svg-label-muted" text-anchor="middle">Crest</text>
+                    <circle cx="350" cy="270" r="4" class="svg-point-peak"/>
+                    <text x="350" y="290" class="svg-label svg-label-muted" text-anchor="middle">Trough</text>
+                    <circle cx="50" cy="150" r="4" class="svg-point-node"/>
+                    <circle cx="200" cy="150" r="4" class="svg-point-node"/>
+                    <circle cx="350" cy="150" r="4" class="svg-point-node"/>
+                </svg>
+            </div>
             <h2>Photographer's Zone: Visible Light Structure</h2>
             <p>
                 Camera optics and the human eye operate within a strictly defined wavelength range. 
@@ -92,6 +122,80 @@ ATTENTION: Kajotte Studio. All rights reserved.-->
                     </tbody>
                 </table>
             </div>
+            <section class="sound-vs-light">
+                <h2>Electromagnetic Waves vs. Sound Waves</h2>
+                <p>
+                    While light is an electromagnetic field disturbance, 
+                    sound is a <strong>mechanical wave</strong> (longitudinal). 
+                    It propagates through the physical vibrations of medium particles—compressions and rarefactions of matter.
+                </p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Light Wave (EM)</th>
+                                <th>Sound Wave (Mechanical)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Disturbance Nature</strong></td>
+                                <td>Electromagnetic field</td>
+                                <td>Medium particle vibrations</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vacuum Propagation</strong></td>
+                                <td>Yes (requires no matter)</td>
+                                <td>No (requires a medium)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Speed (in air)</strong></td>
+                                <td>~300,000,000 m/s</td>
+                                <td>~343 m/s</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wave Type (in gases)</strong></td>
+                                <td>Transverse</td>
+                                <td>Longitudinal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="advanced-waves">
+                <h2>Modern Physics: Gravitational and Matter Waves</h2>
+                <p>
+                    Beyond electromagnetic and mechanical waves, 
+                    physics defines fundamental wave phenomena that form the pillars of quantum mechanics and general relativity:
+                </p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Wave Type</th>
+                                <th>Physical Nature</th>
+                                <th>Propagation Speed</th>
+                                <th>Detection / Phenomenon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Gravitational Waves</strong></td>
+                                <td>Distortions (ripples) in spacetime itself</td>
+                                <td>~300,000,000 m/s (speed of light)</td>
+                                <td>Black hole collisions, neutron star mergers (LIGO / Virgo observatories)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Matter Waves (de Broglie)</strong></td>
+                                <td>Quantum wave-particle duality of matter (electrons, neutrons)</td>
+                                <td>Depends on particle momentum ($v = p / m$)</td>
+                                <td>Electron diffraction, electron microscopy (TEM/SEM)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
             <div class="sources">
                 <strong>Data Sources & Credibility:</strong>
                 <ul>
