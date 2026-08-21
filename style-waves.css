@@ -1,0 +1,217 @@
+/* -------------------------- */
+/*      Kajotte Studio        */
+/* -------------------------- */
+/* Understanding Light (GitHub Gallery) */
+:root {
+    --bg-color: #fafafa;
+    --card-bg: #ffffff;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --accent: #000000;
+    --border-color: #eaeaea;
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-right: 30px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.lang-switch a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.lang-switch a.active, .lang-switch a:hover {
+    background-color: var(--accent);
+    color: #fff;
+}
+
+.lang-switch span {
+    color: var(--border-color);
+    margin: 0 5px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 100px auto 40px;
+    padding: 0 20px;
+}
+
+.content-card {
+    background: var(--card-bg);
+    padding: 60px 80px;
+    border-radius: 2px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0.2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 2.5em 0 1em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.golden-rule {
+    font-size: 1.4em;
+    font-weight: 300;
+    color: var(--text-muted);
+    margin-bottom: 2em;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 3em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    font-size: 0.95em;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+tbody tr {
+    transition: var(--transition);
+}
+
+tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+td:nth-child(2), td:nth-child(3) {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
+}
+
+.sources {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 50px;
+}
+
+.sources strong {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.sources ul {
+    list-style-type: none;
+}
+
+.sources li {
+    margin-bottom: 8px;
+}
+
+.sources a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.sources a:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--text-muted);
+    padding: 40px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .content-card {
+        padding: 40px 20px;
+    }
+    .top-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .nav-links {
+        margin-bottom: 15px;
+    }
+    .nav-links a {
+        margin-right: 15px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+}
