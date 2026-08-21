@@ -116,7 +116,8 @@ h2 {
 
 .table-responsive {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
     margin-bottom: 3em;
 }
 
@@ -200,22 +201,24 @@ footer {
 
 @media (max-width: 768px) {
     .content-card {
-        padding: 30px 15px; 
-    }
-    
-    .table-responsive {
-        overflow-x: visible; 
+        padding: 30px 15px;
     }
     
     table {
-        font-size: 0.82em; 
+        table-layout: fixed; 
+        width: 100%;
+        font-size: 0.82em;
     }
     
     th, td {
-        padding: 12px 6px; 
-        word-wrap: break-word; 
+        padding: 12px 5px; 
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word; 
+        vertical-align: top;
     }
 
+    /* Układ górnego menu */
     .top-nav {
         flex-direction: column;
         padding: 15px 10px;
@@ -223,14 +226,13 @@ footer {
     
     .nav-links {
         display: flex;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 12px 20px; 
+        gap: 12px 20px;
         margin-bottom: 15px;
     }
     
     .nav-links a {
-        margin-right: 0; 
-        font-size: 0.85em;
+        margin-right: 0;
     }
 }
