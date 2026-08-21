@@ -218,7 +218,6 @@ footer {
         vertical-align: top;
     }
 
-    /* Układ górnego menu */
     .top-nav {
         flex-direction: column;
         padding: 15px 10px;
