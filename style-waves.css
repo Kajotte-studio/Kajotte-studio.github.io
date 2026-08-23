@@ -199,6 +199,54 @@ footer {
     letter-spacing: 1px;
 }
 
+/* --- Sekcja wyróżnienia / Trivia o światle --- */
+.photon-box {
+    background: #fdfdfd;
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent);
+    padding: 24px;
+    margin: 2em 0;
+    border-radius: 2px;
+}
+
+.photon-box p {
+    font-size: 1.05em;
+    color: var(--text-main);
+    margin-bottom: 1.2em;
+}
+
+.photon-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.photon-box li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: var(--text-muted);
+}
+
+.photon-box li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.photon-box strong {
+    color: var(--text-main);
+}
+
+/* Poprawka dla nawigacji mobilnej (dodatkowy odstęp kontenera) */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 130px; /* Zabezpieczenie przed zasłanianiem treści przez wyższy, dwuliniowy top-nav */
+    }
+}
+
 @media (max-width: 768px) {
     .content-card {
         padding: 30px 15px;
