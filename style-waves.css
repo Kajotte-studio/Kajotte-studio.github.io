@@ -199,6 +199,47 @@ footer {
     letter-spacing: 1px;
 }
 
+/* --- Sekcja: Tworzenie rzeczywistości przez światło --- */
+.perception-box {
+    background: #fafafa;
+    border: 1px solid var(--border-color);
+    border-left: 3px solid #000000;
+    padding: 24px;
+    margin: 2em 0;
+    border-radius: 2px;
+}
+
+.perception-box p {
+    font-size: 1.05em;
+    color: var(--text-main);
+    margin-bottom: 1em;
+}
+
+.perception-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.perception-box li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: var(--text-muted);
+}
+
+.perception-box li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.perception-box strong {
+    color: var(--text-main);
+}
+
 /* --- Sekcja wyróżnienia / Trivia o światle --- */
 .photon-box {
     background: #fdfdfd;
