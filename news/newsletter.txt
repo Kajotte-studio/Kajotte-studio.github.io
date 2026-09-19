@@ -1,6 +1,6 @@
 2026-09-19: 
 [UPD] No.3/support
-[UPD] No.3/docs_list
+[FIX] No.3/docs_list
 ---
 2026-09-11: 
 [UPD] No.3/index_blog_post_8
