@@ -1,0 +1,68 @@
+<!--KAJOTTE STUDIO | TECHNICAL ECOSYSTEM
+Full terms and documentation: https://kajotte-studio.com/docs
+ATTENTION: Kajotte Studio. All rights reserved.-->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kajotte Studio">
+    <meta name="robots" content="noindex">
+    <title>Weryfikacja i Odblokowanie Dostępu | Kajotte Studio</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Kajotte Studio">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style-error.css">
+</head>
+<body>
+<div class="container">
+    <nav class="lang-nav">
+        <a href="error_pl.html" class="active">PL</a>
+        <a href="error_en.html">EN</a>
+    </nav>
+    <!-- Karta informacyjna -->
+    <div class="card card-warning">
+        <h3>Jednorazowa próba nieautoryzowanego dostępu</h3>
+        <p>
+            Skanowanie katalogów, sprawdzanie podatności, próby typu path traversal czy SQLi/XSS: 
+            może skutkować natychmiastowym i całkowitym zablokowaniem adresu IP na poziomie zapory sieciowej. 
+            Zablokowane adresy IP nie są przywracane automatycznie przez systemy czasowe.
+        </p>
+    </div>
+    <!-- Karta główna z instrukcją odblokowania -->
+    <div class="card card-main">
+        <h2>Zostałeś zablokowany przez pomyłkę?</h2>
+        <p>
+            Jeśli Twój adres IP został zablokowany w wyniku fałszywego alarmu podczas zwykłego przeglądania treści, 
+            jedyną możliwością weryfikacji i przywrócenia dostępu jest bezpośredni kontakt poprzez nasz profil 
+            na GitHubie:
+        </p>
+        <a href="https://github.com/Kajotte-studio" class="github-btn" target="_blank" rel="noopener">
+            GITHUB.COM/KAJOTTE
+        </a>
+        <p>lub</p>
+        <a href="https://github.com/Kajotte-studio/Kajotte-studio.github.io/blob/main/SECURITY.md" class="github-btn" target="_blank" rel="noopener">
+            Politykę bezpieczeństwa
+        </a>
+        <div class="instruction-box">
+            <strong>W wiadomości e-mail lub zgłoszeniu podaj:</strong>
+            <ul>
+                <li><strong>Temat:</strong> Prośba o odblokowanie adresu IP</li>
+                <li><strong>Domena:</strong> Określ, której domeny dotyczy problem</li>
+                <li><strong>Okoliczności:</strong> Krótki opis, przy jakich czynnościach doszło do zablokowania</li>
+                <li><strong>Czas i IP:</strong> Twój adres IP oraz dokładny czas zdarzenia (z strefą czasową)</li>
+            </ul>
+        </div>
+        <p class="subtext">Każde zgłoszenie weryfikujemy ręcznie w logach serwera.</p>
+    </div>
+    <footer>
+        Copyright &copy; 2020-<span id="current-year"></span> 
+        Kajotte Studio. Wszelkie prawa zastrzeżone.
+    </footer>
+    <script src="current-year.js"></script>
+</div>
+</body>
+</html>

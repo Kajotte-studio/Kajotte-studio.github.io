@@ -1,0 +1,67 @@
+<!--KAJOTTE STUDIO | TECHNICAL ECOSYSTEM
+Full terms and documentation: https://kajotte-studio.com/docs
+ATTENTION: Kajotte Studio. All rights reserved.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kajotte Studio">
+    <meta name="robots" content="noindex">
+    <title>Access Verification & Unblock | Kajotte Studio</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Kajotte Studio">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style-error.css">
+</head>
+<body>
+<div class="container">
+    <nav class="lang-nav">
+        <a href="error_pl.html">PL</a>
+        <a href="error_en.html" class="active">EN</a>
+    </nav>
+    <!-- Warning card -->
+    <div class="card card-warning">
+        <h3>Single Unauthorized Access Attempt</h3>
+        <p>
+            Directory scanning, vulnerability probing, path traversal attempts, or SQLi/XSS: 
+            may result in immediate and permanent IP address blockage at the firewall level. 
+            Blocked IP addresses are not restored automatically by automated timers.
+        </p>
+    </div>
+    <!-- Main action card -->
+    <div class="card card-main">
+        <h2>Blocked by Mistake?</h2>
+        <p>
+            If your IP address was restricted due to a false positive during normal browsing, 
+            the only way to verify and restore access is direct contact via our GitHub profile:
+        </p>
+        <a href="https://github.com/Kajotte-studio" class="github-btn" target="_blank" rel="noopener">
+            GITHUB.COM/KAJOTTE
+        </a>
+        <p>or</p>
+        <a href="https://github.com/Kajotte-studio/Kajotte-studio.github.io/blob/main/SECURITY.md" class="github-btn" target="_blank" rel="noopener">
+            Security Policy
+        </a>
+        <div class="instruction-box">
+            <strong>Please include the following details in your message:</strong>
+            <ul>
+                <li><strong>Subject:</strong> Request to unblock IP address</li>
+                <li><strong>Domain:</strong> Specify which domain is affected</li>
+                <li><strong>Circumstances:</strong> Brief description of what triggered the blockage</li>
+                <li><strong>Timestamp & IP:</strong> Your IP address and the exact time of the event (with timezone)</li>
+            </ul>
+        </div>
+        <p class="subtext">Every request is manually verified against server logs.</p>
+    </div>
+    <footer>
+        Copyright &copy; 2020-<span id="current-year"></span> 
+        Kajotte Studio. All rights reserved.
+    </footer>
+    <script src="current-year.js"></script>
+</div>
+</body>
+</html>
