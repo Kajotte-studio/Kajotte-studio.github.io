@@ -1,5 +1,6 @@
 2026-09-20: 
 [NEW] No.1/error
+[UPD] No.3/index_blog_post_error
 [FIX] No.3/index_pl/_en
 [FIX] No.3/index_info
 ---
