@@ -1,3 +1,6 @@
+2026-09-20: 
+[NEW] No.1/error
+---
 2026-09-19: 
 [UPD] No.3/support
 [FIX] No.3/docs_list
