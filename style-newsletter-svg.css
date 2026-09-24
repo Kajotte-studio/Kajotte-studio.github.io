@@ -1,0 +1,12 @@
+.strike-line {
+  stroke: #ff4d4d; /* Wyrazisty czerwony akcent */
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  animation: strike 0.6s ease-in-out forwards 0.3s;
+}
+
+@keyframes strike {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
