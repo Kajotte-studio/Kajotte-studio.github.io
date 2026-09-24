@@ -44,42 +44,27 @@
     transform: translateY(1px);
 }
 
-.glass-btn-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    margin: 10px 0;
-}
-
 .sub-label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #f4f4f4;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    text-align: center;
-    line-height: 1.2;
     user-select: none;
-    opacity: 1;
-    visibility: visible;
+    white-space: nowrap;
+    transition: color 0.3s ease;
 }
 
-/* Po najechaniu na kontener/przycisk – sub-label płynnie znika bez zmiany koloru */
 @media (hover: hover) {
-    .glass-btn-container:hover .sub-label {
-        opacity: 0;
-        visibility: hidden;
+    .glass-nav-link:hover .sub-label {
+        color: #004191;
     }
 }
 
-/* Dostosowanie dla urządzeń mobilnych */
 @media (max-width: 768px) {
     .glass-nav-link {
-        padding: 12px 18px;
+        padding: 10px 18px;
     }
 
     .sub-label {
-        font-size: 0.72rem;
-        color: rgba(255, 255, 255, 0.9);
-        margin-top: 2px;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.85);
     }
 }
