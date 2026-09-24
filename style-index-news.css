@@ -55,30 +55,27 @@
 .sub-label {
     font-size: 0.8rem;
     color: #f4f4f4;
+    transition: color 0.3s ease, opacity 0.3s ease;
     text-align: center;
     line-height: 1.2;
     user-select: none;
 }
 
+@media (hover: hover) {
+    .sub-label:hover {
+        color: #004191;
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .glass-nav-link {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
         padding: 12px 18px;
     }
 
     .sub-label {
-        display: block;
         font-size: 0.72rem;
-        color: rgba(255, 255, 255, 0.85);
-        margin-top: 4px;
-        line-height: 1.1;
-        white-space: normal;
-    }
-
-    .glass-nav-link .link-icon {
-        margin-left: 4px;
-        vertical-align: middle;
+        color: rgba(255, 255, 255, 0.9);
+        margin-top: 2px;
     }
 }
