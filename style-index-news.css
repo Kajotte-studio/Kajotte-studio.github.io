@@ -60,11 +60,19 @@
 
 @media (max-width: 768px) {
     .glass-nav-link {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
         padding: 10px 18px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .sub-label {
+        flex-basis: 100%;
         font-size: 0.75rem;
         color: rgba(255, 255, 255, 0.85);
+        white-space: normal;
+        margin-top: 2px;
     }
 }
