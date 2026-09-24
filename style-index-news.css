@@ -43,3 +43,18 @@
 .glass-nav-link:active {
     transform: translateY(1px);
 }
+
+.sub-label {
+    font-size: 0.85rem;
+    color: #f4f4f4;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    user-select: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .sub-label {
+        color: #a0a0a0;
+    }
+}
