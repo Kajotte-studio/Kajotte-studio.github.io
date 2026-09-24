@@ -55,19 +55,23 @@
 .sub-label {
     font-size: 0.8rem;
     color: #f4f4f4;
-    transition: color 0.3s ease, opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     text-align: center;
     line-height: 1.2;
     user-select: none;
+    opacity: 1;
+    visibility: visible;
 }
 
+/* Po najechaniu na kontener/przycisk – sub-label płynnie znika bez zmiany koloru */
 @media (hover: hover) {
-    .sub-label:hover {
-        color: #004191;
-        opacity: 1;
+    .glass-btn-container:hover .sub-label {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
+/* Dostosowanie dla urządzeń mobilnych */
 @media (max-width: 768px) {
     .glass-nav-link {
         padding: 12px 18px;
