@@ -1,5 +1,5 @@
 /* -------------------------- */
-/*      Kajotte Studio        */
+/*       Kajotte Studio       */
 /* -------------------------- */
 .kajotte-minimal-artwork {
   width: 100%;
@@ -9,10 +9,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .kajotte-minimal-artwork svg {
   display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 500 / 180;
   overflow: visible;
   color: inherit; 
 }
@@ -91,8 +95,9 @@
 
 @media (max-width: 768px) {
   .kajotte-minimal-artwork {
-    margin: 1.5rem auto;
-    padding: 0 1rem;
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+    max-width: 100%;
   }
   
   .kajotte-minimal-artwork .artwork-frame {
@@ -105,8 +110,9 @@
   }
 
   .kajotte-minimal-artwork .artwork-caption {
-    opacity: 0.8;
+    opacity: 0.75;
     transform: translateY(0);
     font-weight: 500;
+    font-size: 10px;
   }
 }
