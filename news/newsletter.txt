@@ -1,3 +1,6 @@
+2026-10-02: 
+[UPD] No.3/index_blog_post_8
+---
 2026-10-01: 
 [FIX] No.3/prime_vitality
 ---
