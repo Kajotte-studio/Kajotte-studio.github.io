@@ -1,3 +1,7 @@
+2026-10-06: 
+[FIX] No.3/index_info
+[UPD] No.3/index_blog_post_27
+---
 2026-10-02: 
 [UPD] No.3/index_blog_post_8
 [UPD] No.3/index_blog_post_27
