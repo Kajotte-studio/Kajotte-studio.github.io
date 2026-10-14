@@ -91,16 +91,16 @@ header h1 {
 }
 
 header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin: 0;
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #c4d4f0;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    margin: 0.5rem auto 0 auto;
+    max-width: 440px;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .glass-card {
