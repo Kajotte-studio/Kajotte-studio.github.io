@@ -1,6 +1,7 @@
 2026-10-20: 
 [UPD] No.2/index_mapa
 [UPD] No.2/index_pl/_en
+[FIX] No.2/index_pl/_en
 ---
 2026-10-19: 
 [UPD] No.3/docs0
