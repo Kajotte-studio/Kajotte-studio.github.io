@@ -1,3 +1,7 @@
+2026-10-22: 
+[FIX] No.3/testsite/0/1/2
+[UPD] No.3/index_blog_post_3
+---
 2026-10-20: 
 [UPD] No.2/index_mapa
 [UPD] No.2/index_pl/_en
