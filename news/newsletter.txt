@@ -1,5 +1,6 @@
 2026-10-23: 
 [UPD] No.3/index_foto
+[UPD] No.3/support
 ---
 2026-10-22: 
 [FIX] No.3/testsite/0/1/2
