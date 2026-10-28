@@ -1,3 +1,6 @@
+2026-10-28: 
+[FIX] No.3/photo_sun0
+---
 2026-10-24: 
 [FIX] No.3/testsite_new
 ---
