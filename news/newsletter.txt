@@ -1,3 +1,6 @@
+2026-10-29: 
+[UPD] No.3/photo_sun
+---
 2026-10-28: 
 [FIX] No.3/photo_sun0
 ---
