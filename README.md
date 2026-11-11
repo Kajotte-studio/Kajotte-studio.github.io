@@ -69,7 +69,7 @@ If you encounter technical challenges or wish to suggest an enhancement to our s
 
 ### Documentation
 * **Technical Documentation:** [kajotte-studio.com/docs](https://kajotte-studio.com/docs)
-* **Full Documentation:** [Technical & Legal Ecosystem](https://kajotte-studio.com/docs0_en.html)
+* **Full list:** [Documentation](https://kajotte-studio.com/docs_list_en.html)
 
 ---
 
