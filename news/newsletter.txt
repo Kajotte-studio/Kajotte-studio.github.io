@@ -1,3 +1,7 @@
+2026-11-16: 
+[UPD] No.3/prime
+[UPD] No.3/dc_info
+---
 2026-11-12: 
 [NEW] No.3/index_blog_post_52
 ---
