@@ -1,3 +1,6 @@
+2026-11-19: 
+[UPD] No.2/monuments
+---
 2026-11-16: 
 [UPD] No.3/prime
 [UPD] No.3/dc_info
