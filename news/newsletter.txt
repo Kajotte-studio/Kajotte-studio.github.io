@@ -1,3 +1,6 @@
+2026-11-22: 
+[FIX] No.3/index_blog_post_46
+---
 2026-11-20: 
 [UPD] No.3/index_tel
 ---
